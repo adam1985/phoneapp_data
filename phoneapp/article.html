@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0;">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>火热战报</title>
+    <link rel="stylesheet" href="assets/styles/index.min.css"/>
+</head>
+<body>
+<div class="wrapper" data-role="page" id="article-page">
+
+    <div class="layout-header">
+        <div class="layout-header-box">
+            <div class="layout-goback-icon"><a href="index.html"></a></div>
+            <h1>火热战报</h1>
+        </div>
+    </div>
+
+    <div role="main" class="layout-content">
+        <div id="scroller">
+            <div class="layout-article" id="layout-article">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-footer"></div>
+
+</div>
+
+<script id="article-template" type="text/html">
+    <h3>{{= title }}</h3>
+    <div class="layout-article-content">
+        {{== content }}
+    </div>
+</script>
+<script src="assets/require.min.js" data-main="assets/dist/index"></script>
+</body>
+</html>

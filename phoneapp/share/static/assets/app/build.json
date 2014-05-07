@@ -1,0 +1,15 @@
+{
+    "baseUrl": "../../assets/app/src",
+    "paths": {
+        "jquery": "jquery/jquery",
+        "jquery.mobile": "mobile/jquery.mobile"
+    },
+    "shim": {
+        //"touchslider": ["jquery", "jquery.mobile"]
+    },
+    "removeCombined": true,
+    "preserveLicenseComments": false,
+    "optimizeCss": "standard",
+    "name": "controller/index",
+    "out": "dist/index.js"
+}
