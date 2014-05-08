@@ -1,42 +1,26 @@
 define(['jquery', 'component/tools', './initializeScroll'], function($, tools, initializeScroll){
     return function() {
 
-        var config = {
-            onScrollStart : function(){
-                iscroll.refresh();
-            }
-        };
-
-        if( !tools.isPc ) {
-
-            config = $.extend( config, {
-                onBeforeScrollStart : function(e){
-                    if( e.target.nodeName.id !== 'touch-copy' ){
-                        e.preventDefault();
-                    }
-
-                }
-            })
-        }
-
-        var iscroll = initializeScroll( config );
-
 
         var ua = navigator.userAgent.toLowerCase(),
             downloadApk = $('.download-apk'),
             download = $('#weixin-download');
-            if( /micromessenger/i.test( ua ) ) {
-                downloadApk.on('tap', 'a', function(e){
+
+            downloadApk.on('tap', 'a', function(e){
+                var href = $(this).attr('data-href');
+                if( /micromessenger/i.test( ua ) ) {
                     e.preventDefault();
                     download.show();
-                    iscroll.scrollTo(0, 0);
+                    document.body.scrollTop = 0;
                     setTimeout( function(){
                         if( download.is(':visible') ) {
                             download.hide();
                         }
                     }, 10 * 1000);
-                });
-            }
+                } else if( href ) {
+                    window.open(href, '_blank');
+                }
+            });
 
         $('#touch-copy').on('tap', function(){
             //this.select();

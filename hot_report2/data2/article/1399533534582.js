@@ -1,0 +1,1 @@
+articleCallBack({"title":"我的焦点图","content":"这是焦点图的内容<br><img src=\"http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/1399533521414jquery.wysiwyg.gif\" style=\"\">"})

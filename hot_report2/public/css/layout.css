@@ -1,0 +1,4 @@
+input.upload-file{ display: inline-block;}
+iframe.upload{ border: none; width: 100%; }
+.upload-Modal{}
+.upload-file-input{ width: 500px; display: block; margin-top: 15px;}

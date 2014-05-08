@@ -1,0 +1,1 @@
+focusConfCallBack([{"title":"我的焦点图","src":"http://www.baidu.com","imgSrc":"http://www.baidu.com/logo.png","aid":"1399533534582"}])

@@ -2,9 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0;">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
     <title>百万世界杯</title>
     <link rel="stylesheet" href="../../static/assets/app/styles/index.css"/>
     <script>
@@ -15,6 +16,7 @@
             if (ispc) {
                 //location.href = sharePageUrl;
             }
+
         }());
     </script>
     <script src="../../static/assets/app/require.min.js"
@@ -84,7 +86,7 @@
 
                     <div class="page-width download-apk" id="download-apk">
                         <a href="#">ios版本下载</a>
-                        <a href="http://wx.dl.baofeng.com/mobile/WorldCup/WorldCup.apk">安卓版本下载</a>
+                        <a href="javascript:void(null)" data-href="http://wx.dl.baofeng.com/mobile/WorldCup/WorldCup.apk">安卓版本下载</a>
                     </div>
                 </div>
 
@@ -164,9 +166,7 @@
             <div class="hide weixin-download" id="weixin-download">
                 <img src="../../static/assets/app/images/weixin-download.png" />
             </div>
-
         </div>
-
     </div>
 </div>
 </body>
