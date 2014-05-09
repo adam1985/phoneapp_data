@@ -25,7 +25,7 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
                                     var layoutBanner = $('#layout-banner-box');
                                     if( data.length >>> 0) {
                                         var templateStr = template.render('banner-template', {
-                                            list : tools.subToArray(data, 5, true),
+                                            list : data,
                                             isShow : !sessionStorage.getItem('is-hide-banner')
                                         });
                                         layoutBanner.html( templateStr );
@@ -46,7 +46,7 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
                                     if( data.length >>> 0) {
                                         data = tools.joinAssignSrc( data );
                                         var templateStr = template.render('focus-template', {
-                                            list : tools.subToArray(data, 6, true)
+                                            list : data
                                         });
                                         focusPicture.html( templateStr );
                                     } else {

@@ -1,5 +1,6 @@
-define(['jquery',  'component/template', 'template/chatTemplate', 'model/chat-conf', 'component/maskLayer'],
-    function ($, template, chatTemplate, chatConf, MaskLayer) {
+define(['jquery',  'component/template', 'conf/config', 'component/jquery.uri',
+    'template/chatTemplate', 'model/chat-conf', 'component/maskLayer', './chatMutual'],
+    function ($, template, config, uri, chatTemplate, chatConf, MaskLayer, chatMutual) {
         return function () {
 
             // 设置页面标题　
@@ -10,11 +11,12 @@ define(['jquery',  'component/template', 'template/chatTemplate', 'model/chat-co
             var tipTemplate = template.compile(chatTemplate.tipTemplate);
             $('#chat-room-tip').html( tipTemplate( chatConf ) );
 
+            var maskLayer = MaskLayer({
+                opacity: 0.5
+            });
+
             // 提示框
             (function(){
-                var maskLayer = MaskLayer({
-                    opacity: 0.5
-                });
 
                 maskLayer.show( function(){
                     var templateStr = template.render('chat-alert-template', chatConf), chatAlert = $(templateStr);
@@ -23,7 +25,11 @@ define(['jquery',  'component/template', 'template/chatTemplate', 'model/chat-co
 
                     $('#chat-alert-btn').on('tap', function(e){
                         e.preventDefault();
-                        chatAlert.fadeOut();
+
+                        chatAlert.fadeOut(function(){
+                            chatMutual();
+                        });
+
                         maskLayer.hide();
                     });
                 });
@@ -35,7 +41,7 @@ define(['jquery',  'component/template', 'template/chatTemplate', 'model/chat-co
                 var qqface = $('#qqface'), faceNumbers = 75, faces = '';
                 for(var i = 0; i < faceNumbers; i++ ) {
                     faces += '<a href="javascript:void(null)" data-face="' + ( i + 1 ) +
-                            '"><img src="assets/images/face/' + ( i + 1 ) + '.gif" /></a>'
+                            '"><img src="' + config.path + 'assets/images/face/' + ( i + 1 ) + '.gif" /></a>'
                 }
 
                 qqface.html( faces );
@@ -50,6 +56,7 @@ define(['jquery',  'component/template', 'template/chatTemplate', 'model/chat-co
 
                 qqface.on('tap','a', function(e){
                     e.preventDefault();
+                    e.stopPropagation();
                     var $this = $(this),
                         faceIndex = $this.attr('data-face'),
                         faceStr = '[em_' + faceIndex + ']',
@@ -63,7 +70,22 @@ define(['jquery',  'component/template', 'template/chatTemplate', 'model/chat-co
 
                 });
 
+                $('.layout-content').on('tap', function(){
+                    qqface.hide();
+                });
+
             }());
+
+
+            // 聊天室数据交互
+            (function(){
+                var token = $.uri( location.href ).at('query').token;
+
+
+
+            }());
+
+
 
         };
     });

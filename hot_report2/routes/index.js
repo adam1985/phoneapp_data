@@ -61,7 +61,7 @@ module.exports = function(app) {
             if (err) {
                 posts = [];
             }
-            console.log(posts);
+
             res.render('list', {
                 title: '主页',
                 posts: posts,
@@ -117,7 +117,7 @@ module.exports = function(app) {
             pages = Math.ceil(totals / 6);
             indexConf.latestPage = pages;
 
-            fs.writeFile('./data2/index/index-conf.js', 'indexConfCallBack(' + JSON.stringify( indexConf ) + ')', function (err) {
+            fs.writeFile('./data/index/index-conf.js', 'indexConfCallBack(' + JSON.stringify( indexConf ) + ')', function (err) {
 
                 if (err) {
                     return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
@@ -138,7 +138,7 @@ module.exports = function(app) {
 
             }
 
-            fs.writeFile('./data2/index/banner-conf.js', 'bannerConfCallBack(' + JSON.stringify( bannerConf ) + ')', function (err) {
+            fs.writeFile('./data/index/banner-conf.js', 'bannerConfCallBack(' + JSON.stringify( bannerConf.slice(0, 5) ) + ')', function (err) {
 
                 if (err) {
                     return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
@@ -171,7 +171,7 @@ module.exports = function(app) {
 
             }
 
-            fs.writeFile('./data2/index/focus-conf.js', 'focusConfCallBack(' + JSON.stringify( focusConf ) + ')', function (err) {
+            fs.writeFile('./data/index/focus-conf.js', 'focusConfCallBack(' + JSON.stringify( focusConf.slice(0,6) ) + ')', function (err) {
 
                 if (err) {
                     return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
@@ -235,11 +235,11 @@ module.exports = function(app) {
 
             }
 
-            var newsListPages = 1;
+            var newsListPages = Math.ceil( newslist.length / 6 );
 
             for(var i = 1, len = newslist.length; i <= len; i++){
                 if( len < 6 ) {
-                    fs.writeFile('./data2/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify(newslist) + ')', function (err) {
+                    fs.writeFile('./data/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify(newslist) + ')', function (err) {
 
 
                         if (err) {
@@ -249,16 +249,16 @@ module.exports = function(app) {
                     });
                 }else
                 if( i % 6 == 0 ) {
-                    fs.writeFile('./data2/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify( newslist.slice(i-6, i) ) + ')', function (err) {
+                    fs.writeFile('./data/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify( newslist.slice(i-6, 6) ) + ')', function (err) {
 
                         if (err) {
                             return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
                         }
                         return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
                     });
-                    newsListPages++;
+                    newsListPages--;
                     if( i + 6 > len ){
-                        fs.writeFile('./data2/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify( newslist.slice(i+1, len) ) + ')', function (err) {
+                        fs.writeFile('./data/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify( newslist.slice(i) ) + ')', function (err) {
 
                             if (err) {
                                 return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
@@ -321,7 +321,7 @@ module.exports = function(app) {
                         pages = Math.ceil(totals / 6);
                         list1Conf.latestPage = pages;
 
-                    fs.writeFile('./data2/list/' + newslistConf[index].type + '/list-conf.js', 'listConfCallBack(' + JSON.stringify( list1Conf ) + ')', function (err) {
+                    fs.writeFile('./data/list/' + newslistConf[index].type + '/list-conf.js', 'listConfCallBack(' + JSON.stringify( list1Conf ) + ')', function (err) {
 
                         if (err) {
                             return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
@@ -353,11 +353,11 @@ module.exports = function(app) {
 
                     });
 
-                    var newsListPages = 1;
+                    var newsListPages = Math.ceil( newslist.length / 6 );
 
                     for(var i = 1, len = newslist.length; i <= len; i++){
                         if( len < 6 ) {
-                            fs.writeFile('./data2/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify(newslist) + ')', function (err) {
+                            fs.writeFile('./data/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify(newslist) + ')', function (err) {
 
 
                                 if (err) {
@@ -367,16 +367,16 @@ module.exports = function(app) {
                             });
                         }else
                         if( i % 6 == 0 ) {
-                            fs.writeFile('./data2/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify( newslist.slice(i-6, i) ) + ')', function (err) {
+                            fs.writeFile('./data/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify( newslist.slice(i-6, 6) ) + ')', function (err) {
 
                                 if (err) {
                                     return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
                                 }
                                 return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
                             });
-                            newsListPages++;
+                            newsListPages--;
                             if( i + 6 > len ){
-                                fs.writeFile('./data2/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify( newslist.slice(i+1, len) ) + ')', function (err) {
+                                fs.writeFile('./data/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify( newslist.slice(i) ) + ')', function (err) {
 
                                     if (err) {
                                         return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
@@ -411,7 +411,7 @@ module.exports = function(app) {
                     obj.title = v.title;
                     obj.content = v.content;
 
-                    fs.writeFile('./data2/article/' + v.time + '.js', 'articleCallBack(' + JSON.stringify( obj ) + ')', function (err) {
+                    fs.writeFile('./data/article/' + v.time + '.js', 'articleCallBack(' + JSON.stringify( obj ) + ')', function (err) {
 
                         if (err) {
                             return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');

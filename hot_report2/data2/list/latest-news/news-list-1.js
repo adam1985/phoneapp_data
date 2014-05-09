@@ -1,1 +1,0 @@
-newsListsCallBack([{"title":"fasdfafafas","imgSrc":"ffasdfsa","info":"fasdfa","aid":"1399539408724"},{"title":"最新赛况标题","imgSrc":"http://www.google.com/logo.png","info":"最新赛况文章描述","aid":"1399536160283"}])

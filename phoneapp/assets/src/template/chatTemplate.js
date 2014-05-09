@@ -2,15 +2,21 @@ define(function(){
     var tipTemplate =  '<p>' + '{{= welcome }}' + '</p>';
 
     var contentTemplate =
-            +    '{{ for (var i = 0; i < list.length; i ++) { }}'
-            +       '<div class="chat-item my-chat-item">'
+            +    '{{ for (var i = 0; i < list.length; i ++) { '
+            +         'var self =   list[i];'
+            +         'if( self.me ) { '
+            +    '}}'
+            +         '<div class="chat-item my-chat-item">'
+            +         '{{ }else{ }}'
+            +         '<div class="chat-item">'
+            +         '{{ } }}'
             +           '<div class="user-title">'
-            +                '<span>{{= user }}</span>'
-            +                '<span class="user-phone-number">{{= phone }}</span>'
-            +                '<span class="create-time">{{= time }}</span>'
+            +                '<span>{{= self.user }}</span>'
+            //+                '<span class="user-phone-number">{{= phone }}</span>'
+            +                '<span class="create-time">{{= self.time }}</span>'
             +           '</div>'
             +            '<div class="chat-content">'
-            +                '<p>{{= content }}</p>'
+            +                '<p>{{= self.content }}</p>'
             +            '</div>'
             +        '</div>'
             +    '{{ } }}';

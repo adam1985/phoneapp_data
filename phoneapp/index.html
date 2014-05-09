@@ -106,9 +106,7 @@
             <a class="category" href="{{= target.src }}?category={{= target.type }}">{{= target.title }}</a>
         </div>
 
-        {{ if( target.list.length >>> 0 ) {
-            target.list = target.list.reverse();
-        }}
+        {{ if( target.list.length >>> 0 ) { }}
         {{ for ( var j = 0, length = target.list.length; j < length; j++ ) {
             var current = target.list[j];
         }}
@@ -147,6 +145,6 @@
     {{ } }}
     {{ } }}
 </script>
-<script src="assets/require.min.js" data-main="assets/src/index"></script>
+<script src="assets/require.min.js" data-main="assets/dist/index"></script>
 </body>
 </html>

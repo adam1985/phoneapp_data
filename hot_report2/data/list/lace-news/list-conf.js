@@ -1,8 +1,1 @@
-listConfCallBack(
-    {
-        "title": "足球花边",
-        "newsSource": "news-list-",
-        "latestPage": 3
-    }
-);
-
+listConfCallBack({"title":"足球花边","newsSource":"news-list-","latestPage":0})

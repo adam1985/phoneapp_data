@@ -42,9 +42,7 @@
 
 <!-- 新闻列表模板 -->
 <script id="news-lists-template" type="text/html">
-    {{ if( list.length >>> 0 ){
-        list = list.reverse();
-    }}
+    {{ if( list.length >>> 0 ){ }}
     {{ for ( var i = 0, len = list.length; i < len; i++ ) {
         var target = list[i];
     }}
