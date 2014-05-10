@@ -10,7 +10,7 @@ node /opt/baofeng-data/phoneapp_data_pangyuanxing/popv5/static/hot_report2/app
 http://fjc1.pop.baofeng.net/popv5/static/phoneapp/assets/src/controller/getFirstPagelist.js
 http://fjc1.pop.baofeng.net/popv5/static/phoneapp/assets/src/controller/getFirstPageList.js
 
-sudo /usr/bin/nohup /usr/local/bin/node /opt/baofeng-data/phoneapp_data_pangyuanxing/popv5/static/hot_report2/app &
+cd /opt/baofeng-data/phoneapp_data_pangyuanxing/popv5/static/hot_report2/ && sudo /usr/bin/nohup /usr/local/bin/node app &
 
 ps aux | grep node
 

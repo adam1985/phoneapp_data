@@ -1,6 +1,8 @@
 var crypto = require('crypto'),
     Post = require('../models/post.js'),
-    fs = require('fs');
+    fs = require('fs'),
+	rd = require('rd'),
+	path = require('path');
 module.exports = function(app) {
 
     app.get('/', function (req, res) {
@@ -80,6 +82,7 @@ module.exports = function(app) {
 
         Post.remove(req.param('time'), function (err) {
             if (err) {
+			
                 return res.end('<script>alert("删除失败!!!");</script><a href="/list">返回</a> ');
             }
 
@@ -90,6 +93,63 @@ module.exports = function(app) {
     app.get('/create', function (req, res) {
         res.render('create', { title: '文章生成' });
     });
+	
+	app.get('/removefile', function (req, res) {
+	
+		res.set({
+            'Content-Type': 'text/html; charset=UTF-8'
+        });
+
+		function rmdir (dirname, f) {
+			var count = 0;
+			fs.readdir(dirname, function(err, basenames) {
+				count = basenames.length;
+				if (count > 0) {
+					basenames.forEach(function (basename) {  
+						var filename = path.join(dirname, basename);
+						fs.stat(filename, function (err, stats) {
+							if (err) { throw err; }
+
+							if (stats.isFile()) {
+								fs.unlink(filename, f);
+							} else if (stats.isDirectory()) {
+								rmdir(filename);
+							}
+						});
+					});
+				} else {
+					return res.end('<script>alert("操作失败!!!");</script><a href="/create">返回</a> ');
+				}
+			});
+		}
+		
+
+		
+		
+		// 异步遍历目录下的所有文件
+		rd.each('./data', function (f, s, next) {
+		  // 每找到一个文件都会调用一次此函数
+		  // 参数s是通过 fs.stat() 获取到的文件属性值
+		  console.log('file: %s', f);
+		  // 必须调用next()才能继续
+		  next();
+		  
+		  fs.unlink(f, function(err){
+			if(err){
+				return res.end('<script>alert("操作失败!!!");</script><a href="/create">返回</a> ');
+			}else {
+				return res.end('<script>alert("操作成功!!!");</script><a href="/create">返回</a> ');
+			}
+			
+		  });
+		}, function (err) {
+		  if (err) throw err;
+		  // 完成
+		});
+		
+	
+
+	});
 
     app.get('/createIndex', function (req, res) {
 
@@ -196,15 +256,20 @@ module.exports = function(app) {
                 ];
 
             if( doc ){
-                var lists;
+			
+                
                 doc.forEach(function(val ,index){
                     var category = Number( val.category );
                     if( category > 1 ){
+					
+						var lists = [];
 
-                        var obj = Object.create(newslistConf)[category - 2];
+                        var obj = {
+							title : newslistConf[category - 2].title,
+							type : newslistConf[category - 2].type
+						};
                         obj.src = "list.html";
 
-                        lists = [];
 
                         var obj1 = {
                             title : val.title,
@@ -214,18 +279,19 @@ module.exports = function(app) {
 
                         if( val.type == '0'){
                             obj1.aid = val.time;
+							obj1.src = "article.html";
                         }
 
                         if( val.type == '1'){
                             obj1.player = true;
                             obj1.videoSrc = val.videoSrc;
+							obj1.src = val.src;
                         }
 
 
                         lists.push( obj1 );
 
                         obj.list = lists;
-
 
 
                         newslist.push(obj);
@@ -342,11 +408,13 @@ module.exports = function(app) {
 
                             if( val.type == '0'){
                                 obj.aid = val.time;
+								obj.src = "article.html";
                             }
 
                             if( val.type == '1'){
                                 obj.player = true;
                                 obj.videoSrc = val.videoSrc;
+								obj.src = val.src;
                             }
 
                             newslist.push(obj);
@@ -420,6 +488,8 @@ module.exports = function(app) {
                     });
                 }
             });
+			return res.end('<script>alert("没有文章生成!!!");</script><a href="/create">返回</a> ');
+			
         });
     });
 
