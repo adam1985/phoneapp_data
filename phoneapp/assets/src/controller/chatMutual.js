@@ -20,6 +20,7 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                     time: 60
                                 },
                                 success: function (getMessage) {
+
                                     if (getMessage.success) {
                                         var
                                             messageData = getMessage.data,
