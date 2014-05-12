@@ -2,7 +2,7 @@ define(function(){
     var tipTemplate =  '<p>' + '{{= welcome }}' + '</p>';
 
     var contentTemplate =
-            +    '{{ for (var i = 0; i < list.length; i ++) { '
+                '{{ for (var i = 0; i < list.length; i ++) { '
             +         'var self =   list[i];'
             +         'if( self.me ) { '
             +    '}}'
@@ -16,7 +16,7 @@ define(function(){
             +                '<span class="create-time">{{= self.time }}</span>'
             +           '</div>'
             +            '<div class="chat-content">'
-            +                '<p>{{= self.content }}</p>'
+            +                '<p>{{== self.content }}</p>'
             +            '</div>'
             +        '</div>'
             +    '{{ } }}';

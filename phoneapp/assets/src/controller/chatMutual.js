@@ -8,7 +8,7 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
             // 聊天室数据交互
             (function () {
                 var token = $.uri(location.href).at('query').token,
-                    getMessage = function (token, name) {
+                    getMessage = function (token, name, uid) {
 
                         return (function () {
                             var arg = arguments;
@@ -29,13 +29,15 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                             };
                                         if (messageData.length >>> 0) {
                                             $.each(messageData, function () {
-                                                var messages = {
-                                                    user: name,
-                                                    me : false,
-                                                    time: this.time,
-                                                    content: this.message
-                                                };
-                                                data.list.push(messages);
+                                                if( this.id != uid ) {
+                                                    var messages = {
+                                                        user: name,
+                                                        me : false,
+                                                        time: this.time,
+                                                        content: this.message
+                                                    };
+                                                    data.list.push(messages);
+                                                }
                                             });
 
                                             var contentTemplate = template.compile(chatTemplate.contentTemplate);
@@ -53,7 +55,7 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                 },
                                 error: function (XMLHttpRequest, textStatus) {
                                     //if(textStatus=="timeout"){
-                                        //arg.callee();
+                                        arg.callee();
                                     //}
                                 }
                             }, true);
@@ -73,7 +75,7 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                         },
                         success: function (joinChat) {
                             if (joinChat.success) {
-                                getMessage(token, joinChat.name);
+                                getMessage(token, joinChat.name, joinChat.data.id);
                             }
                         }
                     }, true);
@@ -86,30 +88,29 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                     var message = inputChatMsg.val();
                     if( message ){
                         ajax({
-                            url : '/sendMessage',
+                            url : '/sendMessage?token=' + token,
                             type : 'post',
                             data : {
-                                token: token,
                                 message : message
                             },
                             success : function( res ){
+                                var data = {
+                                    list: []
+                                };
+                                var messages = {
+                                    user: "我:",
+                                    me : true,
+                                    time: res.time
+                                };
                                 if( res.success ) {
-                                    var data = {
-                                        list: []
-                                    };
-                                    var messages = {
-                                        user: "我:",
-                                        me : true,
-                                        time: res.time,
-                                        content: ubbReplace( message )
-                                    };
-                                    data.list.push( messages );
-
-                                    var contentTemplate = template.compile(chatTemplate.contentTemplate);
-                                    $('#chat-wrap').append(contentTemplate( data ));
+                                    messages.content = ubbReplace( message );
                                 } else {
-                                    alert('信息发送失败!!!');
+                                    messages.content = '消息发送失败'
                                 }
+                                data.list.push( messages );
+
+                                var contentTemplate = template.compile(chatTemplate.contentTemplate);
+                                $('#chat-wrap').append(contentTemplate( data ));
                             }
                         });
                     }
