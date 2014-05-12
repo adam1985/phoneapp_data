@@ -40,16 +40,17 @@ body{ width: 100%; height: 100%; background: url(../images/bg.png) repeat-x #102
 .partner-invite-item{ padding: 0 46px 50px;}
 .partner-invite-res{ line-height: 1.5em; text-align: center; color: #48715e; margin-top: 8px;}
 
-.my-install{ width: 480px;background: url("../images/repeat-x-bg.png") repeat-x 0 305px; position:relative;left: -2px; padding-bottom: 157px; overflow: hidden;}
+.my-install{ width: 480px;background: url("../images/repeat-x-bg.png") repeat-x 0 305px; position:relative;left: -2px; padding-bottom: 50px; overflow: hidden;}
 .my-invite-box{ margin: 30px 0 0 80px;}
-.my-invite-num{ height: 48px; line-height: 48px; width: 340px; background: url(../images/my-invite-num.png) no-repeat center center; color: #688b7f; font-size: 18px; text-align: center;}
+.my-invite-num{ height: 48px; line-height: 48px; width: 340px; color: #688b7f; font-size: 18px; text-align: center;}
 .my-invite-num span{ margin-left: 10px;}
 .my-invite-box p{ width: 340px; color: #48715e; font-size: 14px; text-align: center; line-height: 30px;}
 .install-readme{ margin: 30px 0 0 30px;}
-.quick-mark{width: 100%; margin: 30px 0 0; text-align: center;}
-
-.quick-mark-item img{ display: block;overflow: hidden; width: 280px; margin: auto;}
-
+.quick-mark{width: 100%; margin-bottom: 10px;}
+.quick-mark-item{width: 49.9%; overflow: hidden;  border-width: 0;}
+.quick-mark-item img,.quick-mark-item span{ display: block;overflow: hidden;}
+.quick-mark-item img{ width: 183px; margin: 0 auto;}
+.quick-mark-item span{ text-align: center; padding: 12px 0; color: #48715e; font-size: 18px;}
 .install-readme p,.select-download{ line-height: 1.5em; font-size: 16px;}
 .select-download{ padding: 25px 0 25px 30px;}
 .download-buttons{ padding-bottom: 3px;}

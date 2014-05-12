@@ -1,16 +1,15 @@
-define(['jquery',  'component/template', 'component/jquery.swiper', 'component/loading',
+define(['jquery', 'jquery.mobile',  'component/template', 'component/touchslider',
     'component/superMarquee', './pullDownUpLoad', './playerVideo', 'component/tools', 'conf/config'],
-    function($, template, Swiper, loading, superMarquee, pullDownUpLoad, playerVideo, tools, config){
+    function($, mobile, template, TouchSlider, superMarquee, pullDownUpLoad, playerVideo, tools, config){
 
         return function( complete ){
-            var mobileLoad = loading();
 
             $.ajax({
                 url: config.base + 'data/index/index-conf.js',
                 dataType: 'jsonp',
                 jsonpCallback : 'indexConfCallBack',
                 beforeSend : function() {
-                    mobileLoad.show();
+                    $.mobile.loading('show');
                 },
                 success: function( data ){
                     if( data ) {
@@ -29,8 +28,6 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
                                         layoutBanner.html( templateStr );
                                     } else {
                                         layoutBanner.hide();
-                                        sessionStorage.setItem('is-hide-banner', true);
-
                                     }
                                 }
                             }),
@@ -75,7 +72,7 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
 
                         $.when(bannerDtd, focusDtd, newsDtd).done(function(){
 
-                            mobileLoad.hide();
+                            $.mobile.loading('hide');
 
                             var renderBanner = function(){
                                 var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
@@ -86,14 +83,6 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
 
                                 if( isShow ) {
                                     layoutBannerBox.slideDown('slow', function(){
-                                        // 品牌露出无缝滚动
-                                        $('.layout-banner').superMarquee({
-                                            isEqual: true,
-                                            distance: 30,
-                                            time: 10,
-                                            direction: 'up'
-                                        });
-
                                         dtd.resolve(); // 改变Deferred对象的执行状态
                                     });
                                 } else {
@@ -108,59 +97,28 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
                                     layoutBannerBox.slideUp('slow');
                                 });
 
-
+                                // 品牌露出无缝滚动
+                                $('.layout-banner').superMarquee({
+                                    isEqual: true,
+                                    distance: 30,
+                                    time: 10,
+                                    direction: 'up'
+                                });
 
                                 return dtd.promise(); // 返回promise对象
                             };
 
 
-
-
-                            var focusPictureButtons = $('#focus-picture-buttons').find('a'),
-                                foucsPicTureTitles = $('#focus-picture-titles').find('a');
-
                             // 设置焦点图播放
-                            /*TouchSlider('focus-picture-box', {
+                            TouchSlider('focus-picture-box',{
                                 auto: true,
                                 speed: 300,
                                 timeout: 5000,
-                                before: function (index) {
-                                    focusPictureButtons.removeClass('on').eq(index).addClass('on');
-                                    foucsPicTureTitles.find('a').removeClass('on').eq(index).addClass('on');
-                                }
-                            });*/
-
-                            $('.swiper-container').swiper({
-                                mode:'horizontal',
-                                loop: true,
-                                autoplay: 5000,
-                                onSlideChangeStart : function( swiper) {
-                                    var length = swiper.slides.length - 2,
-                                        activeIndex = swiper.activeIndex - 2,
-                                        nextIndex = activeIndex + 1;
-
-                                    if( nextIndex > length - 1 ) {
-                                        nextIndex = 0;
-                                    }
-
-                                    focusPictureButtons.removeClass('on').eq( nextIndex ).addClass('on');
-                                    foucsPicTureTitles.removeClass('on').eq( nextIndex ).addClass('on');
-
-
+                                before: function(index){
+                                    $('#focus-picture-buttons').find('a').removeClass('on').eq( index ).addClass('on');
+                                    $('#focus-picture-titles').find('a').removeClass('on').eq( index ).addClass('on');
                                 }
                             });
-
-                            /*$('.focus-picture-box').touchSlider({
-                                flexible : true,
-                                speed : 200,
-                                paging : focusPictureButtons,
-                                listSelector : '.focus-picture-list',
-                                counter : function (e) {
-                                    focusPictureButtons.removeClass('on').eq( e.current - 1 ).addClass('on');
-                                    foucsPicTureTitles.removeClass('on').eq( e.current - 1 ).addClass('on');
-                                }
-                            });*/
-
 
                             playerVideo();
 
@@ -168,10 +126,7 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
 
                             $.when(renderBanner()).done(function(){
                                 var focusPictrue = $('#focus-picture'),
-                                    firstFocusImgs = $('#focus-picture-box').find('img'),
-                                    picWidth = 640, deviceWidth = document.documentElement.clientWidth,
-                                    picHeight = ( deviceWidth / picWidth ) * 328;
-                                    //    focusPictrue.height( picHeight );
+                                    firstFocusImgs = $('#focus-picture-box').find('img');
                                 var myScroll = pullDownUpLoad(function(myScroll){
                                     $.ajax({
                                         url: config.base + 'data/index/' + data.newsSource + data.latestPage + '.js',
@@ -218,7 +173,7 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
 
 
                                 firstFocusImgs.on('load', function() {
-                                    //focusPictrue.height( 'auto' );
+                                    focusPictrue.height( 'auto' );
                                     myScroll.refresh();
                                 });
 

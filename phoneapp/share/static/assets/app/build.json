@@ -10,6 +10,6 @@
     "removeCombined": true,
     "preserveLicenseComments": false,
     "optimizeCss": "standard",
-    "name": "index",
+    "name": "controller/index",
     "out": "dist/index.js"
 }

@@ -1,0 +1,11 @@
+{
+    "dir": "dist",
+    "removeCombined": true,
+    "preserveLicenseComments": false,
+    "optimizeCss": "standard",
+    "modules": [
+        {
+            "name": "js/index"
+        }
+    ]
+}

@@ -1,6 +1,10 @@
 define(['jquery', 'jquery.mobile', './commonInitialize',  './commonIscroll', './generalizeInitialize'],
     function($, mobile, commonInitialize,  commonIscroll, generalizeInitialize){
 
+        $.extend( $.mobile, {
+            ajaxEnabled: false
+        });
+
         $(function(){
 
             // 初始化公共模板
@@ -12,4 +16,4 @@ define(['jquery', 'jquery.mobile', './commonInitialize',  './commonIscroll', './
 
         });
 
-    });
+});
