@@ -134,7 +134,8 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
 
                             $.when(renderBanner()).done(function(){
                                 var focusPictrue = $('#focus-picture'),
-                                    firstFocusImgs = $('#focus-picture-box').find('img'),
+                                    foucsPictureBox = $('#focus-picture-box'),
+                                    firstFocusImgs = foucsPictureBox.find('img'),
                                     picWidth = 640, deviceWidth = document.documentElement.clientWidth,
                                     picHeight = ( deviceWidth / picWidth ) * 328;
                                     //focusPictrue.height( picHeight );
@@ -142,23 +143,26 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
                                 var focusPictureButtons = $('#focus-picture-buttons').find('a'),
                                     foucsPicTureTitles = $('#focus-picture-titles').find('a');
 
-                                $('.swiper-container').swiper({
-                                    mode:'horizontal',
-                                    loop: true,
-                                    autoplay: 5000,
-                                    onSlideChangeStart : function( swiper) {
-                                        var length = swiper.slides.length - 2,
-                                            activeIndex = swiper.activeIndex - 2,
-                                            nextIndex = activeIndex + 1;
+                                if( foucsPictureBox.length ) {
+                                    $('.swiper-container').swiper({
+                                        mode:'horizontal',
+                                        loop: true,
+                                        autoplay: 5000,
+                                        onSlideChangeStart : function( swiper) {
+                                            var length = swiper.slides.length - 2,
+                                                activeIndex = swiper.activeIndex - 2,
+                                                nextIndex = activeIndex + 1;
 
-                                        if( nextIndex > length - 1 ) {
-                                            nextIndex = 0;
+                                            if( nextIndex > length - 1 ) {
+                                                nextIndex = 0;
+                                            }
+
+                                            focusPictureButtons.removeClass('on').eq( nextIndex ).addClass('on');
+                                            foucsPicTureTitles.removeClass('on').eq( nextIndex ).addClass('on');
                                         }
+                                    });
+                                }
 
-                                        focusPictureButtons.removeClass('on').eq( nextIndex ).addClass('on');
-                                        foucsPicTureTitles.removeClass('on').eq( nextIndex ).addClass('on');
-                                    }
-                                });
 
                                 var myScroll = pullDownUpLoad(function(myScroll){
                                     pageIndexArg.pageIndex = data.latestPage;

@@ -1,1 +1,0 @@
-newsListCallBack([{"title":"最新赛况","type":"latest-news","src":"list.html","list":[{"title":"最新赛况标题","imgSrc":"http://www.google.com/logo.png","info":"最新赛况文章描述","aid":"1399536160283"}]}])

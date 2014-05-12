@@ -1,7 +1,6 @@
 var crypto = require('crypto'),
     Post = require('../models/post.js'),
     fs = require('fs'),
-	rd = require('rd'),
 	path = require('path');
 module.exports = function(app) {
 
@@ -18,10 +17,10 @@ module.exports = function(app) {
             });
             if (err) {
 
-                res.end('<script>alert("发布失败!!!");</script><a href="/">返回发布文章</a> ');
+                res.end('<script>alert("发布失败!!!");history.go(-1);</script><a href="/">返回发布文章</a> ');
             }
 
-            res.end('<script>alert("发布成功!!!");</script><a href="/">返回发布文章</a><br /><a href="/create">生成文章</a> ');
+            res.end('<script>alert("发布成功!!!"); location.assign("/list");</script><a href="/">返回发布文章</a><br /><a href="/create">生成文章</a> ');
         });
     });
 
@@ -64,6 +63,12 @@ module.exports = function(app) {
                 posts = [];
             }
 
+            var categorys = ["品牌露出", "焦点图", "最新赛况", "精彩进球", "足球花边"];
+
+            posts.forEach(function(v){
+                v.category = categorys[+v.category];
+            });
+
             res.render('list', {
                 title: '主页',
                 posts: posts,
@@ -83,10 +88,10 @@ module.exports = function(app) {
         Post.remove(req.param('time'), function (err) {
             if (err) {
 			
-                return res.end('<script>alert("删除失败!!!");</script><a href="/list">返回</a> ');
+                return res.end('<script>alert("删除失败!!!");location.assign("/list");</script><a href="/list">返回</a> ');
             }
 
-            return res.end('<script>alert("删除成功!!!");</script><a href="/list">返回</a> ');
+            return res.end('<script>alert("删除成功!!!");location.assign("/list");</script><a href="/list">返回</a> ');
         });
     });
 
@@ -113,41 +118,26 @@ module.exports = function(app) {
 							if (stats.isFile()) {
 								fs.unlink(filename, f);
 							} else if (stats.isDirectory()) {
-								rmdir(filename);
+								rmdir(filename, f);
 							}
 						});
 					});
 				} else {
-					return res.end('<script>alert("操作失败!!!");</script><a href="/create">返回</a> ');
-				}
+                    f(false);
+                }
+
 			});
 		}
-		
 
-		
-		
-		// 异步遍历目录下的所有文件
-		rd.each('./data', function (f, s, next) {
-		  // 每找到一个文件都会调用一次此函数
-		  // 参数s是通过 fs.stat() 获取到的文件属性值
-		  console.log('file: %s', f);
-		  // 必须调用next()才能继续
-		  next();
-		  
-		  fs.unlink(f, function(err){
-			if(err){
-				return res.end('<script>alert("操作失败!!!");</script><a href="/create">返回</a> ');
-			}else {
-				return res.end('<script>alert("操作成功!!!");</script><a href="/create">返回</a> ');
-			}
-			
-		  });
-		}, function (err) {
-		  if (err) throw err;
-		  // 完成
-		});
-		
-	
+        rmdir('./data/', function(err){
+            if( err ){
+                return res.end('<script>alert("操作失败!!!"); history.go(-1);</script><a href="/create">返回</a> ');
+            } else {
+                return res.end('<script>alert("操作成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
+            }
+
+        });
+
 
 	});
 
@@ -180,9 +170,9 @@ module.exports = function(app) {
             fs.writeFile('./data/index/index-conf.js', 'indexConfCallBack(' + JSON.stringify( indexConf ) + ')', function (err) {
 
                 if (err) {
-                    return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                    return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                 }
-                return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
             });
 
             if( doc ){
@@ -201,9 +191,9 @@ module.exports = function(app) {
             fs.writeFile('./data/index/banner-conf.js', 'bannerConfCallBack(' + JSON.stringify( bannerConf.slice(0, 5) ) + ')', function (err) {
 
                 if (err) {
-                    return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                    return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                 }
-                return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
             });
 
 
@@ -234,9 +224,9 @@ module.exports = function(app) {
             fs.writeFile('./data/index/focus-conf.js', 'focusConfCallBack(' + JSON.stringify( focusConf.slice(0,6) ) + ')', function (err) {
 
                 if (err) {
-                    return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                    return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                 }
-                return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
             });
 
 
@@ -309,27 +299,27 @@ module.exports = function(app) {
 
 
                         if (err) {
-                            return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                            return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                         }
-                        return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                        return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                     });
                 }else
                 if( i % 6 == 0 ) {
                     fs.writeFile('./data/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify( newslist.slice(i-6, 6) ) + ')', function (err) {
 
                         if (err) {
-                            return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                            return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                         }
-                        return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                        return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                     });
                     newsListPages--;
                     if( i + 6 > len ){
                         fs.writeFile('./data/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify( newslist.slice(i) ) + ')', function (err) {
 
                             if (err) {
-                                return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                                return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                             }
-                            return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                            return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                         });
                     }
 
@@ -390,9 +380,9 @@ module.exports = function(app) {
                     fs.writeFile('./data/list/' + newslistConf[index].type + '/list-conf.js', 'listConfCallBack(' + JSON.stringify( list1Conf ) + ')', function (err) {
 
                         if (err) {
-                            return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                            return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                         }
-                        return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                        return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                     });
 
                     var newslist = [];
@@ -429,27 +419,27 @@ module.exports = function(app) {
 
 
                                 if (err) {
-                                    return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                                    return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                                 }
-                                return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                                return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                             });
                         }else
                         if( i % 6 == 0 ) {
                             fs.writeFile('./data/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify( newslist.slice(i-6, 6) ) + ')', function (err) {
 
                                 if (err) {
-                                    return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                                    return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                                 }
-                                return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                                return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                             });
                             newsListPages--;
                             if( i + 6 > len ){
                                 fs.writeFile('./data/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify( newslist.slice(i) ) + ')', function (err) {
 
                                     if (err) {
-                                        return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                                        return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                                     }
-                                    return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                                    return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                                 });
                             }
 
@@ -482,13 +472,13 @@ module.exports = function(app) {
                     fs.writeFile('./data/article/' + v.time + '.js', 'articleCallBack(' + JSON.stringify( obj ) + ')', function (err) {
 
                         if (err) {
-                            return res.end('<script>alert("生成失败!!!");</script><a href="/create">返回</a> ');
+                            return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                         }
-                        return res.end('<script>alert("生成成功!!!");</script><a href="/create">返回</a> ');
+                        return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                     });
                 }
             });
-			return res.end('<script>alert("没有文章生成!!!");</script><a href="/create">返回</a> ');
+			return res.end('<script>alert("没有文章生成!!!");history.go(-1);</script><a href="/create">返回</a> ');
 			
         });
     });
