@@ -24,6 +24,7 @@
                         <li class="list-group-item">
                             <%= posts[i].title %>
                             [<%= posts[i].category %>]
+                            <a class="btn btn-default" href="/edit?time=<%= posts[i].time %>">编辑</a>
                             <a class="btn btn-default" href="/remove?time=<%= posts[i].time %>">删除</a></li>
                     <% } %>
               </ul>

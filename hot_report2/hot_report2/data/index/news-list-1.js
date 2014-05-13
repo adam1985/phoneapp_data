@@ -1,0 +1,1 @@
+newsListCallBack([{"title":"最新赛况","type":"latest-news","src":"list.html","list":[{"title":"fasdfa1111","imgSrc":"fasd","info":"fasfa","aid":"1399973512383","src":"article.html"}]}])

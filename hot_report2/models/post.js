@@ -174,8 +174,8 @@ Post.getOne = function(name, day, title, callback) {
     });
 };
 
-//返回原始发表的内容（markdown 格式）
-Post.edit = function(name, day, title, callback) {
+//返回原始发表的内容
+Post.edit = function(time, callback) {
     //打开数据库
     mongodb.open(function (err, db) {
         if (err) {
@@ -187,24 +187,21 @@ Post.edit = function(name, day, title, callback) {
                 mongodb.close();
                 return callback(err);
             }
-            //根据用户名、发表日期及文章名进行查询
             collection.findOne({
-                "name": name,
-                "time.day": day,
-                "title": title
+                "time": time
             }, function (err, doc) {
                 mongodb.close();
                 if (err) {
                     return callback(err);
                 }
-                callback(null, doc);//返回查询的一篇文章（markdown 格式）
+                callback(null, doc);
             });
         });
     });
 };
 
 //更新一篇文章及其相关信息
-Post.update = function(name, day, title, post, callback) {
+Post.update = function(time, category, type, title, src, ovideoSrc, imgSrc, info, content, callback) {
     //打开数据库
     mongodb.open(function (err, db) {
         if (err) {
@@ -218,11 +215,18 @@ Post.update = function(name, day, title, post, callback) {
             }
             //更新文章内容
             collection.update({
-                "name": name,
-                "time.day": day,
-                "title": title
+                "time": time
             }, {
-                $set: {post: post}
+                $set: {
+                    category: category,
+                    type: type,
+                    title : title,
+                    src : src,
+                    ovideoSrc : ovideoSrc,
+                    imgSrc : imgSrc,
+                    info : info,
+                    content : content
+                }
             }, function (err) {
                 mongodb.close();
                 if (err) {

@@ -29,8 +29,8 @@ define(['jquery', './maskLayer'], function ($, maskLayer ) {
         config = $.extend({
             url: 'assets/styles/mobile/images/ajax-loader.gif',
             isMask: true,
-            width: 48,
-            height: 48,
+            width: 32,
+            height: 32,
             wrapBox: document.body
 
         }, config);

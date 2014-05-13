@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel='stylesheet' href='/css/bootstrap.css' />
+    <link rel='stylesheet' href='/css/bootstrap-theme.css' />
+    <link rel='stylesheet' href='/css/font-awesome.min.css' />
+    <link rel='stylesheet' href='/css/summernote.css' />
+    <link rel='stylesheet' href='/css/layout.css' />
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/summernote.js"></script>
+    <script src="/js/index.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <%- include nav %>
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-footer">火热战报文章发布系统</div>
+                <form action="/edit" method="post">
+                    <div class="panel-body">
+                        <div class="select-group">
+                            <label>分类</label>
+                            <select name="category">
+                                <% for( var i = 0; i < 5 ; i++) {
+                                    var categorys = ["品牌露出","焦点图","最新赛况","精彩进球","足球花边"];
+                                    if( i == doc.category ) {
+                                %>
+                                        <option value="<%= i %>" selected="selected"><%= categorys[i] %></option>
+                                    <% } else { %>
+                                        <option value="<%= i %>"><%= categorys[i] %></option>
+                                    <% } %>
+                                <% } %>
+                            </select>
+                        </div>
+                        <br />
+
+                        <div class="select-group">
+                            <label>文章类型</label>
+                            <select name="type">
+                                <% for( var i = 0; i < 2 ; i++) {
+                                    var types = ["文章","视频"];
+                                        if( i == doc.types ) {
+                                %>
+                                            <option value="<%= i %>" selected="selected"><%= types[i] %></option>
+                                        <% } else { %>
+                                            <option value="<%= i %>"><%= types[i] %></option>
+                                        <% } %>
+                                <% } %>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="input-group">
+                            <span class="input-group-addon">标题</span>
+                            <input name="title" type="text" value="<%= doc.title %>" class="form-control" placeholder="">
+                        </div>
+                        <br />
+
+                        <div class="input-group">
+                            <span class="input-group-addon">外链地址</span>
+                            <input name="src" type="text" class="form-control" value="<%= doc.src %>" placeholder="类型是视频或品牌露出填写，其它类型忽略">
+                        </div>
+                        <br />
+
+                        <div class="input-group">
+                            <span class="input-group-addon">视频地址</span>
+                            <input name="ovideoSrc" type="text" class="form-control" value="<%= doc.ovideoSrc %>" placeholder="视频需要提供storm播放地址">
+                        </div>
+                        <br />
+
+                        <div class="input-group">
+                            <span class="input-group-addon">焦点图或缩略图地址</span>
+                            <input name="imgSrc" type="text" class="form-control" value="<%= doc.imgSrc %>" placeholder="焦点图大小640 x 328，缩略图大小220 x 164">
+                        </div>
+
+                        <br />
+
+                        <div class="input-group">
+                            <span class="input-group-addon">文章描述</span>
+                            <input name="info" type="text" class="form-control" value="<%= doc.info %>" placeholder="不能超过35个汉字">
+                        </div>
+
+                        <br />
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                            图片上传
+                        </button>
+                        　　文章中出现的图片大小640 x 350
+
+                        <br />
+                        <br />
+
+                        <div id="summernote" class="summernote"></div>
+
+                        <textarea class="hide" name="content" id="content"><%= doc.content %></textarea>
+                        <input type="hidden" name="time" value="<%= doc.time %>">
+
+                        <br />
+
+                        <input class="btn btn-primary" id="post-article" type="button" value="更新" />
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">图片上传</h4>
+            </div>
+            <div class="modal-body">
+                <iframe src="/upload" class="upload" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

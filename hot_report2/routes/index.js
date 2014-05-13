@@ -2,6 +2,12 @@ var crypto = require('crypto'),
     Post = require('../models/post.js'),
     fs = require('fs'),
 	path = require('path');
+
+
+var fstream = require('fstream'),
+    tar = require('tar'),
+    zlib = require('zlib');
+
 module.exports = function(app) {
 
     app.get('/', function (req, res) {
@@ -70,7 +76,7 @@ module.exports = function(app) {
             });
 
             res.render('list', {
-                title: '主页',
+                title: '火热战报文章列表页',
                 posts: posts,
                 page: page,
                 isFirstPage: (page - 1) == 0,
@@ -78,6 +84,34 @@ module.exports = function(app) {
             });
         });
     });
+
+    app.get('/edit', function (req, res) {
+        Post.edit(req.param('time'), function (err, doc) {
+            if (err) {
+                return res.redirect('back');
+            }
+            res.render('edit', {
+               title: '火热战报文章编辑',
+                doc: doc
+            });
+        });
+    });
+
+    app.post('/edit', function (req, res) {
+        res.set({
+            'Content-Type': 'text/html; charset=UTF-8'
+        });
+
+        Post.update(req.body.time, req.body.category, req.body.type, req.body.title, req.body.src, req.body.ovideoSrc, req.body.imgSrc, req.body.info, req.body.content, function (err) {
+            var url = '/edit?time=' + req.param('time');
+            if (err) {
+                return res.end('<script>alert("更新失败!!!");location.assign("' + url + '");</script><a href="/list">返回</a>');
+            }
+
+            return res.end('<script>alert("更新成功!!!");location.assign("/list");</script><a href="/list">返回</a> ');
+        });
+    });
+
 
     app.get('/remove', function (req, res) {
 
@@ -208,11 +242,12 @@ module.exports = function(app) {
 
                         if( val.type == '0'){
                             obj.aid = val.time;
+                            obj.src = "article.html";
                         }
 
                         if( val.type == '1'){
                             obj.player = true;
-                            obj.videoSrc = val.videoSrc;
+                            obj.videoSrc = val.ovideoSrc;
                         }
                         focusConf.push(obj);
                     }
@@ -274,7 +309,7 @@ module.exports = function(app) {
 
                         if( val.type == '1'){
                             obj1.player = true;
-                            obj1.videoSrc = val.videoSrc;
+                            obj1.videoSrc = val.ovideoSrc;
 							obj1.src = val.src;
                         }
 
@@ -403,7 +438,7 @@ module.exports = function(app) {
 
                             if( val.type == '1'){
                                 obj.player = true;
-                                obj.videoSrc = val.videoSrc;
+                                obj.videoSrc = val.ovideoSrc;
 								obj.src = val.src;
                             }
 
@@ -464,7 +499,7 @@ module.exports = function(app) {
 
         Post.getAll(null, null, function(err, doc ){
             doc.forEach(function(v){
-                if( +v.category > 0 ) {
+                if( +v.category > 0 && v.type == 0) {
                     var obj = {};
                     obj.title = v.title;
                     obj.content = v.content;
@@ -478,9 +513,48 @@ module.exports = function(app) {
                     });
                 }
             });
-			return res.end('<script>alert("没有文章生成!!!");history.go(-1);</script><a href="/create">返回</a> ');
+			return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
 			
         });
     });
 
+    app.get('/targz', function (req, res) {
+
+        res.set({
+            'Content-Type': 'text/html; charset=UTF-8'
+        });
+
+        fstream
+            .Reader("./data")
+            .pipe(fstream.Writer("./hot_report2/data"));
+
+        fstream
+            .Reader("./img")
+            .pipe(fstream.Writer("./hot_report2/img"));
+
+        fstream.Reader({ 'path': './hot_report2', 'type': 'Directory' })
+            .pipe(tar.Pack())
+            .pipe(zlib.Gzip())
+            .pipe(fstream.Writer({ 'path': 'data.tar.gz' }));
+
+        return res.end('<script>alert("操作成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
+
+    });
+
+    app.get('/download', function (req, res) {
+
+        res.set({
+            'Content-Type': 'text/html; charset=UTF-8'
+        });
+
+        res.download( './data.tar.gz', 'data.tar.gz', function(err){
+            if( err ){
+                return res.end('<script>alert("先打包数据，再进行下载数据!!");history.go(-1);</script><a href="/create">返回</a>')
+            }
+        } );
+
+    });
+
 };
+
+

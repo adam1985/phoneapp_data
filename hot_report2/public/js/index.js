@@ -1,11 +1,11 @@
 jQuery(function($) {
-    var summernote = $('#summernote');
+    var summernote = $('#summernote'), content = $('#content');
     summernote.summernote({
         height : 400
-    });
+    }).code(content.val());
 
     $('#post-article').click(function(){
-        $('#content').val( summernote.code());
+        content.val( summernote.code());
         $(this).closest('form').submit();
     });
 

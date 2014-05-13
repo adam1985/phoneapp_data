@@ -23,19 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="iphone.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/app/iphone.html">
+      <file leaf-file-name="generalize.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/pc/generalize.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="6" selection-start="398" selection-end="398" vertical-scroll-proportion="-7.1875" vertical-offset="0" max-vertical-offset="483">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="share-res.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="45" selection-start="712" selection-end="712" vertical-scroll-proportion="-4.2694526" vertical-offset="3331" max-vertical-offset="4025">
+            <state line="104" column="0" selection-start="3679" selection-end="3679" vertical-scroll-proportion="0.43659943" vertical-offset="2089" max-vertical-offset="2898">
               <folding />
             </state>
           </provider>
@@ -52,6 +43,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/html/app/share-res.html" />
+        <option value="$PROJECT_DIR$/html/pc/generalize.html" />
       </list>
     </option>
   </component>
@@ -93,7 +85,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -150,6 +141,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,23 +205,33 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/app/jump.html">
+    <entry file="file://$PROJECT_DIR$/html/app/iphone.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="32" selection-start="905" selection-end="905" vertical-scroll-proportion="0.6506365" vertical-offset="0" max-vertical-offset="851">
+        <state line="14" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="483">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/app/iphone.html">
+    <entry file="file://$PROJECT_DIR$/html/app/jump.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="398" selection-end="398" vertical-scroll-proportion="-7.1875" vertical-offset="0" max-vertical-offset="483">
-          <folding />
-        </state>
+        <state line="20" column="32" selection-start="905" selection-end="905" vertical-scroll-proportion="0.6506365" vertical-offset="0" max-vertical-offset="851" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="712" selection-end="712" vertical-scroll-proportion="-4.2694526" vertical-offset="3331" max-vertical-offset="4025">
+        <state line="19" column="13" selection-start="741" selection-end="741" vertical-scroll-proportion="-0.46397695" vertical-offset="759" max-vertical-offset="4025" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/app/iphone.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="0.48797736" vertical-offset="0" max-vertical-offset="707">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/pc/generalize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="0" selection-start="3679" selection-end="3679" vertical-scroll-proportion="0.43659943" vertical-offset="2089" max-vertical-offset="2898">
           <folding />
         </state>
       </provider>

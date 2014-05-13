@@ -181,8 +181,8 @@ border-radius:30px; text-align: center; text-shadow: none; font-size: 18px; font
 /* loading效果　*/
 
 .ajax-loading {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     background: url(../images/loading.png) no-repeat;
     background-position:0 100%;
     -webkit-transform:rotate(0deg) translateZ(0);
@@ -192,6 +192,7 @@ border-radius:30px; text-align: center; text-shadow: none; font-size: 18px; font
     -webkit-animation-duration:2s;
     -webkit-animation-iteration-count:infinite;
     -webkit-animation-timing-function:linear;
+    background-size: 100% auto;
 }
 
 @-webkit-keyframes loading {
@@ -223,7 +224,7 @@ border-radius:30px; text-align: center; text-shadow: none; font-size: 18px; font
 }
 .create-time{color: #b1b1b1;}
 .chat-content p{
-    font-size: 16px;
+    font-size: 14px;
     color: #787878;
     margin: 5px 0;
 }
@@ -255,4 +256,10 @@ padding: 30px 20px; z-index: 9999; box-sizing: border-box;
 .chat-alert-btn a{ display: block; width: 50%; background: #18aa79; height: 40px; line-height: 40px; color: #fff; margin: 30px auto 0;}
 .chat-alert-btn a:hover{background: #1ec18a;}
 
+.post-msg-err{
+    color: #f00;
+    font-style: normal;
+}
+.renew-post-btn{ color: #999; margin-left: 10px; }
+.renew-post-btn:hover{ color: #2da67b;}
 .qqface{ width: 100%; position: fixed; z-index: 99; left:0; bottom: 50px;background: #fff; padding: 5px;}

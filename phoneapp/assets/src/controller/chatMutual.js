@@ -82,7 +82,8 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
 
                 // 发送消息
                 var inputChatMsg = $('#input-chat-msg'),
-                    postChatMsg = $('.post-chat-msg');
+                    postChatMsg = $('.post-chat-msg'),
+                    chatWrap = $('#chat-wrap');
 
                 postChatMsg.on('tap', function(){
                     var message = inputChatMsg.val();
@@ -105,16 +106,23 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                 if( res.success ) {
                                     messages.content = ubbReplace( message );
                                 } else {
-                                    messages.content = '消息发送失败'
+                                    messages.content = '<em class="post-msg-err">消息发送失败</em> <a class="renew-post-btn" href="javascript:void(null)">重新发送</a>'
                                 }
                                 data.list.push( messages );
 
                                 var contentTemplate = template.compile(chatTemplate.contentTemplate);
-                                $('#chat-wrap').append(contentTemplate( data ));
+                                chatWrap.append(contentTemplate( data ));
                             }
-                        });
+                        }, true);
                     }
-                })
+                });
+
+                // 重新发送
+                chatWrap.on('tap', '.renew-post-btn', function(e){
+                    e.preventDefault();
+                    postChatMsg.trigger('tap');
+
+                });
 
             }());
 
