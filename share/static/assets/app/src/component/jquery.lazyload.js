@@ -87,11 +87,6 @@ define(['jquery'], function($){
 
                 self.loaded = false;
 
-                if( $self.attr("src") ) {
-                    $self.attr('data-original', $self.attr("src"));
-                    $self.removeAttr('src');
-                }
-
                 /* If no src attribute given use data:uri. */
                 if ($self.attr("src") === undefined || $self.attr("src") === false) {
                     if ($self.is("img")) {

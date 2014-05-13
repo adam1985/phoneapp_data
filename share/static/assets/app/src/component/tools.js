@@ -1,4 +1,4 @@
-define(['jquery'], function ($) {
+define(['jquery'], function($){
 
     /**
      * 获取数组中后几条数据
@@ -7,44 +7,44 @@ define(['jquery'], function ($) {
      * @param isReverse 是否反转数组
      * @returns {array}
      */
-    var subToArray = function (data, size, isReverse) {
-            if ($.isArray(data)) {
-                if (isReverse) {
+    var subToArray = function ( data, size, isReverse ) {
+            if( $.isArray( data ) ) {
+                if( isReverse ) {
                     data.reverse();
                 }
-                return $.grep(data, function (n, i) {
+                return $.grep(data, function( n, i ){
                     return i < size;
                 });
             }
             return [];
         },
 
-        joinAssignSrc = function (data) {
+        joinAssignSrc = function( data ){
 
-            (function (data) {
+            (function(data){
                 var arg = arguments;
-                if ($.isArray(data)) {
-                    $.each(data, function () {
+                if($.isArray( data )){
+                    $.each( data, function() {
                         var self = this,
                             assignType = {
-                                type: 'article'
+                                type : 'article'
                             };
-                        if (self.aid) {
+                        if( self.aid ) {
                             self.src += '?aid=' + self.aid;
-                            assignType = $.extend(assignType, {
-                                src: self.src
+                            assignType = $.extend( assignType, {
+                                src : self.src
                             });
-                        } else if (self.player) {
-                            assignType = $.extend(assignType, {
-                                type: 'video',
-                                message: self.title,
-                                mainUrl: self.videoSrc,
-                                backUrl: self.src
+                        } else if( self.player ) {
+                            assignType = $.extend( assignType, {
+                                type : 'video',
+                                message : self.title,
+                                mainUrl : self.videoSrc,
+                                backUrl : self.src
                             });
                         }
-                        self.assignType = JSON.stringify(assignType);
-                        if (self.list && $.isArray(self.list)) {
-                            arg.callee(self.list);
+                        self.assignType = JSON.stringify( assignType );
+                        if( self.list && $.isArray( self.list ) ) {
+                            arg.callee( self.list );
                         }
                     });
                 }
@@ -54,8 +54,8 @@ define(['jquery'], function ($) {
             return data;
         },
 
-        // 判断浏览器是否为webkit
-        isWebkit = (function () {
+    // 判断浏览器是否为webkit
+        isWebkit = (function() {
             var UA = navigator.userAgent.toLowerCase(), _isWebkit = false;
             if (/webkit/i.test(UA)) {
                 _isWebkit = true;
@@ -63,21 +63,10 @@ define(['jquery'], function ($) {
             return _isWebkit;
         }());
 
-        isAndroid = (function(){
-            return (/android/gi).test(navigator.appVersion);
-        }());
-
-        isIos = (function(){
-                return (/iphone|ipad/gi).test(navigator.appVersion);
-        }());
-
-
     return {
-        subToArray: subToArray,
-        isWebkit: isWebkit,
-        joinAssignSrc: joinAssignSrc,
-        isAndroid: isAndroid,
-        isIos : isIos
+        subToArray : subToArray,
+        isWebkit : isWebkit,
+        joinAssignSrc: joinAssignSrc
     };
 
 });

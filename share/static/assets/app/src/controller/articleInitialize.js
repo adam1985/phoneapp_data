@@ -1,20 +1,18 @@
-define(['jquery', 'component/template',  'component/loading',  './initializeScroll', 'component/jquery.lazyload', 'component/jquery.uri', 'conf/config'],
-    function($, template, loading, initializeScroll, lazyload, uri, config){
+define(['jquery', 'component/template', './initializeScroll', 'component/jquery.lazyload', 'component/jquery.uri', 'conf/config'],
+    function($, template, initializeScroll, lazyload, uri, config){
         return function( complete ){
 
             var aid = $.uri( location.href ).at('query').aid;
-
-            var mobileLoad = loading();
 
             $.ajax({
                 url: config.base + 'data/article/' + aid + '.js',
                 dataType: 'jsonp',
                 jsonpCallback : 'articleCallBack',
                 beforeSend : function() {
-                    mobileLoad.show();
+                    $.mobile.loading('show');
                 },
                 success: function( data ){
-                    mobileLoad.hide();
+                    $.mobile.loading('hide');
                     var layoutArticle = $('#layout-article');
                     if( data ) {
                         var templateStr = template.render('article-template', data);
@@ -44,13 +42,13 @@ define(['jquery', 'component/template',  'component/loading',  './initializeScro
 
                     layoutArticle.find('img').lazyload({
                         container: layoutContent,
-                        effect      : 'fadeIn',
+                        //effect      : 'fadeIn',
+                        //event: "scroll",
                         "threshold": 200,
                         load : function(){
                             iscroll.refresh();
                         }
                     });
-
 
                     $(document).on('touchstart', function(){
                         iscroll.refresh();

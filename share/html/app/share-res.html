@@ -2,24 +2,25 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0;">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
     <title>百万世界杯</title>
-    <link rel="stylesheet" href="../../static/assets/app/styles/index.css"/>
+    <link rel="stylesheet" href="../../invite-static/assets/app/styles/index.css"/>
     <script>
         (function () {
             var sharePageUrl = '../pc/pc-share-res.html',
                 ispc = !((/android|iphone|ipad/gi).test(navigator.appVersion));
 
             if (ispc) {
-                //location.href = sharePageUrl;
+                location.href = sharePageUrl;
             }
 
         }());
     </script>
     <script src="../../static/assets/app/require.min.js"
-            data-main="../../static/assets/app/src/index"></script>
+            data-main="../../invite-static/assets/app/dist/index"></script>
 
 </head>
 <body>
@@ -28,64 +29,62 @@
     <div role="main" class="layout-content generalize-content">
         <div id="scroller">
             <div class="generalize-banner">
-                <img src="http://fjc1.pop.baofeng.net/popv5/static/hot_report/img/banner-cup.jpg"/>
+                <img src="http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/banner-cup.jpg"/>
             </div>
             <div class="layout-body">
                 <div class="generalize-text">
-                    我安装了【暴风影音百万世界杯】，参加竞猜即可赢取百万大奖您也来安装吧
+                    屌丝看球不寂寞，猜球赢钱麻溜的！连黄健翔都在预测今年世界杯16强，你还拿着手纸干呢吧……下载【百万世界杯】APP，赢百万现金大奖。分享邀请码，更有竞猜券拿，欲知详情，请往下拉！
+                </div>
+
+                <div class="page-width my-invite-res">
+                    黄健翔的2014巴西世界杯预测详情
                 </div>
 
                 <div class="world-cup-box">
                     <div class="world-cup-pic">
-                        <img src="http://fjc1.pop.baofeng.net/popv5/static/hot_report/img/worldcup.jpg"/>
+                        <img src="http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/worldcup.jpg"/>
                     </div>
                     <div class="rank-box page-width">
                         <div class="cl page-width rank-header">
-                            <span>冠军</span>
-                            <span>亚军</span>
-                            <span>季军</span>
+                            <span class="rank-top2"></span>
+                            <span class="rank-top1"></span>
+                            <span class="rank-top2"></span>
                         </div>
                         <div class="cl page-width rank-team">
                             <span>巴西</span>
                             <span>西班牙</span>
                             <span>德国</span>
                         </div>
-                        <div class="page-width my-invite-res">
-                            我的2014巴西世界杯预测详情
-                        </div>
                     </div>
                 </div>
 
                 <div class="invite-box">
-                    <div class="invite-number">
+                    <!--div class="invite-number">
                         <div class="my-invite" id="my-invite">
-                            好友推荐码: <!--<input readonly="readonly" data-role="none"  value="336691" id="touch-copy" />-->
+                            好友推荐码:
                             <span id="touch-copy">336691</span>
                         </div>
-                        <p>安装后在app中输入推荐码可以帮助你获得竞猜券呦</p>
-                    </div>
+                        <p>安装后在app中输入推荐码可以帮助你获得竞猜券呦，请长按邀请码并选择复制。</p>
+                    </div-->
                     <div class="install-apk">
                         <h3>我要安装</h3>
 
                         <p>如果您安装了条码扫描软件</p>
 
                         <p>可以直接扫描下方二维码直达下载页面</p>
+
+                        <p>
+                            请长按二维码图片并保存
+                        </p>
                     </div>
 
-                    <div class="cl page-width quick-mark">
-                        <div class="quick-mark-item">
-                            <span>iphone</span>
-                            <img src="http://fjc1.pop.baofeng.net/popv5/static/hot_report/img/quick-mark.jpg"/>
-                        </div>
-                        <div class="quick-mark-item">
-                            <span>android</span>
-                            <img src="../../static/images/android-quick-mark.jpg"/>
-                        </div>
+                    <div class="page-width quick-mark">
+                        <img src="http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/jump.png"/>
                     </div>
 
                     <div class="page-width download-apk" id="download-apk">
                         <a href="#">ios版本下载</a>
-                        <a href="http://wx.dl.baofeng.com/mobile/WorldCup/WorldCup.apk">安卓版本下载</a>
+                        <a href="javascript:void(null)" data-href="http://wx.dl.baofeng.com/mobile/WorldCup/WorldCup.apk">安卓版本下载</a>
                     </div>
                 </div>
 
@@ -118,11 +117,10 @@
                         2014年6月24日00:00，即为小组赛前两轮32场比赛结束之后。
                     </p>
 
-                    <h4>4、抽奖与发奖：</h4>
+                    <h4>4、抽奖规则：</h4>
 
                     <p>
-                        ①抽奖：预测的正确结果数量最高者可获得或分享百万现金大奖；同时，越早猜出正确答案，奖金占比越大。<br/>
-                        ②发奖：
+                        预测的正确结果数量最高者可获得或分享百万现金大奖；同时，越早猜出正确答案，奖金占比越大。
                     </p>
 
                 </div>
@@ -152,18 +150,16 @@
                         每场比赛在开赛前10分钟截止预测。
                     </p>
 
-                    <h4>4、抽奖与发奖：</h4>
+                    <h4>4、抽奖规则：</h4>
 
                     <p>
-                        ①抽奖：<br/>
-                        ②抽奖：《XXX》节目现场抽取一个赞助商大奖，在当日每场比赛对应的全部抽奖劵及前一日12:00至当日12:00之间通过推荐好友安装或者下载并使用APP获得的所有抽奖劵中随机抽取。以直播现场接听电话为准。<br/>
-                        ③发奖：
+                        节目现场抽取每日奖品，在当日每场比赛对应的全部抽奖券及前一日12：00只当日12:00之间通过好友安装或下载并使用app获得的所有抽奖券中随机抽取。
                     </p>
                 </div>
             </div>
 
             <div class="hide weixin-download" id="weixin-download">
-                <img src="../../static/assets/app/images/weixin-download.png" />
+                <img src="http://fjc1.pop.baofeng.net/popv5/static/share/invite-static/assets/app/images/weixin-download.png" />
             </div>
         </div>
     </div>

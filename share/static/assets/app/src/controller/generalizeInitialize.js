@@ -1,14 +1,11 @@
-define(['jquery', 'component/tools', './initializeScroll'], function($, tools, initializeScroll){
+define(['jquery', './initializeScroll'], function($, initializeScroll){
     return function() {
 
-        var config = {
+        var iscroll = initializeScroll({
             onScrollStart : function(){
                 iscroll.refresh();
             }
-        };
-
-        //var iscroll = initializeScroll( config );
-
+        });
 
         var ua = navigator.userAgent.toLowerCase(),
             downloadApk = $('.download-apk'),
@@ -25,9 +22,5 @@ define(['jquery', 'component/tools', './initializeScroll'], function($, tools, i
                     }, 10 * 1000);
                 });
             }
-
-        $('#touch-copy').on('tap', function(){
-            //this.select();
-        });
     };
 });

@@ -1,8 +1,0 @@
-{
-    "baseUrl": "../pc/js",
-    "removeCombined": true,
-    "preserveLicenseComments": false,
-    "optimizeCss": "standard",
-    "name": "index",
-    "out": "dist/index.js"
-}
