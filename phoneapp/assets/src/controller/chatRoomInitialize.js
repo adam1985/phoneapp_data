@@ -77,13 +77,7 @@ define(['jquery',  'component/template', 'conf/config', 'component/jquery.uri',
             }());
 
 
-            // 聊天室数据交互
-            (function(){
-                var token = $.uri( location.href ).at('query').token;
 
-
-
-            }());
 
 
 

@@ -62,18 +62,15 @@ module.exports = function(app) {
 
     app.get('/list', function (req, res) {
         //判断是否是第一页，并把请求的页数转换成 number 类型
-        var page = req.query.p ? parseInt(req.query.p) : 1;
+        var page = req.query.p ? parseInt(req.query.p) : 1, category = req.query.category, query = {};
+        if( category !== undefined ){
+            query.category = category;
+        }
         //查询并返回第 page 页的 10 篇文章
-        Post.getTen(null, page, function (err, posts, total) {
+        Post.getTen(query, page, function (err, posts, total) {
             if (err) {
                 posts = [];
             }
-
-            var categorys = ["品牌露出", "焦点图", "最新赛况", "精彩进球", "足球花边"];
-
-            posts.forEach(function(v){
-                v.category = categorys[+v.category];
-            });
 
             res.render('list', {
                 title: '火热战报文章列表页',
@@ -85,8 +82,22 @@ module.exports = function(app) {
         });
     });
 
+    app.get('/article', function (req, res) {
+        Post.getArticle(req.param('time'), function (err, doc) {
+            if (err) {
+                return res.redirect('back');
+            }
+
+            res.render('article', {
+                title: '火热战报文章详情页',
+                doc: doc
+            });
+        });
+    });
+
+
     app.get('/edit', function (req, res) {
-        Post.edit(req.param('time'), function (err, doc) {
+        Post.getArticle(req.param('time'), function (err, doc) {
             if (err) {
                 return res.redirect('back');
             }
@@ -550,6 +561,8 @@ module.exports = function(app) {
         res.download( './data.tar.gz', 'data.tar.gz', function(err){
             if( err ){
                 return res.end('<script>alert("先打包数据，再进行下载数据!!");history.go(-1);</script><a href="/create">返回</a>')
+            } else {
+                fs.unlink('./data.tar.gz');
             }
         } );
 

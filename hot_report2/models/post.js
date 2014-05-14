@@ -88,7 +88,7 @@ Post.getAll = function(key, val, callback) {
 };
 
 //一次获取十篇文章
-Post.getTen = function(name, page, callback) {
+Post.getTen = function(query, page, callback) {
     mongodb.close();
     //打开数据库
     mongodb.open(function (err, db) {
@@ -101,10 +101,8 @@ Post.getTen = function(name, page, callback) {
                 mongodb.close();
                 return callback(err);
             }
-            var query = {};
-            if (name) {
-                query.name = name;
-            }
+           query = query || {};
+
             //使用 count 返回特定查询的文档数 total
             collection.count(query, function (err, total) {
                 //根据 query 对象查询，并跳过前 (page-1)*10 个结果，返回之后的 10 个结果
@@ -126,56 +124,8 @@ Post.getTen = function(name, page, callback) {
 };
 
 //获取一篇文章
-Post.getOne = function(name, day, title, callback) {
-    //打开数据库
-    mongodb.open(function (err, db) {
-        if (err) {
-            return callback(err);
-        }
-        //读取 posts 集合
-        db.collection('posts', function (err, collection) {
-            if (err) {
-                mongodb.close();
-                return callback(err);
-            }
-            //根据用户名、发表日期及文章名进行查询
-            collection.findOne({
-                "name": name,
-                "time.day": day,
-                "title": title
-            }, function (err, doc) {
-                if (err) {
-                    mongodb.close();
-                    return callback(err);
-                }
-                if (doc) {
-                    //每访问 1 次，pv 值增加 1
-                    collection.update({
-                        "name": name,
-                        "time.day": day,
-                        "title": title
-                    }, {
-                        $inc: {"pv": 1}
-                    }, function (err) {
-                        mongodb.close();
-                        if (err) {
-                            return callback(err);
-                        }
-                    });
-                    //解析 markdown 为 html
-                    doc.post = markdown.toHTML(doc.post);
-                    doc.comments.forEach(function (comment) {
-                        comment.content = markdown.toHTML(comment.content);
-                    });
-                    callback(null, doc);//返回查询的一篇文章
-                }
-            });
-        });
-    });
-};
 
-//返回原始发表的内容
-Post.edit = function(time, callback) {
+Post.getArticle = function(time, callback) {
     //打开数据库
     mongodb.open(function (err, db) {
         if (err) {
