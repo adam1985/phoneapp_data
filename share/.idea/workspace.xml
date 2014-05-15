@@ -32,8 +32,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/html/app/share-res.html" />
         <option value="$PROJECT_DIR$/html/pc/generalize.html" />
+        <option value="$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/app/share.html" />
+        <option value="$PROJECT_DIR$/html/app/share-res.html" />
       </list>
     </option>
   </component>
@@ -93,42 +94,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -174,8 +139,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -205,11 +170,6 @@
         <state line="14" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="483" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="741" selection-end="741" vertical-scroll-proportion="-0.46397695" vertical-offset="759" max-vertical-offset="4025" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/pc/generalize.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="18" selection-start="3868" selection-end="3868" vertical-scroll-proportion="0.46974063" vertical-offset="2204" max-vertical-offset="2898" />
@@ -217,14 +177,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/app/iphone.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="0.48797736" vertical-offset="0" max-vertical-offset="707">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="0.48797736" vertical-offset="0" max-vertical-offset="707" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/app/jump.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="979" selection-end="979" vertical-scroll-proportion="0.57708627" vertical-offset="144" max-vertical-offset="851">
+        <state line="24" column="13" selection-start="979" selection-end="979" vertical-scroll-proportion="0.57708627" vertical-offset="144" max-vertical-offset="851" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/app/share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="26" selection-start="2529" selection-end="2529" vertical-scroll-proportion="0.629683" vertical-offset="828" max-vertical-offset="3680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="6" selection-start="904" selection-end="904" vertical-scroll-proportion="0.82853025" vertical-offset="0" max-vertical-offset="4025">
           <folding />
         </state>
       </provider>

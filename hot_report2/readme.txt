@@ -4,6 +4,8 @@ http://kb.cnblogs.com/page/112185/
 
 /root/mongodb/mongo/bin/mongod --dbpath=/root/mongodb/data/mongodb_data/ --logpath=/root/mongodb/data/mongodb_log/mongodb.log --logappend&  
 
+http://www.2cto.com/database/201401/271642.html ±∏∑›”Îª÷∏¥
+
 node /opt/baofeng-data/phoneapp_data_pangyuanxing/popv5/static/hot_report2/app
 
 

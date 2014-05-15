@@ -66,6 +66,8 @@ define(['jquery',  'component/template', 'conf/config', 'component/jquery.uri',
                         faceStatus[faceIndex] = 1;
                     }
 
+                    inputMsg.focus();
+
                     qqface.hide();
 
                 });
@@ -75,11 +77,6 @@ define(['jquery',  'component/template', 'conf/config', 'component/jquery.uri',
                 });
 
             }());
-
-
-
-
-
 
         };
     });

@@ -61,37 +61,15 @@ define(['jquery'], function ($) {
                 _isWebkit = true;
             }
             return _isWebkit;
-        }()),
+        }());
 
         isAndroid = (function(){
             return (/android/gi).test(navigator.appVersion);
-        }()),
+        }());
 
         isIos = (function(){
                 return (/iphone|ipad/gi).test(navigator.appVersion);
-        }()),
-
-        formatTime = function( sDate ){
-            var date;
-
-            var preZero = function ( num ) {
-                num = parseInt( num );
-                return ( num < 10 ? '0' : '' ) + num;
-            };
-
-            if( sDate instanceof Date ) {
-                date = sDate;
-            } else {
-                if( /\d{9,}/.test(sDate) ) {
-                    date = new Date(parseInt(sDate) * 1000 );
-                } else {
-                    sDate = sDate.replace(/-/g, '/');
-                    date = new Date(sDate);
-                }
-            }
-
-            return preZero(date.getHours()) + ':' + preZero(date.getSeconds()) + ':' + preZero(date.getMinutes());
-        };
+        }());
 
 
     return {
@@ -99,8 +77,7 @@ define(['jquery'], function ($) {
         isWebkit: isWebkit,
         joinAssignSrc: joinAssignSrc,
         isAndroid: isAndroid,
-        isIos : isIos,
-        formatTime : formatTime
+        isIos : isIos
     };
 
 });

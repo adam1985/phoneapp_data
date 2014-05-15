@@ -13,15 +13,41 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                     chatWrap = $('#chat-wrap'),
                     layoutContent = $('.layout-content'),
                     chatRoomTip = $('#chat-room-tip'),
+                    ubbReplace = function (str, blockWord){
+                        var faceExp = /\[em_([0-9]+)\]/g;
+
+                        if( blockWord.length >>> 0 ) {
+                            $.each(blockWord, function(){
+                                var exp = new RegExp('(' + this + ')', 'g');
+                                if(exp.test(str)) {
+                                    str = str.replace( exp, function( $, $1){
+                                        var index = str.indexOf($1),
+                                            preStr = str.substring(0, index),
+                                            nextStr = str.substring(index + 1);
+                                        if(  !( preStr.indexOf('[') !== -1 &&  nextStr.indexOf(']') !== -1 )) {
+                                            return $1.replace(/[\w\W]/g, '*');
+                                        }
+                                        return $1;
+                                    });
+
+                                }
+                            });
+                        }
+
+                        str = str.replace(faceExp,'<img src="' + config.path + 'assets/images/face/$1.gif" border="0" />');
+
+
+                        return str;
+                    },
                     refreshIscroll = function( content ){
                         chatWrap.append(content);
                         iscroll.refresh();
                         if( chatWrap.height() >= layoutContent.height() - chatRoomTip.outerHeight() ) {
-                            iscroll.scrollTo(0, iscroll.y - chatWrap.last().height);
+                            var item = chatWrap.find('.chat-item').last()[0];
+                           iscroll.scrollToElement(item);
                         }
-
                     },
-                    getMessage = function (token, name, uid) {
+                    getMessage = function (token, name, uid, blockWord) {
 
                         return (function () {
                             var arg = arguments;
@@ -47,7 +73,7 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                                         user: name,
                                                         me : false,
                                                         time: tools.formatTime(this.time),
-                                                        content: this.message
+                                                        content: ubbReplace(this.message, blockWord)
                                                     };
                                                     data.list.push(messages);
                                                 }
@@ -75,10 +101,6 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                         }());
 
 
-                    },
-                    ubbReplace = function (str){
-                        str = str.replace(/\[em_([0-9]*)\]/g,'<img src="' + config.path + 'assets/images/face/$1.gif" border="0" />');
-                        return str;
                     };
 
                     ajax({
@@ -88,80 +110,95 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                         },
                         success: function (joinChat) {
                             if (joinChat.success) {
-                                getMessage(token, joinChat.name, joinChat.data.id);
+                                ajax({
+                                    url : 'http://fjc1.pop.baofeng.net/popv5/static/phoneapp/assets/src/model/blockWord.js',
+                                    dataType: 'jsonp',
+                                    jsonpCallback : 'blockWordCallBack',
+                                    success: function( blockWord ){
+                                        getMessage(token, joinChat.name, joinChat.data.id, blockWord);
+
+                                        // 发送消息
+                                        var inputChatMsg = $('#input-chat-msg'),
+                                            postChatMsg = $('#post-chat-msg'),
+                                            disabledCls = 'disabled-post-chat-btn',
+                                            timeout;
+
+                                        postChatMsg.on('tap', function(){
+                                            var message = inputChatMsg.val();
+                                            if( !postChatMsg.hasClass(disabledCls) ){
+                                                if( message ) {
+                                                    postChatMsg.addClass(disabledCls);
+                                                    timeout && clearTimeout(timeout);
+                                                    ajax({
+                                                        url : '/sendMessage?token=' + token,
+                                                        type : 'post',
+                                                        data : {
+                                                            message : message
+                                                        },
+                                                        success : function( res ){
+                                                            var data = {
+                                                                list: []
+                                                            };
+                                                            var messages = {
+                                                                user: "我: ",
+                                                                me : true,
+                                                                time: tools.formatTime(res.time)
+                                                            };
+                                                            if( res.success ) {
+                                                                messages.content = ubbReplace( message, blockWord );
+                                                            } else {
+                                                                messages.content = '<em class="post-msg-err">消息发送失败</em> <a class="renew-post-btn" href="javascript:void(null)">重新发送</a>'
+                                                            }
+                                                            data.list.push( messages );
+
+                                                            var contentTemplate = template.compile(chatTemplate.contentTemplate);
+                                                            refreshIscroll(contentTemplate(data));
+                                                        }
+                                                    }, true);
+                                                    timeout = setTimeout(function(){
+                                                        timeout && clearTimeout(timeout);
+                                                        postChatMsg.removeClass(disabledCls);
+                                                    }, 3000);
+                                                }
+
+                                            } else {
+                                                var data = {
+                                                    list: []
+                                                };
+                                                var messages = {
+                                                    user: "我: ",
+                                                    me : true,
+                                                    time: tools.formatTime(new Date())
+                                                };
+
+                                                messages.content = '<em class="post-msg-err">防止灌水，发消息间隔不少于3秒</em>';
+
+                                                data.list.push( messages );
+
+                                                var contentTemplate = template.compile(chatTemplate.contentTemplate);
+                                                refreshIscroll(contentTemplate(data));
+                                            }
+                                        });
+
+                                        inputChatMsg.on('keydown', function(e){
+                                            if( e.keyCode === 13 ) {
+                                                postChatMsg.trigger('tap');
+                                            }
+                                        });
+
+                                        // 重新发送
+                                        chatWrap.on('tap', '.renew-post-btn', function(e){
+                                            e.preventDefault();
+                                            postChatMsg.trigger('tap');
+
+                                        });
+
+                                    }
+                                });
+
                             }
                         }
                     }, true);
-
-                // 发送消息
-                var inputChatMsg = $('#input-chat-msg'),
-                    postChatMsg = $('.post-chat-msg'),
-                    disabledCls = 'disabled-post-chat-btn',
-                    timeout;
-
-                postChatMsg.on('tap', function(){
-                    var message = inputChatMsg.val();
-                    if( !postChatMsg.hasClass(disabledCls) ){
-                        if( message ) {
-                            postChatMsg.addClass(disabledCls);
-                            timeout && clearTimeout(timeout);
-                            ajax({
-                                url : '/sendMessage?token=' + token,
-                                type : 'post',
-                                data : {
-                                    message : message
-                                },
-                                success : function( res ){
-                                    var data = {
-                                        list: []
-                                    };
-                                    var messages = {
-                                        user: "我: ",
-                                        me : true,
-                                        time: tools.formatTime(res.time)
-                                    };
-                                    if( res.success ) {
-                                        messages.content = ubbReplace( message );
-                                    } else {
-                                        messages.content = '<em class="post-msg-err">消息发送失败</em> <a class="renew-post-btn" href="javascript:void(null)">重新发送</a>'
-                                    }
-                                    data.list.push( messages );
-
-                                    var contentTemplate = template.compile(chatTemplate.contentTemplate);
-                                    refreshIscroll(contentTemplate(data));
-                                }
-                            }, true);
-                            timeout = setTimeout(function(){
-                                timeout && clearTimeout(timeout);
-                                postChatMsg.removeClass(disabledCls);
-                            }, 3000);
-                        }
-
-                    } else {
-                        var data = {
-                            list: []
-                        };
-                        var messages = {
-                            user: "我: ",
-                            me : true,
-                            time: tools.formatTime(new Date())
-                        };
-
-                        messages.content = '<em class="post-msg-err">防止灌水，发消息间隔不少于3秒</em> <a class="renew-post-btn" href="javascript:void(null)">重新发送</a>';
-
-                        data.list.push( messages );
-
-                        var contentTemplate = template.compile(chatTemplate.contentTemplate);
-                        refreshIscroll(contentTemplate(data));
-                    }
-                });
-
-                // 重新发送
-                chatWrap.on('tap', '.renew-post-btn', function(e){
-                    e.preventDefault();
-                    postChatMsg.trigger('tap');
-
-                });
 
             }());
 
