@@ -22,7 +22,35 @@
     <favorites_list name="share" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="guess.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/guess.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="32" selection-start="2795" selection-end="2795" vertical-scroll-proportion="0.7017291" vertical-offset="1031" max-vertical-offset="2024">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generalize.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generalize.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="0" selection-start="1710" selection-end="1855" vertical-scroll-proportion="-12.21875" vertical-offset="621" max-vertical-offset="2921">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index2.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc/css/index2.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="24" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1127">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -32,9 +60,19 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/html/pc/generalize.html" />
         <option value="$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/app/share.html" />
         <option value="$PROJECT_DIR$/html/app/share-res.html" />
+        <option value="$PROJECT_DIR$/bf-static/assets/pc/css/index.css" />
+        <option value="$PROJECT_DIR$/html/pc/inviteShare_bat.html" />
+        <option value="$PROJECT_DIR$/html/pc/pc-share-res.html" />
+        <option value="$PROJECT_DIR$/html/pc/inviteShare.html" />
+        <option value="$PROJECT_DIR$/html/pc/generalize.html" />
+        <option value="$PROJECT_DIR$/invite-static/assets/pc/css/index.css" />
+        <option value="$PROJECT_DIR$/generalize.html" />
+        <option value="$PROJECT_DIR$/static/bf-static/assets/pc/css/index.css" />
+        <option value="$PROJECT_DIR$/../../../../webbf/windforce/trunk/guess.html" />
+        <option value="$PROJECT_DIR$/static/bf-static/assets/pc/css/index2.css" />
+        <option value="$PROJECT_DIR$/guess.html" />
       </list>
     </option>
   </component>
@@ -94,6 +132,130 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bf-static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bf-static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bf-static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bf-static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="invite-static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -106,6 +268,11 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\phoneapp_data\popv5\static\share\static\bf-static\assets\pc\css" />
+    </key>
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -120,15 +287,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="变化" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -170,11 +337,6 @@
         <state line="14" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="483" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/pc/generalize.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="18" selection-start="3868" selection-end="3868" vertical-scroll-proportion="0.46974063" vertical-offset="2204" max-vertical-offset="2898" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/app/iphone.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="0.48797736" vertical-offset="0" max-vertical-offset="707" />
@@ -195,6 +357,76 @@
     <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="6" selection-start="904" selection-end="904" vertical-scroll-proportion="0.82853025" vertical-offset="0" max-vertical-offset="4025">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/pc/pc-share-res.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="28" selection-start="129" selection-end="129" vertical-scroll-proportion="-2.8775215" vertical-offset="2089" max-vertical-offset="2783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/pc/inviteShare_bat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="28" selection-start="129" selection-end="129" vertical-scroll-proportion="-5.9596543" vertical-offset="4228" max-vertical-offset="4922">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="36" selection-start="571" selection-end="571" vertical-scroll-proportion="0.3168044" vertical-offset="0" max-vertical-offset="1702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/pc/generalize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="7" selection-start="4170" selection-end="4170" vertical-scroll-proportion="0.80115277" vertical-offset="2181" max-vertical-offset="2921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/pc/inviteShare.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="6" selection-start="4162" selection-end="4162" vertical-scroll-proportion="0.7680115" vertical-offset="2181" max-vertical-offset="2921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/guess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="7" selection-start="4164" selection-end="4164" vertical-scroll-proportion="0.7348703" vertical-offset="2227" max-vertical-offset="2921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generalize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1710" selection-end="1855" vertical-scroll-proportion="-12.21875" vertical-offset="621" max-vertical-offset="2921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc/css/index2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="24" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1127">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="32" selection-start="2795" selection-end="2795" vertical-scroll-proportion="0.7017291" vertical-offset="1031" max-vertical-offset="2024">
           <folding />
         </state>
       </provider>
