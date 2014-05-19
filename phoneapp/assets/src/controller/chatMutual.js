@@ -13,6 +13,19 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                     chatWrap = $('#chat-wrap'),
                     layoutContent = $('.layout-content'),
                     chatRoomTip = $('#chat-room-tip'),
+                    isBlockWord = function( str , blockWord){
+                        var isBlockWord_ = false;
+                        $.each(blockWord, function(){
+                            var exp = new RegExp('(' + this + ')', 'g');
+                            if(exp.test(str)) {
+                                isBlockWord_ = true;
+                                return false
+                            }
+
+                        });
+
+                        return isBlockWord_;
+                    },
                     ubbReplace = function (str, blockWord){
                         var faceExp = /\[em_([0-9]+)\]/g;
 
@@ -124,9 +137,28 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                             timeout;
 
                                         postChatMsg.on('tap', function(){
-                                            var message = inputChatMsg.val();
-                                            if( !postChatMsg.hasClass(disabledCls) ){
-                                                if( message ) {
+                                            var message = inputChatMsg.val(),
+                                                _isBlockWord = isBlockWord(message, blockWord),
+                                                data, messages, contentTemplate;
+                                            if( message ) {
+                                                if( _isBlockWord ) {
+                                                    data = {
+                                                        list: []
+                                                    };
+                                                    messages = {
+                                                        user: "我: ",
+                                                        me : true,
+                                                        time: tools.formatTime(new Date())
+                                                    };
+
+                                                    messages.content =  ubbReplace( message, blockWord);
+
+                                                    data.list.push( messages );
+
+                                                    contentTemplate = template.compile(chatTemplate.contentTemplate);
+                                                    refreshIscroll(contentTemplate(data));
+
+                                                } else  if( !postChatMsg.hasClass(disabledCls) ){
                                                     postChatMsg.addClass(disabledCls);
                                                     timeout && clearTimeout(timeout);
                                                     ajax({
@@ -155,29 +187,31 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                                             refreshIscroll(contentTemplate(data));
                                                         }
                                                     }, true);
+
                                                     timeout = setTimeout(function(){
                                                         timeout && clearTimeout(timeout);
                                                         postChatMsg.removeClass(disabledCls);
                                                     }, 3000);
+
+                                                } else {
+                                                    data = {
+                                                        list: []
+                                                    };
+                                                    messages = {
+                                                        user: "我: ",
+                                                        me : true,
+                                                        time: tools.formatTime(new Date())
+                                                    };
+
+                                                    messages.content = '<em class="post-msg-err">防止灌水，发消息间隔不少于3秒</em>';
+
+                                                    data.list.push( messages );
+
+                                                    contentTemplate = template.compile(chatTemplate.contentTemplate);
+                                                    refreshIscroll(contentTemplate(data));
                                                 }
-
-                                            } else {
-                                                var data = {
-                                                    list: []
-                                                };
-                                                var messages = {
-                                                    user: "我: ",
-                                                    me : true,
-                                                    time: tools.formatTime(new Date())
-                                                };
-
-                                                messages.content = '<em class="post-msg-err">防止灌水，发消息间隔不少于3秒</em>';
-
-                                                data.list.push( messages );
-
-                                                var contentTemplate = template.compile(chatTemplate.contentTemplate);
-                                                refreshIscroll(contentTemplate(data));
                                             }
+
                                         });
 
                                         inputChatMsg.on('keydown', function(e){
