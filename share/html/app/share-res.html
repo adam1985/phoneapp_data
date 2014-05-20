@@ -8,18 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <title>百万世界杯</title>
     <link rel="stylesheet" href="../../invite-static/assets/app/styles/index.css"/>
-    <script>
-        (function () {
-            var sharePageUrl = '../pc/pc-share-res.html',
-                ispc = !((/android|iphone|ipad/gi).test(navigator.appVersion));
-
-            if (ispc) {
-                location.href = sharePageUrl;
-            }
-
-        }());
-    </script>
-    <script src="../../static/assets/app/require.min.js"
+    <script src="../../invite-static/assets/app/require.min.js"
             data-main="../../invite-static/assets/app/dist/index"></script>
 
 </head>
@@ -58,14 +47,14 @@
                     </div>
                 </div>
 
-                <div class="invite-box">
-                    <!--div class="invite-number">
+                <div class="hide invite-box">
+                    <div class="invite-number">
                         <div class="my-invite" id="my-invite">
                             好友推荐码:
-                            <span id="touch-copy">336691</span>
+                            <span id="my-invite-code"></span>
                         </div>
                         <p>安装后在app中输入推荐码可以帮助你获得竞猜券呦，请长按邀请码并选择复制。</p>
-                    </div-->
+                    </div>
                     <div class="install-apk">
                         <h3>我要安装</h3>
 

@@ -11,7 +11,7 @@ define(function(){
             +         '<div class="chat-item">'
             +         '{{ } }}'
             +           '<div class="user-title">'
-            +                '<span>{{= self.user }}</span>'
+            +                '<span> {{= self.user }} </span>  '
             //+                '<span class="user-phone-number">{{= phone }}</span>'
             +                '<span class="create-time">{{= self.time }}</span>'
             +           '</div>'

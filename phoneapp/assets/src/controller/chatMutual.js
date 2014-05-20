@@ -18,7 +18,13 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                         $.each(blockWord, function(){
                             var exp = new RegExp('(' + this + ')', 'g');
                             if(exp.test(str)) {
-                                isBlockWord_ = true;
+                                var index = str.indexOf(RegExp.$1),
+                                    preStr = str.substring(0, index),
+                                    nextStr = str.substring(index + 1);
+                                if(  !( preStr.indexOf('[') !== -1 &&  nextStr.indexOf(']') !== -1 )) {
+                                    isBlockWord_ = true;
+                                }
+
                                 return false
                             }
 
@@ -123,12 +129,15 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                         },
                         success: function (joinChat) {
                             if (joinChat.success) {
+
+                                $('#chat-room-tip').show();
+
                                 ajax({
                                     url : 'http://fjc1.pop.baofeng.net/popv5/static/phoneapp/assets/src/model/blockWord.js',
                                     dataType: 'jsonp',
                                     jsonpCallback : 'blockWordCallBack',
                                     success: function( blockWord ){
-                                        getMessage(token, joinChat.name, joinChat.data.id, blockWord);
+                                        getMessage(token, joinChat.data.name, joinChat.data.id, blockWord);
 
                                         // 发送消息
                                         var inputChatMsg = $('#input-chat-msg'),
@@ -185,6 +194,8 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
 
                                                             var contentTemplate = template.compile(chatTemplate.contentTemplate);
                                                             refreshIscroll(contentTemplate(data));
+
+                                                            inputChatMsg.val('');
                                                         }
                                                     }, true);
 

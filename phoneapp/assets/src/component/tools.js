@@ -90,7 +90,7 @@ define(['jquery'], function ($) {
                 }
             }
 
-            return preZero(date.getHours()) + ':' + preZero(date.getSeconds()) + ':' + preZero(date.getMinutes());
+            return preZero(date.getHours()) + ':' + preZero(date.getMinutes()) + ':' + preZero(date.getSeconds());
         };
 
 

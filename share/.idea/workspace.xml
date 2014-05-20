@@ -23,10 +23,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/config.js">
+      <file leaf-file-name="index2.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/css/index2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="3" selection-start="868" selection-end="868" vertical-scroll-proportion="0.09504132" vertical-offset="0" max-vertical-offset="726">
+            <state line="18" column="13" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3036">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="guess.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guess.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.71875" vertical-offset="0" max-vertical-offset="7705">
+              <folding>
+                <marker date="1400576054261" expanded="true" signature="7303:7579" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="7344:7455" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="7486:7529" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="7689:8940" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="7728:7868" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="9053:9837" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="9090:9826" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="9118:9811" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="9276:9769" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="9327:9398" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="9452:9743" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="9922:10212" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="10420:11049" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="10440:11034" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="10461:10567" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="10588:10816" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="10837:11013" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="11268:11501" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="11432:11486" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="11753:12409" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="11809:12396" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="11864:11956" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="11992:12156" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="12037:12137" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="12194:12381" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="12477:12870" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="12625:12844" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="12674:12826" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="12974:13328" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="13007:13089" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="13122:13203" placeholder="..." />
+                <marker date="1400576054261" expanded="true" signature="13236:13317" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="focus-conf.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/focus-conf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="27" selection-start="627" selection-end="627" vertical-scroll-proportion="0.5602165" vertical-offset="0" max-vertical-offset="2070">
               <folding />
             </state>
           </provider>
@@ -43,10 +94,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/app/share.html" />
-        <option value="$PROJECT_DIR$/html/app/share-res.html" />
         <option value="$PROJECT_DIR$/bf-static/assets/pc/css/index.css" />
         <option value="$PROJECT_DIR$/html/pc/inviteShare_bat.html" />
-        <option value="$PROJECT_DIR$/html/pc/pc-share-res.html" />
         <option value="$PROJECT_DIR$/html/pc/inviteShare.html" />
         <option value="$PROJECT_DIR$/html/pc/generalize.html" />
         <option value="$PROJECT_DIR$/invite-static/assets/pc/css/index.css" />
@@ -59,15 +108,25 @@
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/build.json" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/roll.js" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/superMarquee.js" />
-        <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/css/index2.css" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/slider.js" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/loading.js" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/focus-conf.js" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/interface/ajax.js" />
         <option value="$PROJECT_DIR$/../phoneapp/assets/src/controller/chatMutual.js" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/controller/initialize.js" />
-        <option value="$PROJECT_DIR$/guess.html" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/config.js" />
+        <option value="$PROJECT_DIR$/invite-static/assets/app/src/controller/initialize.js" />
+        <option value="$PROJECT_DIR$/invite-static/assets/app/src/controller/generalizeInitialize.js" />
+        <option value="$PROJECT_DIR$/invite-static/assets/pc/js/initialize.js" />
+        <option value="$PROJECT_DIR$/invite-static/assets/app/build.json" />
+        <option value="$PROJECT_DIR$/html/app/share-res.html" />
+        <option value="$PROJECT_DIR$/invite-static/assets/app/src/index.js" />
+        <option value="$PROJECT_DIR$/html/pc/pc-share-res.html" />
+        <option value="$PROJECT_DIR$/invite-static/assets/app/src/controller/jump.js" />
+        <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/css/index2.css" />
+        <option value="$PROJECT_DIR$/guess.html" />
+        <option value="$PROJECT_DIR$/../../../../webbf/adcms/template/popv5/index.html" />
+        <option value="$PROJECT_DIR$/../../../../webbf/adcms/template/popv5/static/share/data/focus-conf.js" />
       </list>
     </option>
   </component>
@@ -109,6 +168,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -245,40 +305,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="interface" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bf-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="conf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -304,54 +330,9 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bf-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="invite-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -367,6 +348,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\phoneapp_data\popv5\static\share\invite-static\assets\app\src\controller" />
       <recent name="D:\wamp\www\phoneapp_data\popv5\static\share\static\bf-static\assets\pc\css" />
     </key>
   </component>
@@ -438,8 +420,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -459,411 +441,313 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/guess.html">
+    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/guess.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="2024">
-          <folding>
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="119" column="7" selection-start="4164" selection-end="4164" vertical-scroll-proportion="0.7348703" vertical-offset="2227" max-vertical-offset="2921" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generalize.html">
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/app/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1710" selection-end="1855" vertical-scroll-proportion="0.0" vertical-offset="621" max-vertical-offset="2921">
-          <folding />
-        </state>
+        <state line="4" column="48" selection-start="107" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/app/src/controller/initialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.124492556" vertical-offset="0" max-vertical-offset="739" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc/css/index2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="23" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.0" vertical-offset="401" max-vertical-offset="1127">
-          <folding />
-        </state>
+        <state line="55" column="28" selection-start="3004" selection-end="3004" vertical-scroll-proportion="1.0633609" vertical-offset="493" max-vertical-offset="3013" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/template.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-17.113667" vertical-offset="12647" max-vertical-offset="13386" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../webbf/huiyan/dev/public/src/assets/component/window.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="9" selection-start="3469" selection-end="3956" vertical-scroll-proportion="0.74695534" vertical-offset="3381" max-vertical-offset="10212" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/app/build.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="38" selection-start="40" selection-end="40" vertical-scroll-proportion="0.032531824" vertical-offset="0" max-vertical-offset="707" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/build.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="19" selection-start="18" selection-end="21" vertical-scroll-proportion="0.032531824" vertical-offset="0" max-vertical-offset="707" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phoneapp/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="42" selection-start="675" selection-end="685" vertical-scroll-proportion="0.37753722" vertical-offset="273" max-vertical-offset="2185" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/build.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="6" selection-start="153" selection-end="153" vertical-scroll-proportion="0.22772278" vertical-offset="0" max-vertical-offset="707" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/roll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="20" selection-start="32" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="45" selection-start="31" selection-end="62" vertical-scroll-proportion="0.031123139" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/maskLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="-0.5290934" vertical-offset="552" max-vertical-offset="3289" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/app/src/controller/indexInitialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="0" selection-start="4667" selection-end="5016" vertical-scroll-proportion="-1.4316645" vertical-offset="3105" max-vertical-offset="5635" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phoneapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="0" selection-start="2109" selection-end="2154" vertical-scroll-proportion="-9.34375" vertical-offset="1104" max-vertical-offset="3565" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/src/component/loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.6150628" vertical-offset="640" max-vertical-offset="2944" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/styles/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="15" selection-start="9239" selection-end="9239" vertical-scroll-proportion="0.23122239" vertical-offset="4029" max-vertical-offset="6210" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/src/controller/indexInitialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5405" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../webbf/huiyan/dev/public/src/assets/component/loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="12" selection-start="2115" selection-end="2136" vertical-scroll-proportion="0.0" vertical-offset="1606" max-vertical-offset="3634" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/interface/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="19" selection-start="529" selection-end="529" vertical-scroll-proportion="0.6224628" vertical-offset="0" max-vertical-offset="966" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="46" selection-start="653" selection-end="680" vertical-scroll-proportion="0.6265223" vertical-offset="204" max-vertical-offset="3036" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/src/controller/chatMutual.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="75" selection-start="12113" selection-end="12113" vertical-scroll-proportion="0.0" vertical-offset="3276" max-vertical-offset="4416" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc/js/initialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="11" selection-start="388" selection-end="388" vertical-scroll-proportion="0.37347767" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/superMarquee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="279" column="21" selection-start="11112" selection-end="11121" vertical-scroll-proportion="0.26676178" vertical-offset="6230" max-vertical-offset="7107" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="58" selection-start="4707" selection-end="4707" vertical-scroll-proportion="0.42625168" vertical-offset="2307" max-vertical-offset="4324" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/controller/initialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="2297" selection-end="2297" vertical-scroll-proportion="1.9958677" vertical-offset="0" max-vertical-offset="1978" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/window.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="15" selection-start="666" selection-end="814" vertical-scroll-proportion="0.6535859" vertical-offset="207" max-vertical-offset="2116" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="3" selection-start="868" selection-end="868" vertical-scroll-proportion="0.09504132" vertical-offset="0" max-vertical-offset="726" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/component/jquery.uri.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8234" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/commonInitialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="37" selection-start="151" selection-end="159" vertical-scroll-proportion="0.062246278" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/src/component/tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="0" selection-start="2994" selection-end="2994" vertical-scroll-proportion="0.47090665" vertical-offset="1837" max-vertical-offset="2576" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/component/tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="29" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.65764546" vertical-offset="1308" max-vertical-offset="2047" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/listInitialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="12" selection-start="295" selection-end="354" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2530" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/pc/generalize.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="0" selection-start="3679" selection-end="3679" vertical-scroll-proportion="0.0" vertical-offset="2089" max-vertical-offset="2898" />
+        <state line="119" column="7" selection-start="4170" selection-end="4170" vertical-scroll-proportion="3.2478387" vertical-offset="483" max-vertical-offset="2921" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/app/iphone.html">
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc/js/initialize.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="483" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/app/iphone.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="0.48797736" vertical-offset="0" max-vertical-offset="707" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/app/jump.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="979" selection-end="979" vertical-scroll-proportion="0.57708627" vertical-offset="144" max-vertical-offset="851" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/app/share.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="26" selection-start="2529" selection-end="2529" vertical-scroll-proportion="0.629683" vertical-offset="828" max-vertical-offset="3680" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="6" selection-start="904" selection-end="904" vertical-scroll-proportion="0.82853025" vertical-offset="0" max-vertical-offset="4025">
+        <state line="10" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="0.3112314" vertical-offset="0" max-vertical-offset="739">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/generalizeInitialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="366" selection-end="510" vertical-scroll-proportion="0.3112314" vertical-offset="0" max-vertical-offset="874">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/initialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="39" selection-start="353" selection-end="353" vertical-scroll-proportion="0.28010824" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="54" selection-start="230" selection-end="230" vertical-scroll-proportion="0.24898511" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/build.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="1" selection-start="349" selection-end="349" vertical-scroll-proportion="0.45544556" vertical-offset="0" max-vertical-offset="707" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/pc/pc-share-res.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="129" selection-end="129" vertical-scroll-proportion="-2.8775215" vertical-offset="2089" max-vertical-offset="2783">
+        <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="0.03314121" vertical-offset="0" max-vertical-offset="2829">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/pc/inviteShare_bat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="129" selection-end="129" vertical-scroll-proportion="-5.9596543" vertical-offset="4228" max-vertical-offset="4922">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="36" selection-start="571" selection-end="571" vertical-scroll-proportion="0.3168044" vertical-offset="0" max-vertical-offset="1702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/pc/generalize.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="7" selection-start="4170" selection-end="4170" vertical-scroll-proportion="0.80115277" vertical-offset="2181" max-vertical-offset="2921">
-          <folding />
-        </state>
+        <state line="205" column="2" selection-start="9224" selection-end="9349" vertical-scroll-proportion="0.7478386" vertical-offset="4196" max-vertical-offset="4922" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/pc/inviteShare.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="6" selection-start="4162" selection-end="4162" vertical-scroll-proportion="0.7680115" vertical-offset="2181" max-vertical-offset="2921">
+        <state line="118" column="6" selection-start="4162" selection-end="4162" vertical-scroll-proportion="3.18732" vertical-offset="502" max-vertical-offset="2921" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="58" selection-start="586" selection-end="590" vertical-scroll-proportion="-0.23198847" vertical-offset="414" max-vertical-offset="3772">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc/css/index.css">
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc/build.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
-          <folding />
-        </state>
+        <state line="7" column="1" selection-start="175" selection-end="175" vertical-scroll-proportion="0.22772278" vertical-offset="0" max-vertical-offset="707" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/guess.html">
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/jump.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="7" selection-start="4164" selection-end="4164" vertical-scroll-proportion="0.7348703" vertical-offset="2227" max-vertical-offset="2921" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generalize.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1710" selection-end="1855" vertical-scroll-proportion="0.0" vertical-offset="621" max-vertical-offset="2921">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/app/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="48" selection-start="107" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/app/src/controller/initialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.124492556" vertical-offset="0" max-vertical-offset="739">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc/css/index2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="28" selection-start="3004" selection-end="3004" vertical-scroll-proportion="1.0633609" vertical-offset="493" max-vertical-offset="3013">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-17.113667" vertical-offset="12647" max-vertical-offset="13386">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../webbf/huiyan/dev/public/src/assets/component/window.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="9" selection-start="3469" selection-end="3956" vertical-scroll-proportion="0.74695534" vertical-offset="3381" max-vertical-offset="10212">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/app/build.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="38" selection-start="40" selection-end="40" vertical-scroll-proportion="0.032531824" vertical-offset="0" max-vertical-offset="707">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/build.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="19" selection-start="18" selection-end="21" vertical-scroll-proportion="0.032531824" vertical-offset="0" max-vertical-offset="707">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phoneapp/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="42" selection-start="675" selection-end="685" vertical-scroll-proportion="0.37753722" vertical-offset="273" max-vertical-offset="2185">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/build.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="153" selection-end="153" vertical-scroll-proportion="0.22772278" vertical-offset="0" max-vertical-offset="707">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/roll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="20" selection-start="32" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4600">
-          <folding>
-            <marker date="1400480016079" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400480016079" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400480016079" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400480016079" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="45" selection-start="31" selection-end="62" vertical-scroll-proportion="0.031123139" vertical-offset="0" max-vertical-offset="739">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/maskLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="-0.5290934" vertical-offset="552" max-vertical-offset="3289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/app/src/controller/indexInitialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="4667" selection-end="5016" vertical-scroll-proportion="-1.4316645" vertical-offset="3105" max-vertical-offset="5635">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phoneapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="2109" selection-end="2154" vertical-scroll-proportion="-9.34375" vertical-offset="1104" max-vertical-offset="3565">
-          <folding>
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400130224923" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/src/component/loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.6150628" vertical-offset="640" max-vertical-offset="2944">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/styles/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="15" selection-start="9239" selection-end="9239" vertical-scroll-proportion="0.23122239" vertical-offset="4029" max-vertical-offset="6210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/src/controller/indexInitialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../webbf/huiyan/dev/public/src/assets/component/loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="12" selection-start="2115" selection-end="2136" vertical-scroll-proportion="0.0" vertical-offset="1606" max-vertical-offset="3634">
-          <folding>
-            <marker date="1383186886841" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/interface/ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="19" selection-start="529" selection-end="529" vertical-scroll-proportion="0.6224628" vertical-offset="0" max-vertical-offset="966">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="46" selection-start="653" selection-end="680" vertical-scroll-proportion="0.6265223" vertical-offset="204" max-vertical-offset="3036">
-          <folding>
-            <marker date="1400489044066" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phoneapp/assets/src/controller/chatMutual.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="75" selection-start="12113" selection-end="12113" vertical-scroll-proportion="0.0" vertical-offset="3276" max-vertical-offset="4416">
-          <folding>
-            <element signature="e#3005#5615#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc/js/initialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="11" selection-start="388" selection-end="388" vertical-scroll-proportion="0.37347767" vertical-offset="0" max-vertical-offset="739">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/superMarquee.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="21" selection-start="11112" selection-end="11121" vertical-scroll-proportion="0.26676178" vertical-offset="6230" max-vertical-offset="7107">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="58" selection-start="4707" selection-end="4707" vertical-scroll-proportion="0.42625168" vertical-offset="2307" max-vertical-offset="4324">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/focus-conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="10" selection-start="734" selection-end="734" vertical-scroll-proportion="0.6535859" vertical-offset="0" max-vertical-offset="2070">
+        <state line="20" column="5" selection-start="488" selection-end="488" vertical-scroll-proportion="0.6224628" vertical-offset="0" max-vertical-offset="739">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/css/index2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="35" selection-start="6196" selection-end="6196" vertical-scroll-proportion="0.049586777" vertical-offset="2310" max-vertical-offset="3036">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/controller/initialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2297" selection-end="2297" vertical-scroll-proportion="1.9958677" vertical-offset="0" max-vertical-offset="1978">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/window.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="15" selection-start="666" selection-end="814" vertical-scroll-proportion="0.6535859" vertical-offset="207" max-vertical-offset="2116">
+        <state line="18" column="13" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3036">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/guess.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="32" selection-start="719" selection-end="719" vertical-scroll-proportion="0.56340057" vertical-offset="0" max-vertical-offset="7498">
+        <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.71875" vertical-offset="0" max-vertical-offset="7705">
           <folding>
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1400493070762" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="7303:7579" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="7344:7455" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="7486:7529" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="7689:8940" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="7728:7868" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="9053:9837" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="9090:9826" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="9118:9811" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="9276:9769" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="9327:9398" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="9452:9743" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="9922:10212" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="10420:11049" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="10440:11034" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="10461:10567" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="10588:10816" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="10837:11013" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="11268:11501" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="11432:11486" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="11753:12409" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="11809:12396" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="11864:11956" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="11992:12156" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="12037:12137" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="12194:12381" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="12477:12870" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="12625:12844" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="12674:12826" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="12974:13328" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="13007:13089" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="13122:13203" placeholder="..." />
+            <marker date="1400576054261" expanded="true" signature="13236:13317" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/config.js">
+    <entry file="file://$PROJECT_DIR$/../../../../webbf/adcms/template/popv5/static/share/data/focus-conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="3" selection-start="868" selection-end="868" vertical-scroll-proportion="0.09504132" vertical-offset="0" max-vertical-offset="726">
+        <state line="0" column="35" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../webbf/adcms/template/popv5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="24" selection-start="2877" selection-end="2939" vertical-scroll-proportion="0.3645533" vertical-offset="1035" max-vertical-offset="9269">
+          <folding>
+            <marker date="1400492243644" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400492243644" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/focus-conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="27" selection-start="627" selection-end="627" vertical-scroll-proportion="0.5602165" vertical-offset="0" max-vertical-offset="2070">
           <folding />
         </state>
       </provider>

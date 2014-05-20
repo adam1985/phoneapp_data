@@ -61,10 +61,10 @@ define(['jquery',  'component/template', 'conf/config', 'component/jquery.uri',
                         faceIndex = $this.attr('data-face'),
                         faceStr = '[em_' + faceIndex + ']',
                         inputMsg = $('#input-chat-msg')[0];
-                    if( !faceStatus[faceIndex] ) {
+                    //if( !faceStatus[faceIndex] ) {
                         inputMsg.value += faceStr;
                         faceStatus[faceIndex] = 1;
-                    }
+                    //}
 
                     inputMsg.focus();
 

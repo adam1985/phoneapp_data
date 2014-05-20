@@ -14,18 +14,9 @@
         <p> 奖池在不断增加，每增加一个预测，<br/>
             奖池增加0.1元 </p>
     </div>
-    <div class="cl total-wages">
-        <div class="wages-item">1
-            <div class="ef-link"></div>
-        </div>
-        <div class="wages-item">0
-            <div class="ef-link"></div>
-        </div>
-        <div class="wages-item">2
-            <div class="ef-link"></div>
-        </div>
+    <div class="total-wages-box">
+
     </div>
-    <div class="day-wages"> <span>1058.7</span> </div>
 </div>
 <div class="cl content">
     <div class="fl aside-left">
@@ -273,6 +264,7 @@
         </div>
     {{ } }}
 </script>
+
 <!-- 众多明星激情参与 -->
 <script type="text/html" id="focus-template">
     {{ for ( var i = 0, len = list.length; i < len; i++ ) {
@@ -315,6 +307,23 @@
         {{ } }}
     </ul>
 </script>
+
+<!-- 总共奖池 -->
+<script type="text/html" id="wages-template">
+    <div class="cl total-wages">
+        <div class="wages-item"> {{= totalWage.charAt(0) }}
+            <div class="ef-link"></div>
+        </div>
+        <div class="wages-item">{{= totalWage.charAt(1) }}
+            <div class="ef-link"></div>
+        </div>
+        <div class="wages-item">{{= totalWage.charAt(2) }}
+            <div class="ef-link"></div>
+        </div>
+    </div>
+    <div class="day-wages"> <span> {{= dayWage }} </span> </div>
+</script>
+
 <script src="static/bf-static/assets/pc2/require.min.js" data-main="static/bf-static/assets/pc2/src/index"></script>
 </body>
 </html>

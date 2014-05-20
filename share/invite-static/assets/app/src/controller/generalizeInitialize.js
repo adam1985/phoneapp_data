@@ -1,10 +1,17 @@
-define(['jquery', 'component/tools', './initializeScroll'], function($, tools, initializeScroll){
+define(['jquery', 'component/tools', 'component/jquery.uri'], function($, tools){
     return function() {
 
 
         var ua = navigator.userAgent.toLowerCase(),
             downloadApk = $('.download-apk'),
-            download = $('#weixin-download');
+            download = $('#weixin-download'),
+            invite = $.uri( location.href ).at('query').invite,
+            myInviteCode = $('#my-invite-code');
+
+            if( invite ){
+                myInviteCode.closest('.invite-box').show();
+                myInviteCode.html( invite );
+            }
 
             downloadApk.on('tap', 'a', function(e){
                 var href = $(this).attr('data-href');
@@ -22,8 +29,5 @@ define(['jquery', 'component/tools', './initializeScroll'], function($, tools, i
                 }
             });
 
-        $('#touch-copy').on('tap', function(){
-            //this.select();
-        });
     };
 });

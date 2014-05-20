@@ -137,7 +137,7 @@ img{ vertical-align: middle;}
 .qa-answer span {  width: 90%;text-align: justify;}
 
 /* 免责声明 */
-.disclaimer-content h2{ text-align: center; font-size: 18px;}
+.disclaimer-content h2{ text-align: left; font-size: 18px;}
 .disclaimer-detail p{ margin: 0 0 5px 0;  line-height: 1.5em;}
 
 /* 邀请好友安装 */
@@ -212,6 +212,8 @@ border-radius:30px; text-align: center; text-shadow: none; font-size: 18px; font
     top:0;
     bottom: 50px;
 }
+.chat-room-tip{ display: none;}
+
 .chat-room-tip p{
     color: #b1b1b1;
     font-size: 16px;
