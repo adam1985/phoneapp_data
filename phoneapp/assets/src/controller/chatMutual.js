@@ -23,9 +23,9 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                     nextStr = str.substring(index + 1);
                                 if(  !( preStr.indexOf('[') !== -1 &&  nextStr.indexOf(']') !== -1 )) {
                                     isBlockWord_ = true;
+                                    return false;
                                 }
 
-                                return false
                             }
 
                         });
@@ -34,7 +34,6 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                     },
                     ubbReplace = function (str, blockWord){
                         var faceExp = /\[em_([0-9]+)\]/g;
-
                         if( blockWord.length >>> 0 ) {
                             $.each(blockWord, function(){
                                 var exp = new RegExp('(' + this + ')', 'g');

@@ -26,7 +26,16 @@
       <file leaf-file-name="share-res.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="2697" selection-end="2697" vertical-scroll-proportion="-8.625" vertical-offset="1173" max-vertical-offset="3772">
+            <state line="23" column="26" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-10.0625" vertical-offset="207" max-vertical-offset="4048">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/styles/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="159" column="42" selection-start="7957" selection-end="7957" vertical-scroll-proportion="0.09843081" vertical-offset="3588" max-vertical-offset="4922">
               <folding />
             </state>
           </provider>
@@ -41,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generalizeInitialize.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="generalizeInitialize.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/generalizeInitialize.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="44" selection-start="944" selection-end="944" vertical-scroll-proportion="0.71583223" vertical-offset="0" max-vertical-offset="874">
+            <state line="23" column="44" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874">
               <folding />
             </state>
           </provider>
@@ -105,9 +114,10 @@
         <option value="$PROJECT_DIR$/guess.html" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/DD_belatedPNG_0.0.7a-min.js" />
         <option value="$PROJECT_DIR$/../../html/worldcup/data/focus-conf.js" />
-        <option value="$PROJECT_DIR$/html/app/share-res.html" />
         <option value="$PROJECT_DIR$/invite-static/assets/app/src/controller/generalizeInitialize.js" />
         <option value="$PROJECT_DIR$/invite-static/assets/app/src/controller/jump.js" />
+        <option value="$PROJECT_DIR$/html/app/share-res.html" />
+        <option value="$PROJECT_DIR$/invite-static/assets/app2/styles/index.css" />
       </list>
     </option>
   </component>
@@ -231,7 +241,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="app2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,41 +263,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="app2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="invite-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -436,11 +416,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/app/build.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="38" selection-start="40" selection-end="40" vertical-scroll-proportion="0.032531824" vertical-offset="0" max-vertical-offset="707" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../phoneapp/assets/build.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="19" selection-start="18" selection-end="21" vertical-scroll-proportion="0.032531824" vertical-offset="0" max-vertical-offset="707" />
@@ -637,7 +612,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="201" column="36" selection-start="9035" selection-end="9035" vertical-scroll-proportion="6.5948644" vertical-offset="0" max-vertical-offset="7682">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -679,20 +654,6 @@
         <state line="16" column="45" selection-start="730" selection-end="730" vertical-scroll-proportion="0.5068871" vertical-offset="0" max-vertical-offset="3197" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/initialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2697" selection-end="2697" vertical-scroll-proportion="-8.625" vertical-offset="1173" max-vertical-offset="3772">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/jump.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="10" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="621">
@@ -700,9 +661,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="26" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-10.0625" vertical-offset="207" max-vertical-offset="4048">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/initialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/generalizeInitialize.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="44" selection-start="944" selection-end="944" vertical-scroll-proportion="0.71583223" vertical-offset="0" max-vertical-offset="874">
+        <state line="23" column="44" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/styles/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="42" selection-start="7957" selection-end="7957" vertical-scroll-proportion="0.09843081" vertical-offset="3588" max-vertical-offset="4922">
           <folding />
         </state>
       </provider>
