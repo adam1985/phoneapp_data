@@ -27,10 +27,10 @@ define(['jquery', './maskLayer'], function ($, maskLayer ) {
          */
 
         config = $.extend({
-            url: 'static/bf-static/assets/pc2/images/loading.gif',
+            url: 'static/bf-static/assets/pc2/images/loadding.gif',
             isMask: true,
-            width: 32,
-            height: 32,
+            width: 124,
+            height: 124,
             wrapBox: document.body
 
         }, config);

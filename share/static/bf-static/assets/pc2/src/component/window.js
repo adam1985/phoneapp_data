@@ -46,23 +46,36 @@ define(['jquery', './template', './maskLayer'], function ( $, template, maskLaye
     };
 
     popWindow.prototype.position = function( container ) {
-        var height =  container.height();
+
+        var isIE6 = window.ActiveXObject &&  !window.XMLHttpRequest;
+
+        var height =  container.height(), docHeight = document.documentElement.clientHeight;
         container.css({
             'width': this.config.width
         });
 
-        container.animate({
-            'margin-top' : -( height / 2 )
-        });
+        var conf = {};
+
+        if( isIE6 ) {
+            conf.top = ( docHeight - height ) / 2 +document.documentElement.scrollTop;
+        } else {
+            conf['margin-top'] = -( height / 2);
+        }
+
+        container.animate( conf );
 
     };
 
     popWindow.prototype.show = function() {
+
         var self = this;
         this.maskLayer.show();
+
         this.popContent.show( 0, function(){
             self.position(self.popContent);
         });
+
+
         return this;
     };
 

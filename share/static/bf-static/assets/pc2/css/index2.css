@@ -12,13 +12,17 @@ body{ width: 100%; height: 100%; background: url(../images/gbanner.jpg) no-repea
 .top-ios-android,.top-apk-download,.top-tip-txt,.total-wages,.day-wages{ position: absolute;
 }
 .top-ios-android{ width: 108px; height: 108px; left : 760px; top : 70px; }
+
+.top-ios-android img{
+    width:108px;height:108px; display: block;
+}
 .top-apk-download{ width: 120px; height: 100px;left : 890px; top :70px;}
 .top-apk-download a{ display: block; width: 100%; height: 40px; margin: 5px 0 8px; text-indent: -9999em;}
 .top-tip-txt{width: 250px; height: 35px;left :810px; top :240px; }
 .top-tip-txt p{ font-size: 12px; color: #fff; line-height: 1.5em;}
 .total-wages{width: 160px; height: 67px;left :810px; top :288px; }
 .wages-item{ position: relative; width: 46px; margin: 0 2px 0 2px; height: 100%;float: left; text-align: center; line-height: 67px; font-size: 60px;}
-.ef-link{position: absolute; left : 50%; margin-left: -15px; top : 33px; height: 3px; width: 30px; background: #ededed;}
+.ef-link{position: absolute; left : 50%; margin-left: -15px; top : 33px; height: 3px; width: 30px; background: #ededed; overflow: hidden;}
 .day-wages {
     height: 20px;
     left: 837px;
@@ -33,7 +37,7 @@ body{ width: 100%; height: 100%; background: url(../images/gbanner.jpg) no-repea
 .content{ width: 1008px; margin: 0 auto; padding-bottom: 35px;}
 .com-top{margin-top: 35px;}
 .aside-left{ width: 608px;}
-.com-header{ width: 533px; height: 56px;line-height: 56px; font-weight: bold; background: url(../images/gl_head.png) no-repeat; color: #106736; font-size: 18px; padding-left: 75px;}
+.com-header{ width: 533px; height: 56px;line-height: 56px; font-weight: bold; background: url(../images/gl_head.png) no-repeat; color: #106736; font-size: 18px; padding-left: 75px; overflow: hidden;}
 .section-content{width: 548px;background: url(../images/gl_bg.png) repeat-y; padding: 30px; }
 .slide-content{width: 467px; height: 386px; background: url("../images/worldcup_bg.png") no-repeat;}
 .slide-item{ padding: 20px 20px 20px 25px; display: none;}
@@ -46,9 +50,9 @@ body{ width: 100%; height: 100%; background: url(../images/gbanner.jpg) no-repea
 
 .slide-ul{ margin: 6px auto 0; height: 340px; overflow: hidden;}
 .slide-ul li{ margin-bottom: 6px;}
-.slide-ul img,.slide-ul span{display: block; width: 60px; text-align: center;}
+.slide-ul img,.slide-ul span{display: block; width: 60px; text-align: center; }
 .slide-ul span{margin-top: 3px;}
-.slide-ul a{ font-size: 12px; color: #074522; text-decoration: none;}
+.slide-ul a{ font-size: 12px; color: #074522; text-decoration: none; display: block;width: 60px;}
 .slide-ul a:hover{ color: #0a9c4a;}
 .slide-up a,.slide-down a{ display: block; width: 37px; height: 19px; text-indent: -9999em; margin-left: 12px;}
 .slide-up a{ background: url(../images/slide_up.png) no-repeat;}
@@ -89,12 +93,15 @@ body{ width: 100%; height: 100%; background: url(../images/gbanner.jpg) no-repea
 /*.app-downloads a.android:hover{ background-image: url(../images/android_btn_on.png);}*/
 .rank-item-wrap{ width: 267px; height: 200px; background: url(../images/team_top.png) no-repeat left bottom; margin: auto; overflow: hidden;}
 .rank-item-box{width: 282px;}
+.rank-item-box span{word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */ }
 .rank-item{ width: 80px; float: left; margin-right: 14px; text-align: center; font-size: 12px;}
 .rank-item img,.rank-item span{display: block;}
 .rank-item img{ margin-bottom: 80px;}
 .rank-item-wrap .rank-ream-name{ font-size: 14px; font-weight: bold;}
+.rank-ream-name{ _padding-top: 3px;}
 .rank-ream-votes{ margin-top: 3px;}
-.rank-ream-votes em { color: #f00; font-weight: bold;}
+.rank-ream-votes em { color: #f00; font-weight: bold; font-style: normal;}
 .team-rank-bottom{ height: 37px; background-image: url(../images/s_bt.png); text-align: center;}
 .team-rank-bottom a{ font-size: 12px; color: #fff; padding-top: 8px; display: block; text-decoration: none;}
 .team-rank-bottom a:hover{ text-decoration: underline;}
@@ -107,9 +114,9 @@ body{ width: 100%; height: 100%; background: url(../images/gbanner.jpg) no-repea
 .weibo-item-box img{ display: block; margin-bottom: 15px;}
 .weibo-item-box a{ display: block; float: left; width: 80px; margin-right: 20px; font-size: 12px; text-align: center;}
 .mask-box{ width: 100%; height: 2000px; background: #848585; position: relative;}
-.pop-wrap{ width: 1007px; position: fixed; _position: absolute;left : 50%; top: 50%; margin-left: -504px; z-index: 9999; display: none;}
+.pop-wrap{ width: 1007px; position: fixed; _position: absolute;left : 50%;  top: 50%;margin-left: -504px; z-index: 9999; display: none; overflow: hidden;}
 .pop-header{ width: 100%; height: 61px; background: url(../images/pop_head.png) no-repeat; line-height: 61px; text-align: center;
-color: #106736; font-size: 18px; font-weight: bold;}
+color: #106736; font-size: 18px; font-weight: bold; overflow: hidden;}
 .pop-close-btn{ float: right; margin-right: 40px; display: inline; height: 61px; width: 18px;background: url(../images/pop_close.png) no-repeat left center;}
 .pop-close-btn:hover{background-image: url(../images/pop_close_on.png); }
 .pop-body{ width: 100%; background: url(../images/pop_bg.png) repeat-y; padding: 25px 27px; font-size: 12px;}
@@ -120,7 +127,7 @@ color: #106736; font-size: 18px; font-weight: bold;}
 .total-team-wrap{ margin-left: 2px;}
 .total-team-box li{ float: left; width: 100px; height: 120px; background: url(../images/team-box.png) no-repeat; margin:0 20px 20px 0;}
 .team-top-num{ font-size: 16px; font-weight: bold; padding: 0 0 0 3px;}
-.team-top-detail{ width: 60px; margin: auto; text-align: center;}
+.team-top-detail{ /*width: 60px;*/ margin: auto; text-align: center;}
 .team-top-detail img{ display: block; width: 52px; margin: 0 auto 10px;}
 .team-top-detail  span{ display: block;}
 .team-top-detail .rank-ream-name { font-size: 14px; font-weight: bold; }

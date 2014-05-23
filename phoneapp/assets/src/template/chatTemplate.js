@@ -21,9 +21,19 @@ define(function(){
             +        '</div>'
             +    '{{ } }}';
 
+    var errorTemplate =
+            '<div class="chat-item">'
+        +            '<div class="chat-content">'
+        +                '<p class="post-msg-err">{{== content }}</p>'
+        +            '</div>'
+        +    '</div>';
+
+
+
     return {
         tipTemplate : tipTemplate,
-        contentTemplate : contentTemplate
+        contentTemplate : contentTemplate,
+        errorTemplate : errorTemplate
     }
 
 });

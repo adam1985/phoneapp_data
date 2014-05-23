@@ -2,8 +2,15 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="renderer" content="webkit">
     <title>百万世界杯推广安装</title>
     <link rel="stylesheet" href="static/bf-static/assets/pc2/css/index2.css"/>
+    <!--[if IE 6]>
+    <script src="static/bf-static/assets/pc2/DD_belatedPNG_0.0.7a-min.js"></script>
+    <script>
+        DD_belatedPNG.fix(".fixpng");
+    </script>
+    <![endif]-->
 </head>
 <body>
 <div class="wrapper">
@@ -14,7 +21,7 @@
         <p> 奖池在不断增加，每增加一个预测，<br/>
             奖池增加0.1元 </p>
     </div>
-    <div class="total-wages-box">
+    <div id="total-wages-box">
 
     </div>
 </div>
@@ -85,7 +92,11 @@
             <div class="com-bottom com-bottom-top"></div>
         </div>
         <div class="com-top section-column-3">
-            <div class="com-header ms-font com-header-top worldcup-time-head"> 世界杯时间表 <a class="fr clickable" href="#">查看全部时间表 >></a> </div>
+            <div class="cl com-header ms-font com-header-top worldcup-time-head">
+                <a class="fr clickable" href="javascript:void(null)" id="total-game-times">查看全部时间表 >></a>
+                世界杯时间表
+
+            </div>
             <div class="cl section-content worldcup-time">
                 <div class="cl worldcup-box" id="worldcup-box">
 
@@ -141,8 +152,9 @@
 <script type="text/html" id="pop-template">
     <div class="pop-wrap">
         <div class="ms-font pop-header">
-            {{= title }}
             <a class="pop-close-btn" href="javascript:void(null)"></a>
+            {{= title }}
+
         </div>
         <div class="pop-body">
             {{== content }}
@@ -207,9 +219,9 @@
                             {{= i + 1}}
                         </div>
                         <div class="team-top-detail">
-                            <img src="{{= target.src }}" width="52" height="52"/>
-                            <span class="rank-ream-name">{{= target.name }}</span>
-                            <span class="rank-ream-votes"><em>{{= target.vote }}</em> 票</span>
+                            <img class="fixpng" src="{{= target.src }}" width="52" height="52"/>
+                            <span class="rank-ream-name">{{= target.team_name }}</span>
+                            <span class="rank-ream-votes"><em>{{= target.count }}</em> 票</span>
                         </div>
                     </li>
                 {{ } }}
@@ -221,9 +233,13 @@
 <script type="text/html" id="partake-template">
         <ul>
             {{ for ( var i = 0, len = list.length; i < len; i++ ) {
-                var target = list[i];
+                var target = list[i], typeTexts = ['填写了"百万猜球"竞猜卷', '竞猜单场比赛结果'];
             }}
-                <li> <b>{{= target.phone }}</b> <span>填写了"百万猜球"竞猜卷</span> 【<a class="clickable" href="{{= target.src }}">查看</a>】 </li>
+                <li> <b>{{= target.phone }}</b> <span>{{= typeTexts[target.type] }}</span>
+                    {{ if( target.type == 1 ) { }}
+                        【<a class="clickable" href="{{= target.share_url }}">查看</a>】
+                    {{ } }}
+                </li>
             {{ } }}
         </ul>
 </script>
@@ -238,9 +254,9 @@
                     <td colspan="3" class="cup-item-head"> {{= target.time }} </td>
                 </tr>
                 <tr>
-                    <td><img src="{{= target.teamAsrc }}" width="34" height="35"/></td>
+                    <td><img class="fixpng" src="{{= target.teamAsrc }}" width="34" height="35"/></td>
                     <td></td>
-                    <td><img src="{{= target.teamBsrc }}" width="34" height="35"/></td>
+                    <td><img class="fixpng" src="{{= target.teamBsrc }}" width="34" height="35"/></td>
                 </tr>
                 <tr>
                     <td width="45%">{{= target.teamA }}</td>
@@ -252,15 +268,20 @@
     {{ } }}
 </script>
 
+<!-- 全部时间表 -->
+<script type="text/html" id="total-time-template">
+    <img width="60%" src="static/bf-static/assets/pc/images/share-worldcup.jpg">
+</script>
+
 <!-- 球队支持排行榜 -->
 <script type="text/html" id="team-rank-template">
     {{ for ( var i = 0, len = list.length; i < len; i++ ) {
         var target = list[i];
     }}
         <div class="rank-item">
-            <img src="{{= target.src }}" width="80" height="80"/>
-            <span class="rank-ream-name">{{= target.name }}</span> <span class="rank-ream-votes">
-            <em>146893</em> {{= target.vote }}</span>
+            <img class="fixpng" src="{{= target.src }}" width="80" height="80"/>
+            <span class="rank-ream-name">{{= target.team_name }}</span> <span class="rank-ream-votes">
+            <em>{{= target.count }}</em> 票</span>
         </div>
     {{ } }}
 </script>

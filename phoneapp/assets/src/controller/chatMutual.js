@@ -107,7 +107,13 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                             arg.callee();
                                         }
                                     } else {
-                                        arg.callee();
+                                        var errorTemplate = template.compile(chatTemplate.errorTemplate),
+                                            userStatusTip = chatConf.userStatus[getMessage.errCode];
+                                        if( userStatusTip ) {
+                                            refreshIscroll(errorTemplate({
+                                                content : userStatusTip
+                                            }));
+                                        }
                                     }
 
                                 },
@@ -128,9 +134,8 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                             token: token
                         },
                         success: function (joinChat) {
+                            var chatWelcome = chatConf.welcome;
                             if (joinChat.success) {
-
-                                $('#chat-room-tip').show();
 
                                 ajax({
                                     url : 'http://fjc1.pop.baofeng.net/popv5/static/phoneapp/assets/src/model/blockWord.js',
@@ -144,6 +149,9 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                             postChatMsg = $('#post-chat-msg'),
                                             disabledCls = 'disabled-post-chat-btn',
                                             timeout;
+
+                                        inputChatMsg.focus(function(e){e.preventDefault();});
+                                        inputChatMsg.on('tap', function(){ this.focus();});
 
                                         postChatMsg.on('tap', function(){
                                             var message = inputChatMsg.val(),
@@ -183,19 +191,25 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                                             var messages = {
                                                                 user: "我: ",
                                                                 me : true,
-                                                                time: tools.formatTime(res.time)
+                                                                time: tools.formatTime(new Date())
                                                             };
                                                             if( res.success ) {
                                                                 messages.content = ubbReplace( message, blockWord );
+                                                                inputChatMsg.val('');
                                                             } else {
-                                                                messages.content = '<em class="post-msg-err">消息发送失败</em> <a class="renew-post-btn" href="javascript:void(null)">重新发送</a>'
+                                                                var userStatusTip = chatConf.userStatus[res.errCode];
+                                                                if( userStatusTip ) {
+                                                                    messages.content = '<em class="post-msg-err">' + userStatusTip + '</em>';
+                                                                }
+                                                                if( res.errCode == 22) {
+                                                                    messages.content = ' <a class="renew-post-btn" href="javascript:void(null)">重新发送</a>';
+                                                                }
                                                             }
                                                             data.list.push( messages );
 
                                                             var contentTemplate = template.compile(chatTemplate.contentTemplate);
                                                             refreshIscroll(contentTemplate(data));
 
-                                                            inputChatMsg.val('');
                                                         }
                                                     }, true);
 
@@ -214,7 +228,7 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                                         time: tools.formatTime(new Date())
                                                     };
 
-                                                    messages.content = '<em class="post-msg-err">防止灌水，发消息间隔不少于3秒</em>';
+                                                    messages.content = '<em class="post-msg-err">您发送信息过于频繁，请3s后重试</em>';
 
                                                     data.list.push( messages );
 
@@ -241,8 +255,23 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                     }
                                 });
 
+                            } else {
+                                chatWelcome = chatConf.joinfail;
                             }
+
+                            // 聊天室欢迎语
+
+                            var tipTemplate = template.compile(chatTemplate.tipTemplate),
+                                chatRoomTip = $('#chat-room-tip');
+
+                            chatRoomTip.html( tipTemplate( {
+                                welcome : chatWelcome
+                            } ));
+
+                            chatRoomTip.show();
+
                         }
+
                     }, true);
 
             }());

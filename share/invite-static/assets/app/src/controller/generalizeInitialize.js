@@ -9,7 +9,7 @@ define(['jquery', 'component/tools', 'component/jquery.uri'], function($, tools)
             myInviteCode = $('#my-invite-code');
 
             if( invite ){
-                myInviteCode.closest('.invite-box').show();
+                myInviteCode.closest('.invite-number').show();
                 myInviteCode.html( invite );
             }
 

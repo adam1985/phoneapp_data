@@ -6,11 +6,6 @@ define(['jquery',  'component/template', 'conf/config', 'component/jquery.uri',
             // 设置页面标题　
             document.title = chatConf.title;
 
-            // 聊天室欢迎语
-
-            var tipTemplate = template.compile(chatTemplate.tipTemplate);
-            $('#chat-room-tip').html( tipTemplate( chatConf ) );
-
             var maskLayer = MaskLayer({
                 opacity: 0.5
             });
@@ -66,7 +61,7 @@ define(['jquery',  'component/template', 'conf/config', 'component/jquery.uri',
                         faceStatus[faceIndex] = 1;
                     //}
 
-                    inputMsg.focus();
+                    //inputMsg.focus();
 
                     qqface.hide();
 
