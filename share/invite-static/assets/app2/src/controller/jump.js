@@ -17,6 +17,6 @@ define(['jquery', 'component/tools', 'component/jquery.uri'], function($, tools)
     ispc = !tools.isAndroid && !tools.isIos;
 
     if ( ispc ) {
-        //location.href = sharePageUrl;
+        location.href = sharePageUrl;
     }
 });

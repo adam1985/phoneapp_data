@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+body{background-color:#f3ce25; padding:0; margin:0;}
+*{margin:0px; padding:0px;}
+.hide{ display: none;}
+
+/*头部*/
+.reward-top{background-image:url(../images/reward-top-bj.jpg); height:420px; background-position:center top; background-repeat:no-repeat;}
+.reward-top-img{width:1160px; margin:0 auto; height:420px; background-image:url(../images/reward-banner.jpg);}
+.reward-top-content{width:230px; padding-left:850px; padding-top:70px;}
+.reward-top-download{width:230px; height:106px; padding-bottom:69px;}
+.reward-top-download-left{width:108px; float:left; height:106px; padding-right:17px;}
+.reward-top-download-right{width:105px; float:left; height:106px;}
+.reward-top-download-right a{margin-bottom:16px; display:block;}
+.reward-top-explain{width:192px; padding-left:70px; height:44px; color:#ffffff; font-size:12px; font-family:"宋体"; line-height:18px;} 
+.reward-top-total{width:192px; padding-left:70px;} 
+.total-wages{width:192px; height:66px; background-image:url(../images/total-bj.jpg); background-repeat:no-repeat; padding-bottom:12px;}
+.wages-item{width:47px; line-height:66px; float:left; text-align:center; font-size:60px; margin-right:2px;}
+.day-wages{background-image:url(../images/day-wages-bj.jpg); width:117px; height:17px; overflow:hidden;}
+.day-wages span{width:65px; height:17px; line-height:17px; text-align:center; color:#ff0000; font-size:12px; font-family:"宋体"; font-weight:bold; display:block; padding-left:25px;}
+
+/*正文内容*/
+.reward-center-bj{background-image:url(../images/reward-wrapper-bj.jpg); background-position:center top; background-repeat:no-repeat;}
+.reward-wrapper{width:1160px; margin:0 auto;}
+.reward-wrapper-top{width:1007px; padding-left:80px; height:648px;}
+.reward-center-left{width:675px; float:left;}
+.reward-center-left-title{width:675px; height:57px;}
+.reward-center-left-info{width:675px; height:591px; background-image:url(../images/leftinfo-bj.jpg); background-repeat:no-repeat;}
+.reward-center-left-img{width:608px; padding-left:30px; height:446px;}
+.reward-center-left-img img{width:608px; height:446px;}
+.reward-center-left-fontinfo{padding-left:54px; color:#000000; font-size:12px; font-family:"宋体"; line-height:18px; width:570px; padding-top:28px; height:60px;}
+.reward-center-left-fontinfo span{font-weight:bold;}
+.reward-center-left-fonttitle{font-size:14px; font-weight:bold; font-family:"宋体"; color:#000000; width:608px; padding-left:30px; text-align:center; height:50px; line-height:50px;}
+.reward-center-right{width:297px; float:left; margin-left:35px;}
+.reward-center-right-title{width:297px; height:57px;}
+.reward-center-right-info{width:297px; height:591px; background-image:url(../images/rightinfo-bj.jpg); background-repeat:no-repeat;}
+.reward-center-right-wrap{width:232px; padding-left:28px; padding-top:29px;}
+.referral-code{width:232px; height:94px;}
+.referral-code span{color:#48715e; font-size:13px; font-weight:bold; font-family:"宋体";}
+.referral-code-total{width:232px; height:46px; line-height:46px; text-align:center; color:#ffffff; font-family:"微软雅黑", "宋体"; font-size:18px; background-image:url(../images/referral-bj.jpg); background-repeat:no-repeat; margin-top:9px;}
+.referral-code-total em{font-style:normal; color:#fff100;}
+.right-QR-code{width:209px; margin:0 auto; height:260px; text-align:center;}
+.right-QR-code span{color:#000000; font-size:12px; font-family:"宋体"; line-height:18px;}
+.right-QR-code-img{width:209px; height:203px; padding-top:12px;}
+.right-button{width:232px; height:170px;}
+.right-button a{margin-bottom:8px; display:block;}
+.right-explain-font{width:232px; text-align:center; color:#000000; font-size:12px; font-family:"宋体"; display:block;}
+.rule-introduction{padding-top:33px; width:1007px; height:486px; padding-left:80px; padding-bottom:43px;}
+.rule-introduction-title{width:1007px; height:57px;}
+.rule-introduction-content{background-image:url(../images/rule-content-bj.jpg); width:1007px; height:429px;}
+.rule-introduction-content-left{padding-top:28px; padding-left:30px; width:497px; float:left; color:#000000; font-family:"宋体"; line-height:20px; font-size:12px;}
+.rule-introduction-content-left span,.rule-introduction-content-right span{display:block; padding-bottom:7px;}
+.rule-introduction-content-left em,.rule-introduction-content-right em{font-style:normal; font-weight:bold;}
+.rule-introduction-content-right{padding-top:28px; width:473px; float:left; color:#000000; font-family:"宋体"; line-height:20px; font-size:12px;}
+.rule-introduction-content-right a{color:#106736; text-decoration:underline; font-weight:bold;}

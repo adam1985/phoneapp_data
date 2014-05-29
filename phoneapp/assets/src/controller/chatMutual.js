@@ -176,7 +176,6 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
 
                                                 } else  if( !postChatMsg.hasClass(disabledCls) ){
                                                     postChatMsg.addClass(disabledCls);
-                                                    timeout && clearTimeout(timeout);
                                                     ajax({
                                                         url : '/sendMessage?token=' + token,
                                                         type : 'post',

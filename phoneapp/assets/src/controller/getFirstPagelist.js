@@ -1,5 +1,5 @@
-define(['jquery','component/template', 'component/tools', 'conf/config'],
-    function($, template, tools, config){
+define(['jquery','component/template', 'component/tools', 'conf/config', './getMiniVideo'],
+    function($, template, tools, config, getMiniVideo ){
         return function(pageIndexArg, path, data, jsonpCallback, boxId, templateId){
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
             var totalRow = 0, maxRow = 6, ajaxNumber = 0,
@@ -24,6 +24,7 @@ define(['jquery','component/template', 'component/tools', 'conf/config'],
                                 if( ajaxNumber > 1 ) {
                                     newsListContainer.append( templateStr );
                                 } else {
+                                    getMiniVideo();
                                     newsListContainer.html( templateStr );
                                 }
 

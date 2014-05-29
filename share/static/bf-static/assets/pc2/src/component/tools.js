@@ -82,7 +82,7 @@ define(['jquery',  'conf/config'], function ($, config) {
             if( sDate instanceof Date ) {
                 date = sDate;
             } else {
-                if( /\d{9,}/.test(sDate) ) {
+                if( /\d{9,10}/.test(sDate) ) {
                     date = new Date(parseInt(sDate) * 1000 );
                 } else {
                     sDate = sDate.replace(/-/g, '/');
@@ -90,7 +90,7 @@ define(['jquery',  'conf/config'], function ($, config) {
                 }
             }
 
-            return preZero(date.getHours()) + ':' + preZero(date.getMinutes()) + ':' + preZero(date.getSeconds());
+            return preZero(date.getMonth() + 1) + '月' + preZero(date.getDate()) + '日  ' + preZero(date.getHours()) + ':' + preZero(date.getMinutes());
         },
         tidToTeam = function ( tid ) {
             if( config.teams.length >>>0 ) {

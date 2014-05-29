@@ -17,6 +17,7 @@ define(['jquery', 'component/loading'], function($, loading){
 
         config = $.extend({
             type: 'get',
+            cache : false,
             dataType: 'json'
         }, config);
 

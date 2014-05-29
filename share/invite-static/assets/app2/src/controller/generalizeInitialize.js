@@ -18,7 +18,7 @@ define(['jquery', 'component/tools', 'component/jquery.uri'], function($, tools)
                 if( /micromessenger/i.test( ua ) ) {
                     e.preventDefault();
                     download.show();
-                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
                     setTimeout( function(){
                         if( download.is(':visible') ) {
                             download.hide();

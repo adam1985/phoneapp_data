@@ -312,7 +312,7 @@ var DD_belatedPNG = {
             }
         }
         el.vml.image.shape.fillcolor = 'none'; /* Don't show blank white shapeangle when waiting for image to load. */
-        el.vml.image.fill.type = 'tile'; /* Makes image show up. */
+        el.vml.image.fill.type = 'frame'; /* Makes image show up. */
         el.vml.color.fill.on = false; /* Actually going to apply vml element's style.backgroundColor, so hide the whiteness. */
         lib.attachHandlers(el);
         lib.giveLayout(el);

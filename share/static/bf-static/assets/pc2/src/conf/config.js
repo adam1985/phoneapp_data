@@ -1,5 +1,5 @@
 define({
-    pageDir : "http://worldcup.test/",
+    pageDir : "http://worldcup.baofeng.com/",
     dataDir : "http://fjc1.pop.baofeng.net/popv5/html/worldcup/data/",
     assetsDir : "http://worldcup.baofeng.com/static/bf-static/",
     teamIcon : "http://static.worldcup.baofeng.com/share/static/team/",

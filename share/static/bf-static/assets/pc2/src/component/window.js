@@ -41,13 +41,15 @@ define(['jquery', './template', './maskLayer'], function ( $, template, maskLaye
             self.hide();
         });
 
+        this.refresh();
+
         return this;
 
     };
 
-    popWindow.prototype.position = function( container ) {
+    popWindow.prototype.ISIE6 = window.ActiveXObject &&  !window.XMLHttpRequest;
 
-        var isIE6 = window.ActiveXObject &&  !window.XMLHttpRequest;
+    popWindow.prototype.position = function( container ) {
 
         var height =  container.height(), docHeight = document.documentElement.clientHeight;
         container.css({
@@ -56,14 +58,23 @@ define(['jquery', './template', './maskLayer'], function ( $, template, maskLaye
 
         var conf = {};
 
-        if( isIE6 ) {
-            conf.top = ( docHeight - height ) / 2 +document.documentElement.scrollTop;
+        if( this.ISIE6 ) {
+            conf.top = ( docHeight - height ) / 2 + document.documentElement.scrollTop;
         } else {
             conf['margin-top'] = -( height / 2);
         }
 
-        container.animate( conf );
+        container.animate( conf, 0 );
 
+    };
+
+    popWindow.prototype.refresh = function(){
+        if( this.ISIE6 ) {
+            var self = this;
+            $(window).scroll( function(){
+                self.position(self.popContent);
+            });
+        }
     };
 
     popWindow.prototype.show = function() {

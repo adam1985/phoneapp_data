@@ -133,7 +133,7 @@ define(['jquery', 'component/template','component/tools', 'component/slider', 'c
                                 if( gameTeams.length >>> 0 ) {
                                     $.each(gameTeams, function() {
                                         list.push({
-                                            time : this.time,
+                                            time : tools.formatTime(this.match_time),
                                             teamA : tools.tidToTeam( this.a_tid ),
                                             teamB : tools.tidToTeam( this.b_tid ),
                                             teamAsrc : config.teamIcon + this.a_tid + '.png',

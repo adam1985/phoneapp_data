@@ -1,0 +1,40 @@
+@import "scrollbar.css";
+.fl{float:left;}
+.fr{float:right;}
+.cl{zoom:1;}
+.cl:after{content:"";display:block;height:0;clear:both;visibility:hidden}
+.ellipsis, .layout-banner li,.focus-picture-titles a,.qt-item a { display:block;overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
+a{text-decoration:none;outline:none;}
+a:hover{text-decoration:none;}
+html, body, .wrapper{overflow-x: hidden !important;}
+body{font-family: "微软雅黑", "宋体" , Arial, Helvetica, sans-serif; margin: 0; padding: 0;/*-webkit-user-select: none; -moz-user-select: none;*/   }
+img{ vertical-align: middle;}
+.clickable{ color: #106736; text-decoration: none; font-weight: bold;}
+.clickable:hover { text-decoration: underline;}
+html{ background: #f3ce25;}
+.header img{ width: 100%; }
+.content{ width: 90%; margin: 10px auto;}
+.section{ position: relative;}
+.section img{ width: 100%;}
+.app-downloads{ width: 40%; margin: auto; position: absolute; top : 50%; left: 50%; margin-left: -20%;}
+.app-downloads a{ display: block;}
+.app-downloads img {float: left; width: 100%; display: block; margin: 8px 0 0;}
+
+.quiz-box{ margin-top: 20px;font-size:12px; }
+.quiz-header img{ width: 100%;}
+.quiz{margin-bottom: 20px; }
+.quiz-title{ color: #fff100; font-size: 14px; background: url(../images/quiz_title.png) no-repeat; width: 77px; height: 23px; line-height: 23px;  text-align: center; margin-bottom: 8px;}
+.quiz-box p{ margin: 5px 0; }
+.quiz h4{font-weight: bold; margin:6px 0;}
+
+.disclaimer-root{ background: #f2d226;}
+.disclaimer-wrapper{ background: url(../images/bgc.png) repeat-x;}
+.disclaimer-contaier{ padding: 30px;}
+.disclaimer-contaier h1{ margin:0;}
+.imer-list { margin: 15px 0;}
+.disclaimer-contaier h1 img{ width: 100%;  display: block; vertical-align: middle;}
+.disclaimer-contaier h6 { text-align: left; margin: 5px 0 0 0;font-size: 13px;}
+.disclaimer-contaier p{ font-size: 14px; margin: 5px 0;}
+.goback-guess{ margin: 15px 0 0; text-align: center; }
+.goback-guess a{font-weight: bold; color: #000;}
+.goback-guess a:hover{ text-decoration: underline;}
