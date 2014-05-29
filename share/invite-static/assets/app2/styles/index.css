@@ -12,7 +12,7 @@ img{ vertical-align: middle;}
 .ui-page-theme-a a:active, html .ui-bar-a a:active, html .ui-body-a a:active, html body .ui-group-theme-a a:active {
     color: #5ce5b5;
 }
-
+.bred{ color: #f00; font-weight: bold;}
 .wrapper{ height: 100%; width: 100%;}
 .hide{ display: none;}
 .show, .block{ display: block;}
@@ -166,7 +166,8 @@ img{ vertical-align: middle;}
 .mini-quick-code img, .mini-download-apk img{ width: 100%; vertical-align: top; padding-bottom: 3px;}
 
 .layout-body,.generalize-text{ padding: 10px;}
-.generalize-text{ padding-top: 0; margin-top: 6px; color: #106736;}
+.generalize-text{padding-top: 0;margin-top: 6px;color: #106736;
+    font-family: "微软雅黑";font-size: 18px;}
 .world-cup-pic{ width: 100%;}
 .rank-box{ box-sizing: border-box; font-size: 16px; }
 .rank-header,.rank-team { height: 36px; line-height: 36px; background: #7fbf2b; margin-bottom: 5px; width: 100%;}
@@ -175,24 +176,32 @@ img{ vertical-align: middle;}
 .rank-top1{ background-image: url(../images/top1.png);}
 .rank-top2{ background-image: url(../images/top2.png);}
 .rank-top3{ background-image: url(../images/top3.png);}
-.my-invite-res{ text-align: center; padding: 0 0 10px; color: #106736;}
+.rank-new{width:100%; background-color:#f2ca26; height:133px; color:#000000; font-family:"微软雅黑", "宋体"; font-size:24px;}
+.rank-left{width:30%; float:left; margin-right:0.5%; height:133px; text-align:center; position:relative;}
+.rank-center{width:38.9%; float:left; margin-right:0.5%; height:133px; text-align:center; position:relative;}
+.rank-right{width:30%; float:left; height:133px; text-align:center; position:relative;}
+.rank-left span,.rank-right span{display:block; position:absolute; z-index:1; bottom:5px; width:100%; text-align:center; left:0;}
+.rank-center span{display:block; font-size:30px; position:absolute; z-index:1; bottom:8px; width:100%; text-align:center; left:0;}
+.rank-new img{width:100%; height:133px;}
+.my-invite-res{text-align: center;padding: 0 0 10px;color: #106736;
+    font-size: 20px;font-weight: bold;}
 
 .invite-box{ padding: 10px; }
 .invite-box p{ color: #646464; font-size: 16px;}
 .my-invite{  width:100%; height:50px; color: #688b7f;box-sizing: border-box;line-height: 50px; padding-left: 20px; font-size: 18px; background: url(../images/invite-bg.png) no-repeat center center;background-size: 100% auto;}
 .my-invite span, .my-invite input{margin-left: 10px; display: inline-block; width: 100px; background: transparent; color: #688b7f;border: none; font-size: 20px;ime-mode: disabled;-webkit-user-select:text ; -moz-user-select: text;  }
-.invite-number p{margin-top: 5px; text-align: center;}
+.invite-number p{margin-top: 5px;}
 .install-apk{ }
-.install-apk h3{margin-bottom: 10px;}
+.install-apk h3{margin-bottom: 10px;color: #106736;font-size: 26px;}
 .install-apk p{ margin: 3px 0 0;}
-.quick-mark{width: 100%; text-align: center; margin-top: 15px;}
+.quick-mark{width: 100%; text-align: center; margin: 15px 0;}
 .quick-mark img {width: 70%; }
 
 
 .download-apk{ margin-top: 20px;}
-.download-apk a{ display: block; width: 65%; height: 40px; line-height: 40px; margin: 15px auto; color: #000;
-background : -webkit-gradient(linear,0% 0%, 0% 100%, from(#fae232), to(#e8b20c), color-stop(0.5,#d58519));
-background : -moz-linear-gradient(0% 0% 270deg, #fae232,#e8b20c, #d58519 50%);
+.download-apk a{ display: block; width: 65%; height: 40px; line-height: 40px; margin: 15px auto; color: #fff;
+background : -webkit-gradient(linear,0% 0%, 0% 100%, from(#60ac01), to(#3c8c1b), color-stop(0.5,#176c31));
+background : -moz-linear-gradient(0% 0% 270deg, #60ac01,#3c8c1b, #176c31 50%);
 border-radius:30px; text-align: center; text-shadow: none; font-size: 18px; font-weight: normal;}
 
 .generalize-wrapper hr{ border-top:1px solid #cbcbcb; height: 0;}

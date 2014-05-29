@@ -2,11 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=7" />
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <link rel="stylesheet" href="../../invite-static/assets/pc2/css/index2.css"/>
-
     <title>百万猜球</title>
+    <script>
+        (function(){
+            var PageUrl = "../app/share-res.html",
+                    exp = /invite=(\d+)/,
+                    ispc = !((/android|iphone|ipad/gi).test(navigator.appVersion));
+                    exp.exec( location.href);
+
+            if( !ispc ) {
+                location.href = PageUrl + '?invite=' + RegExp.$1;
+            }
+
+        }());
+
+    </script>
 </head>
 
 <body>
@@ -57,8 +69,7 @@
                 <div class="reward-center-left-title"><img src="../../invite-static/assets/pc2/images/lefttitle.jpg" border="0" /></div>
                 <div class="reward-center-left-info">
                     <div class="reward-center-left-fontinfo">
-                        屌丝看球不寂寞，猜球赢钱麻溜的！众明星都在预测今年世界杯16强，你还拿着手纸干呢吧……下载【百万猜球】APP，赢百万现金大奖。分享邀请码，更有竞猜券拿，欲知详情，请往下拉！
-                    </div>
+                        预测世界杯比赛胜负，猜的最准的人赢得100万现金！完全免费，无需全部猜对，只要你比其他人猜的更准，你就能得到100万大奖，靠运气，更靠实力！快下载“百万猜球”APP参加吧！                    </div>
                     <div class="reward-center-left-img"><img src="http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/worldcup.jpg" border="0" /></div>
                     <div class="reward-center-left-fonttitle">我的2014巴西世界杯预测详情</div>
                 </div>
@@ -68,8 +79,8 @@
                 <div class="reward-center-right-info">
                     <div class="reward-center-right-wrap">
                         <div class="hide my-invite-box referral-code">
-                            <span>在app中输入推荐码可获得竞猜券呦</span>
-                            <div class="referral-code-total">好友推荐码：<em id="my-invite-code"></em></div>
+                            <span>在APP中输入邀请码可获得竞猜券呦</span>
+                            <div class="referral-code-total">好友邀请码：<em id="my-invite-code"></em></div>
                         </div>
                         <div class="right-QR-code">
                             <span>如果您安装了条码扫描软件<br />可以直接扫描下方二维码直达下载页面</span>
@@ -92,51 +103,84 @@
         </div>
         <div class="rule-introduction">
             <div class="rule-introduction-title"><img src="../../invite-static/assets/pc2/images/rule-title.jpg" border="0" /></div>
-            <div class="rule-introduction-content">
-                <div class="rule-introduction-content-left">
-                    <span><img src="../../invite-static/assets/pc2/images/rule-left-title.jpg" border="0" /></span>
-                    <em>1、参与方式：</em><br />
-                    ①填写竞猜券，预测世界杯16场淘汰赛的对阵双方及获胜队伍；<br />
-                    ②每场比赛，对阵双方、获胜队伍三者全对才算预测正确；<br />
-                    ③每人最多可获得并填写10张竞猜劵，活动截止之前每张竞猜劵只可修改一次。<br />
-                    <em>2、竞猜劵获取方式：</em><br />
-                    ①下载APP后首次登录或注册暴风的用户可自动获得一张竞猜劵；<br />
-                    ②注册为暴风影音用户后完善用户信息可获得一张竞猜劵；<br />
-                    ③推荐好友成功安装“百万猜球”APP后可获得竞猜劵；<br />
-                    ④下载并使用好友推荐的APP可获得一张竞猜劵。<br />
-                    <em>3、竞猜截止时间：</em><br />
-                    2014年6月24日00:00，即为小组赛前两轮32场比赛结束之后。
-                    <h4>4、奖品设置</h4>
+            <div class="rule-box-bg">
+                <div class="rule-introduction-content">
 
-                    <p>奖金100万</p>
+                    <div class="rule-introduction-content-left">
+                            <span><img src="http://fjc1.pop.baofeng.net/popv5/static/share/share-static/assets/pc2/images/rule-left-title.jpg" border="0" /></span>
+                            <h4>1、参与方式：</h4>
 
-                    <h4>5、抽奖规则：</h4>
+                            <p>
+                                ①填写竞猜券，预测世界杯16场淘汰赛的对阵双方及获胜队伍；<br/>
+                                ②每场比赛，对阵双方、获胜队伍三者全对才算预测正确；<br/>
+                                ③每人最多可获得并填写10张竞猜劵，活动截止之前每张竞猜劵只可修改一次。
+                            </p>
 
-                    <p>
-                        预测的正确结果数量最高者可获得或分享百万现金大奖；<br />同时，越早猜出正确答案，奖金占比越大。中奖结果可在app的百万竞猜中查询。
-                    </p>
+                            <h4>2、竞猜劵获取方式：</h4>
 
-                </div>
-                <div class="rule-introduction-content-right">
-                    <span><img src="../../invite-static/assets/pc2/images/rule-right-title.jpg" border="0" /></span>
-                    <em>1、参与方式：</em><br />
-                    预测世界杯64场比赛中的单场比赛结果（小组赛中的胜负平，或汰赛中的获胜队）<br />
-                    每场比赛只能预测一次，不可修改。<br />
-                    <em>2、抽奖券劵获取方式：</em><br />
-                    ①推荐好友成功安装【百万猜球】 APP即可获得一张抽奖劵；<br />
-                    ②下载并使用推荐的APP即可获得一张抽奖劵；<br />
-                    ③猜中某场比赛即可获得一张抽奖劵。<br />
-                    <em>3、预测截止时间：</em>每场比赛在开赛前10分钟截止预测。<br />
-                    <em>4、每日奖品设置:</em> <br />
-                    每日奖品为价值4000元的暴风眼镜1副以及面值100元1号店代金卡300张 <br />
+                            <p>
+                                ①下载APP后首次登录或注册暴风的用户可自动获得一张竞猜劵；<br/>
+                                ②注册为暴风影音用户后完善用户信息可获得一张竞猜劵；<br/>
+                                ③推荐好友成功安装“百万猜球”APP后可获得竞猜劵；<br/>
+                                ④下载并使用好友推荐的APP可获得一张竞猜劵。
+                            </p>
 
-                    <em>5、抽奖规则：</em> <br />
+                            <h4>3、竞猜截止时间：</h4>
 
-                    《猜球宝典》节目现场抽取每日奖品，在当日每场比赛对应的全部抽奖券及前一日20：00只当日20:00之间通过好友安装或下载并使用app获得的所有抽奖券中随机抽取。<br />
+                            <p>
+                                2014年6月24日00:00，即为小组赛前两轮32场比赛结束之后。
+                            </p>
 
-                    <em>6、奖品发放：</em>
-                    用户可在《百万猜球》app的今日竞猜>>我的抽奖券 中查询中奖情况。中奖后获奖人邮寄地址通过新浪官方微博（@百万猜球）及腾讯官方微博（@baiwancaiqiu）的私信中搜集。<br />
 
+                            <h4>4、奖品设置</h4>
+                            <p>奖金100万</p>
+
+                            <h4>5、获奖规则</h4>
+                            <p class="bred">
+                                百万现金大奖由预测准确率最高的一人获得或由准确率相同的多人分享。不需要全部猜对，只要相对更准确。竞猜券提交得越早，获得奖金占比越大。</p>
+
+                            <h4>6、领奖规则：</h4>
+                            <p>比赛结束即由暴风影音公司公布获奖者名单，获奖者需到暴风影音公司领奖<br>（领奖者的往返路费由个人承担）。</p>
+
+
+                        </div>
+
+                        <div class="rule-introduction-content-right">
+                            <span><img src="http://fjc1.pop.baofeng.net/popv5/static/share/share-static/assets/pc2/images/rule-right-title.jpg" border="0" /></span>
+
+                            <h4>1、参与方式：</h4>
+                            <p>
+                                预测世界杯64场比赛中的单场比赛结果（小组赛中的胜负平，或淘汰赛中的获胜队）每场比赛只能预测一次，不可修改。
+                            </p>
+
+                            <h4>2、竞猜劵获取方式：</h4>
+
+                            <p>
+                                ①推荐好友成功安装“百万猜球” APP即可获得一张抽奖劵；<br/>
+                                ②下载并使用推荐的APP即可获得一张抽奖劵；<br/>
+                                ③猜中任意一场比赛即可获得一张抽奖劵。
+                            </p>
+
+                            <h4>3、竞猜截止时间：</h4>
+
+                            <p>
+                                每场比赛在开赛前10分钟截止预测。
+                            </p>
+
+                            <h4>4、每日奖品设置:</h4>
+                            <p>①价值4000元的暴风眼镜1副；<br /> ②面值100元1号店礼品卡300张。</p>
+
+                            <h4>5、抽奖规则：</h4>
+
+                            <p>
+                                当日所有抽奖券的拥有者均有参与资格，《猜球宝典》节目将现场抽取每日大奖。
+                                该环节中奖者必须在直播中接听电话才能领取，如果没有接听电话则重新抽取奖品。                    </p>
+
+                            <h4>6、领奖规则：</h4>
+                            <p>单日奖品的发放以快件方式寄出。</p>
+
+
+                        </div>
 
                 </div>
             </div>
@@ -144,6 +188,12 @@
     </div>
 </div>
 <!--正文内容结束-->
-<script src="../../invite-static/assets/pc/js/require.min.js" data-main="../../invite-static/assets/pc2/dist/index"></script>
+<script type="text/javascript" src="../../invite-static/assets/pc/js/require.min.js" data-main="../../invite-static/assets/pc2/dist/index"></script>
+<div class="hide">
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe96c8615f0274f0b6aceff2d5b7e8670' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
 </body>
 </html>

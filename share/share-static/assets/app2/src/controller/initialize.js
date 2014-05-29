@@ -12,4 +12,4 @@ define(['jquery', 'jquery.mobile', './commonInitialize',  './commonIscroll', './
 
         });
 
-    });
+});

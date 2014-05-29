@@ -3,7 +3,7 @@
 body{background-color:#f3ce25; padding:0; margin:0;}
 *{margin:0px; padding:0px;}
 .hide{ display: none;}
-
+.bred{ color: #f00; font-weight: bold;}
 /*头部*/
 .reward-top{background-image:url(../images/reward-top-bj.jpg); height:420px; background-position:center top; background-repeat:no-repeat;}
 .reward-top-img{width:1160px; margin:0 auto; height:420px; background-image:url(../images/reward-banner.jpg);}
@@ -45,11 +45,13 @@ body{background-color:#f3ce25; padding:0; margin:0;}
 .right-button{width:232px; height:170px;}
 .right-button a{margin-bottom:8px; display:block;}
 .right-explain-font{width:232px; text-align:center; color:#000000; font-size:12px; font-family:"宋体"; display:block;}
-.rule-introduction{padding-top:33px; width:1007px; height:486px; padding-left:80px; padding-bottom:43px;}
+.rule-introduction{padding-top:33px; width:1007px; padding-left:80px; padding-bottom:43px; }
 .rule-introduction-title{width:1007px; height:57px;}
-.rule-introduction-content{background-image:url(../images/rule-content-bj.jpg); width:1007px; height:429px;}
-.rule-introduction-content-left{padding-top:28px; padding-left:30px; width:497px; float:left; color:#000000; font-family:"宋体"; line-height:20px; font-size:12px;}
+.rule-box-bg{ background: url(../images/box_bg.png) repeat-y;}
+.rule-box-bg h4{font-weight: bold;}
+.rule-introduction-content{background:url(../images/rule-content-bj.jpg) no-repeat left bottom; width:1007px; height:470px;}
+.rule-introduction-content-left{padding-top:28px; padding-left:30px; width:450px; float:left; color:#000000; font-family:"宋体"; line-height:20px; font-size:12px;}
 .rule-introduction-content-left span,.rule-introduction-content-right span{display:block; padding-bottom:7px;}
 .rule-introduction-content-left em,.rule-introduction-content-right em{font-style:normal; font-weight:bold;}
-.rule-introduction-content-right{padding-top:28px; width:473px; float:left; color:#000000; font-family:"宋体"; line-height:20px; font-size:12px;}
+.rule-introduction-content-right{padding-top:28px; width:450px; float:right; padding-right: 35px; color:#000000; font-family:"宋体"; line-height:20px; font-size:12px;}
 .rule-introduction-content-right a{color:#106736; text-decoration:underline; font-weight:bold;}

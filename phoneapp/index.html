@@ -145,6 +145,32 @@
     {{ } }}
     {{ } }}
 </script>
+<!-- 微视视频模板 -->
+<script id="weishi-template" type="text/html">
+    <div class="news-list-box">
+        <div class="sprites news-list-header">
+            <a href="{{= src }}" class="category">{{= title }}</a>
+        </div>
+        <div class="cl news-list-body">
+            <div class="fl thumb-box">
+                <a class="thumb vthumb" href="{{= src }}">
+                    <img src="{{= imgSrc }}">
+                    <span class="sprites video-play-btn"></span>
+                </a>
+            </div>
+            <div class="fr news-content">
+                <div class="in-news-content">
+                    <a href="{{= src }}" class="atitle">
+                        <p>
+                            {{= info }}
+                        </p>
+                        <span class="fr join-v-video">点击查看更多内容</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
 <script src="assets/require.min.js" data-main="assets/src/index"></script>
 </body>
 </html>

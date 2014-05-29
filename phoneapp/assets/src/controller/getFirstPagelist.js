@@ -1,5 +1,5 @@
-define(['jquery','component/template', 'component/tools', 'conf/config', './getMiniVideo'],
-    function($, template, tools, config, getMiniVideo ){
+define(['jquery','component/template', 'component/tools', 'conf/config', './miniVideoEntrance'],
+    function($, template, tools, config, miniVideoEntrance ){
         return function(pageIndexArg, path, data, jsonpCallback, boxId, templateId){
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
             var totalRow = 0, maxRow = 6, ajaxNumber = 0,
@@ -24,8 +24,20 @@ define(['jquery','component/template', 'component/tools', 'conf/config', './getM
                                 if( ajaxNumber > 1 ) {
                                     newsListContainer.append( templateStr );
                                 } else {
-                                    getMiniVideo();
-                                    newsListContainer.html( templateStr );
+                                    if($('#index-page').length) {
+                                        miniVideoEntrance().done( function(){
+                                            var weishiData = JSON.parse(localStorage.getItem('weishi-data'));
+                                            var vTemplate = template.render('weishi-template', weishiData),
+                                                newList = $(templateStr);
+                                            newsListContainer.html( newList );
+                                            $('#news-list-container').find('.news-list-box').
+                                                eq(weishiData.position - 1).before(vTemplate);
+
+                                        });
+                                    } else {
+                                        newsListContainer.html( templateStr );
+                                    }
+
                                 }
 
                             }

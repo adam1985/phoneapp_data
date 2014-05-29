@@ -20,14 +20,19 @@ define(['jquery', 'component/tools', 'conf/config'],
                                 url: config.vInterface + 'interface',
                                 dataType: 'jsonp',
                                 data : {
-                                    url : "https://open.t.qq.com/api/weishi/tags",
+                                    url : "https://open.t.qq.com/api/weishi/getvideourl",
                                     protocol_type : 'wbox',
                                     version : '1.0',
                                     client_id : config.client_id,
-                                    access_token : token.data.access_token
+                                    access_token : token.data.access_token,
+                                    id : 2005523057019372,
+                                    vid : '1008_7db34308c718412bbe69dbb7f1eb7f4b',
+                                    device : 'android phone-3',
+                                    play : 'HTML5-1',
+                                    fmt : 'mp4'
                                 },
-                                success: function( tags ){
-                                    console.log(tags);
+                                success: function( timeline ){
+                                    console.log(timeline);
                                 }
                             });
                         }
