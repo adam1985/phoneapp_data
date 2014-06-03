@@ -14,7 +14,7 @@ define(['jquery', 'component/tools', 'conf/config', './interfaceCache'],
                         data = {
                             title : weishiConf.title,
                             src : 'video.html',
-                            imgSrc : totalTags[10].pics || weishiConf.imgSrc,
+                            imgSrc : weishiConf.imgSrc,
                             info : weishiConf.info,
                             position : weishiConf.position
                         };

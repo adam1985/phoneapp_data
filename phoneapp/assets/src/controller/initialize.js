@@ -1,7 +1,7 @@
 define(['jquery', 'jquery.mobile',  './commonInitialize',  './indexInitialize',  './listInitialize',
-    './articleInitialize', './qaInitialize', './chatRoomInitialize', './commonIscroll'],
+    './articleInitialize', './qaInitialize', './chatRoomInitialize', './videoInitialize', './commonIscroll'],
     function($, mobile, commonInitialize, indexInitialize, listInitialize,
-             articleInitialize, qaInitialize, chatRoomInitialize, commonIscroll){
+             articleInitialize, qaInitialize, chatRoomInitialize, videoInitialize, commonIscroll){
 
         $(function(){
 
@@ -31,6 +31,11 @@ define(['jquery', 'jquery.mobile',  './commonInitialize',  './indexInitialize', 
             // 初始化聊天室
             if( $('#chat-room-page').length ) {
                 chatRoomInitialize();
+            }
+
+            // 初始化微视视频
+            if( $('#video-page').length ) {
+                videoInitialize();
             }
 
             // 渲染滚动条

@@ -54,7 +54,7 @@ define(['jquery',  'conf/config'], function ($, config) {
             return data;
         },
 
-    // 判断浏览器是否为webkit
+        // 判断浏览器是否为webkit
         isWebkit = (function () {
             var UA = navigator.userAgent.toLowerCase(), _isWebkit = false;
             if (/webkit/i.test(UA)) {
@@ -68,7 +68,7 @@ define(['jquery',  'conf/config'], function ($, config) {
         }()),
 
         isIos = (function(){
-            return (/iphone|ipad/gi).test(navigator.appVersion);
+                return (/iphone|ipad/gi).test(navigator.appVersion);
         }()),
 
         isIE6  = window.ActiveXObject &&  !window.XMLHttpRequest,

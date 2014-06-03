@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0;">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="assets/styles/index.min.css"/>
+    <title>8s' 世界杯微视频</title>
+</head>
+<body>
+<div class="wrapper" data-role="page" id="video-page">
+    <div class="layout-header">
+        <div class="layout-header-box">
+            <div class="layout-goback-index"><a href="index.html"></a></div>
+            <h1 id="news-lists-title">8s' 世界杯微视频</h1>
+        </div>
+    </div>
+
+    <div role="main" class="layout-content">
+        <div id="scroller">
+            <div id="pullDown">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+            </div>
+            <div id="video-lists-container" class="video-lists-container">
+                <div class="video-list-item">
+                    <div class="video-thumb">
+                        <a class="player-video" data-playid="1" href="javascript:void(null)">
+                            <img class="video-max-pic" src="assets/images/video_img.jpg" />
+                            <span class="player-btn"><img src="assets/images/player_btn.png" /></span>
+                        </a>
+                    </div>
+                    <div class="cl video-control">
+                        <div class="fl video-icon">
+                            <img src="assets/images/video_icon.png" /> 精彩进球
+                        </div>
+                        <div class="fr video-control-btn">
+                            <a class="fl" href="#"><img src="assets/images/video_download.png" /> </a>
+                            <a class="fr" id="toggle-full-screen" href="javascript:void(null)"><img src="assets/images/full_screen.png" /> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="layout-footer"></div>
+
+</div>
+
+<!-- 新闻列表模板 -->
+<script id="news-lists-template" type="text/html">
+    {{ if( list.length >>> 0 ){ }}
+    {{ for ( var i = 0, len = list.length; i < len; i++ ) {
+        var target = list[i];
+    }}
+    <div class="news-list-box">
+
+        {{ if( target.imgSrc ) { }}
+        <div class="cl news-list-body">
+            <div class="fl thumb-box">
+                <a href="javascript:void(null)" class="thumb" data-params="{{= target.assignType }}">
+                    <img src="{{= target.imgSrc }}"/>
+                    {{ if( target.player ) { }}
+                    <span class="sprites video-play-btn"></span>
+                    {{ } }}
+                </a>
+            </div>
+            <div class="fr news-content">
+                <div class="in-news-content">
+                    {{ } else { }}
+                    <div class="news-list-body">
+                        <div class="news-content news-list-lace">
+                            <div>
+                                {{ } }}
+
+                                <a class="atitle" href="javascript:void(null)" data-params="{{= target.assignType }}">
+                                    <h2>{{= target.title }}</h2>
+                                    <p>
+                                        {{= target.info }}
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+    {{ } }}
+    {{ } }}
+</script>
+<script src="assets/require.min.js" data-main="assets/src/index"></script>
+</body>
+</html>

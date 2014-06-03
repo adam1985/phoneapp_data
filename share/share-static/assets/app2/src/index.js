@@ -1,9 +1,9 @@
 require.config({
-    baseUrl: '../../invite-static/assets/app/src',
+    //baseUrl: '../../invite-static/assets/app/src',
     paths: {
         'jquery': 'jquery/jquery',
         'jquery.mobile' : 'mobile/jquery.mobile'
     }
 });
 
-require(['controller/jump', 'controller/initialize']);
+require(['controller/initialize']);

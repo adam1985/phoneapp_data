@@ -1,4 +1,4 @@
-﻿define(['./jquery'], function($){
+﻿define(['jquery'], function($){
     return (function( $ ){ //图片轮播放器
         var Class = {
             create : function(){
@@ -37,7 +37,8 @@
                 self.box = $this;
                 self.lists = $( options.wrap, $this ).find( options.diyTag );
                 self.len = this.lists.length;
-                self.buttons = $( options.buttons, $this ).find( options.buttonTag );
+                self.buttonBox = $( options.buttons, $this );
+                self.buttons = self.buttonBox.find( options.buttonTag );
                 self.prev = $( options.prev, $this );
                 self.next = $( options.next, $this );
                 self.index = 0;
@@ -48,7 +49,7 @@
                 self.handler();
             },
 
-            invoke: function( index, fixWidth ) { // 播放至某一张
+            invoke: function( index, fixWidth, evt ) { // 播放至某一张
                 var self = this;
                 if( self.len > 1 ) {
                     if( self.animateAble ) {
@@ -82,13 +83,21 @@
                             self.lists.removeClass( self.className );
                             self.animateAble = true;
                         } );
+
                         self.lists.eq( index ).fadeIn( self.speed, function (){
                             $(this).addClass(self.className);
                             self.animateAble = true;
                         });
                     }
 
-                    self.eachMove && self.eachMove( index , self.len );
+                    if( self.eachMove ) {
+                        if( evt ){
+                            self.eachMove( index , self.len, evt );
+                        } else {
+                            self.eachMove( index , self.len );
+                        }
+                    }
+
                 }
             },
 
@@ -106,12 +115,12 @@
 
             goto_play : function(){ // 按钮事件
                 var self = this;
-                self.buttons[ self.eventType ](function(){
-                    var index = $(this).index();
+                self.buttonBox.on(self.eventType, 'li', function(evt){
+                    var index = parseInt($(this).attr('data-index'));
                     if( self.index === index ) return;
                     self.index = index;
                     self.type === 'move' && self.moveStyle( self.width );
-                    self.invoke( self.index, this.width );
+                    self.invoke( self.index, this.width , evt);
                 });
             },
 

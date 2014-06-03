@@ -271,3 +271,17 @@ padding: 30px 20px; z-index: 9999; box-sizing: border-box;
 .renew-post-btn:hover{ color: #2da67b;}
 .qqface{  width: 100%; position: fixed; z-index: 99; left:0; bottom: 50px;background: #fff; padding: 5px;}
 
+/* 微视视频 */
+.video-lists-container{ border-bottom: 1px solid #ccc;}
+.video-list-item{ margin: 10px 10px 30px 10px;
+    -moz-box-shadow:1px 5px 10px #8A8A8A; -webkit-box-shadow:1px 5px 10px #8A8A8A; box-shadow:1px 5px 10px #8A8A8A;}
+.video-thumb a,.video-thumb img{ display: block; width: 100%;}
+.video-thumb a{ position: relative;}
+.video-thumb .player-btn{ display: block; width: 15%; position: absolute; left: 50%; top : 50%; margin: -7% 0 0 -7%;}
+.video-control{ padding: 15px 10px;}
+.video-icon{width:50%;}
+.video-icon img{width: 18%;}
+.video-control-btn{ width: 35%}
+.video-control-btn img,.video-control-btn a{ display: inline-block; }
+.video-control-btn a{width: 25%; margin-right: 10%; }
+.video-control-btn img{ width: 100%;}

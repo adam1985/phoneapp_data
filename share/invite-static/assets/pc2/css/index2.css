@@ -28,7 +28,16 @@ body{background-color:#f3ce25; padding:0; margin:0;}
 .reward-center-left-info{width:675px; height:591px; background-image:url(../images/leftinfo-bj.jpg); background-repeat:no-repeat;}
 .reward-center-left-img{width:608px; padding-left:30px; height:446px;}
 .reward-center-left-img img{width:608px; height:446px;}
-.reward-center-left-fontinfo{padding-left:54px; color:#000000; font-size:12px; font-family:"宋体"; line-height:18px; width:570px; padding-top:28px; height:60px;}
+.reward-center-left-fontinfo {
+    padding-left: 54px;
+    color: #000;
+    font-size: 12px;
+    font-family: "宋体";
+    line-height: 18px;
+    width: 570px;
+    padding-top: 28px;
+    padding-bottom: 10px;
+}
 .reward-center-left-fontinfo span{font-weight:bold;}
 .reward-center-left-fonttitle{font-size:14px; font-weight:bold; font-family:"宋体"; color:#000000; width:608px; padding-left:30px; text-align:center; height:50px; line-height:50px;}
 .reward-center-right{width:297px; float:left; margin-left:35px;}

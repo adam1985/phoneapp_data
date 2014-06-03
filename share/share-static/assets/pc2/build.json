@@ -1,5 +1,11 @@
 {
-    "baseUrl": "../pc/js",
+    "baseUrl": "src",
+    "paths": {
+        "jquery": "jquery/jquery"
+    },
+    "shim": {
+        //"touchslider": ["jquery", "jquery.mobile"]
+    },
     "removeCombined": true,
     "preserveLicenseComments": false,
     "optimizeCss": "standard",
