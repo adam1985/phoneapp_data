@@ -67,11 +67,8 @@
         <div class="reward-wrapper-top">
             <div class="reward-center-left">
                 <div class="reward-center-left-title"><img src="../../invite-static/assets/pc2/images/lefttitle.jpg" border="0" /></div>
-                <div class="reward-center-left-info">
-                    <div class="reward-center-left-fontinfo">
-                        预测世界杯比赛胜负，猜的最准的人赢得100万现金！完全免费，无需全部猜对，只要你比其他人猜的更准，你就能得到100万大奖，靠运气，更靠实力！快下载“百万猜球”APP参加吧！                    </div>
-                    <div class="reward-center-left-img"><img src="http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/worldcup.jpg" border="0" /></div>
-                    <div class="reward-center-left-fonttitle">我的2014巴西世界杯预测详情</div>
+                <div class="reward-center-left-info" id="my-share-invite">
+
                 </div>
             </div>
             <div class="reward-center-right">
@@ -179,16 +176,24 @@
                             <h4>6、领奖规则：</h4>
                             <p>单日奖品的发放以快件方式寄出。</p>
 
-
                         </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!--正文内容结束-->
-<script type="text/javascript" src="../../invite-static/assets/pc/js/require.min.js" data-main="../../invite-static/assets/pc2/dist/index"></script>
+<script type="text/html" id="my-invite-template">
+    <div class="reward-center-left-fontinfo">
+        {{= text }}
+        预测世界杯比赛胜负，猜的最准的人赢得100万现金！完全免费，无需全部猜对，只要你比其他人猜的更准，你就能得到100万大奖，靠运气，更靠实力！快下载“百万猜球”APP参加吧！
+    </div>
+    <div class="reward-center-left-img">
+        <img src="{{= imgSrc }}" border="0" />
+    </div>
+    <div class="reward-center-left-fonttitle">{{= name }}的预测详情</div>
+</script>
+<script type="text/javascript" src="http://fjc1.pop.baofeng.net/popv5/static/share/invite-static/assets/pc2/require.min.js" data-main="http://fjc1.pop.baofeng.net/popv5/static/share/invite-static/assets/pc2/dist/index"></script>
 <div class="hide">
 <script type="text/javascript">
     var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

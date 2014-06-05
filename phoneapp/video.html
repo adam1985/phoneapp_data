@@ -23,23 +23,7 @@
                 <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
             </div>
             <div id="video-lists-container" class="video-lists-container">
-                <div class="video-list-item">
-                    <div class="video-thumb">
-                        <a class="player-video" data-playid="1" href="javascript:void(null)">
-                            <img class="video-max-pic" src="assets/images/video_img.jpg" />
-                            <span class="player-btn"><img src="assets/images/player_btn.png" /></span>
-                        </a>
-                    </div>
-                    <div class="cl video-control">
-                        <div class="fl video-icon">
-                            <img src="assets/images/video_icon.png" /> 精彩进球
-                        </div>
-                        <div class="fr video-control-btn">
-                            <a class="fl" href="#"><img src="assets/images/video_download.png" /> </a>
-                            <a class="fr" id="toggle-full-screen" href="javascript:void(null)"><img src="assets/images/full_screen.png" /> </a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <div id="pullUp">
                 <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
@@ -52,43 +36,29 @@
 
 </div>
 
-<!-- 新闻列表模板 -->
-<script id="news-lists-template" type="text/html">
+<!-- 微视视频列表模板 -->
+<script id="video-lists-template" type="text/html">
     {{ if( list.length >>> 0 ){ }}
     {{ for ( var i = 0, len = list.length; i < len; i++ ) {
         var target = list[i];
     }}
-    <div class="news-list-box">
-
-        {{ if( target.imgSrc ) { }}
-        <div class="cl news-list-body">
-            <div class="fl thumb-box">
-                <a href="javascript:void(null)" class="thumb" data-params="{{= target.assignType }}">
-                    <img src="{{= target.imgSrc }}"/>
-                    {{ if( target.player ) { }}
-                    <span class="sprites video-play-btn"></span>
-                    {{ } }}
-                </a>
+    <div class="video-list-item">
+        <div class="video-thumb">
+            <a class="player-video" data-vid="{{= target.vid }}" data-id="{{= target.id }}" href="javascript:void(null)">
+                <img class="video-max-pic" src="{{= target.picurl }}" />
+                <span class="player-btn"><img src="assets/images/player_btn.png" /></span>
+            </a>
+        </div>
+        <div class="cl video-control">
+            <div class="fl video-icon">
+                <img src="assets/images/video_icon.png" /> 精彩进球
             </div>
-            <div class="fr news-content">
-                <div class="in-news-content">
-                    {{ } else { }}
-                    <div class="news-list-body">
-                        <div class="news-content news-list-lace">
-                            <div>
-                                {{ } }}
-
-                                <a class="atitle" href="javascript:void(null)" data-params="{{= target.assignType }}">
-                                    <h2>{{= target.title }}</h2>
-                                    <p>
-                                        {{= target.info }}
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+            <div class="fr video-control-btn">
+                <a class="fl" href="javascript:void(null)" data-vid="{{= target.vid }}" data-id="{{= target.id }}"><img src="assets/images/video_download.png" /> </a>
+                <a class="fr" id="toggle-full-screen" href="javascript:void(null)"><img src="assets/images/full_screen.png" /> </a>
+            </div>
+        </div>
+    </div>
     {{ } }}
     {{ } }}
 </script>

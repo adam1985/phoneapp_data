@@ -168,20 +168,19 @@ img{ vertical-align: middle;}
 .layout-body,.generalize-text{ padding: 10px;}
 .generalize-text{padding-top: 0;margin-top: 6px;color: #106736;
     font-family: "微软雅黑";font-size: 18px;}
-.world-cup-pic{ width: 100%;}
 .rank-box{ box-sizing: border-box; font-size: 16px; }
 .rank-header,.rank-team { height: 36px; line-height: 36px; background: #7fbf2b; margin-bottom: 5px; width: 100%;}
-.rank-box span{ float:left;display: block; color: #fff; width: 33.3%;height: 36px;   text-align: center;box-sizing: border-box; }
+.rank-box span{ float:left;display: block; color: #fff; width: 33.3%;text-align: center;box-sizing: border-box; }
 .rank-header span{background-repeat:  no-repeat; background-position:  center center; background-size: auto 100%;}
 .rank-top1{ background-image: url(../images/top1.png);}
 .rank-top2{ background-image: url(../images/top2.png);}
 .rank-top3{ background-image: url(../images/top3.png);}
-.rank-new{width:100%; background-color:#f2ca26; height:133px; color:#000000; font-family:"微软雅黑", "宋体"; font-size:24px;}
+.rank-new{width:100%; background-color:#f2ca26; height:133px; color:#000000; font-family:"微软雅黑", "宋体"; font-size:16px;}
 .rank-left{width:30%; float:left; margin-right:0.5%; height:133px; text-align:center; position:relative;}
 .rank-center{width:38.9%; float:left; margin-right:0.5%; height:133px; text-align:center; position:relative;}
 .rank-right{width:30%; float:left; height:133px; text-align:center; position:relative;}
 .rank-left span,.rank-right span{display:block; position:absolute; z-index:1; bottom:5px; width:100%; text-align:center; left:0;}
-.rank-center span{display:block; font-size:30px; position:absolute; z-index:1; bottom:8px; width:100%; text-align:center; left:0;}
+.rank-center span{display:block; font-size:18px; position:absolute; z-index:1; bottom:8px; width:100%; text-align:center; left:0;}
 .rank-new img{width:100%; height:133px;}
 .my-invite-res{text-align: center;padding: 0 0 10px;color: #106736;
     font-size: 20px;font-weight: bold;}

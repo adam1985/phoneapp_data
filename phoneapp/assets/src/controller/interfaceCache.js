@@ -26,7 +26,7 @@ define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
                 var access_token = $.cookie('access_token');
                 if( !access_token ) {
                     $.ajax({
-                        url: config.vInterface + 'interface',
+                        url: config.vInterface,
                         dataType: 'jsonp',
                         data : {
                             url : "https://open.t.qq.com/api/auth/token",
@@ -36,9 +36,10 @@ define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
                         },
                         success: function( token ){
                             if( token.ret == 0 ) {
-                                var now = new Date(), mins = now.getMinutes();
+                                var time, expires;
+                                time = expires = new Date();
                                 $.cookie('access_token', token.data.access_token, {
-                                    expires : now.setMinutes(mins + config.timeout - 1),
+                                    expires : expires.setTime(+time + ( config.timeout - 1 ) * 60 * 1000),
                                     domain : '.baofeng.net'
                                 });
                                 dtd.resolve(); // 改变Deferred对象的执行状态
@@ -58,7 +59,7 @@ define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
                     tokenDtd().done(function(){
                         var access_token = $.cookie('access_token');
                         $.ajax({
-                            url: config.vInterface + 'interface',
+                            url: config.vInterface,
                             dataType: 'jsonp',
                             data : {
                                 url : "https://open.t.qq.com/api/weishi/tags",

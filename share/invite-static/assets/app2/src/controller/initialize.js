@@ -1,5 +1,6 @@
-define(['jquery', 'jquery.mobile', './commonInitialize',  './commonIscroll', './generalizeInitialize'],
-    function($, mobile, commonInitialize,  commonIscroll, generalizeInitialize){
+define(['jquery', 'jquery.mobile', 'component/template',
+    './commonInitialize',  './commonIscroll', './generalizeInitialize', 'conf/config'],
+    function($, mobile, template, commonInitialize,  commonIscroll, generalizeInitialize, config){
 
         $(function(){
 
@@ -9,6 +10,14 @@ define(['jquery', 'jquery.mobile', './commonInitialize',  './commonIscroll', './
             if( $('#generalize-page').length ) {
                 generalizeInitialize();
             }
+
+            var random = Math.floor( Math.random() * 4),
+                superV = config.superList[random];
+
+            var templateStr = template.render('my-invite-template', superV);
+
+            $('#my-share-invite').html( templateStr );
+
 
         });
 

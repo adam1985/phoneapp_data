@@ -7,31 +7,31 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <title>百万世界杯</title>
-    <script>
-        (function () {
-            var jumpUrl = {
+</head>
+<body>
+<div style="display: none;">
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc8ce18317936c91898a28ddf786ee363' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+<script>
+    (function () {
+        var jumpUrl = {
                     andriod : 'http://wx.dl.baofeng.com/mobile/WorldCup/WorldCup.apk',
                     ios : 'https://itunes.apple.com/us/app/bai-wan-cai-qiu/id849399346?l=zh&ls=1&mt=8'
                 },
                 isAndroid = ((/android/gi).test(navigator.appVersion)),
                 isIos = ((/iphone|ipad/gi).test(navigator.appVersion));
 
-            if (isAndroid) {
-                location.href = jumpUrl.andriod;
-            } else if( isIos ) {
-                location.href = jumpUrl.ios;
-            }
+        if (isAndroid) {
+            location.href = jumpUrl.andriod;
+        } else if( isIos ) {
+            location.href = jumpUrl.ios;
+        }
 
-        }());
-    </script>
-</head>
-<body>
-<div style="display: none;">
-<script type="text/javascript">
-    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc8ce18317936c91898a28ddf786ee363' type='text/javascript'%3E%3C/script%3E"));
+    }());
 </script>
-</div>
 </body>
 </html>
 

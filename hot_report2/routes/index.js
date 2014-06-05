@@ -32,8 +32,7 @@ module.exports = function(app) {
 
     app.get('/upload', function (req, res) {
         res.render('upload', {
-            title: '文件上传',
-            uploadFile : ''
+            title: '文件上传'
         });
     });
 
@@ -47,16 +46,32 @@ module.exports = function(app) {
                 var fileName =  (+new Date) + req.files[i].name, target_path = './img/' + fileName;
                 // 使用同步方式重命名一个文件
                 fs.renameSync(req.files[i].path, target_path);
-                res.render('upload', {
-                    title: '文件上传',
-                    uploadFile : 'http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/'+ fileName
+                //http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/
+
+                res.render('show', {
+                    title: '文件上传成功',
+                    file : '/img/' + fileName,
+                    filePath : '/img/' + fileName
                 });
 
             }
         }
 
+    });
 
-
+    app.get('/img/:name', function (req, res) {
+        var name = req.params.name;
+        fs.readFile("img/" + name, "binary", function(error, file) {
+            if(error) {
+                res.writeHead(500, {"Content-Type": "text/plain"});
+                res.write(error + "\n");
+                res.end();
+            } else {
+                res.writeHead(200, {"Content-Type": "image/png"});
+                res.write(file, "binary");
+                res.end();
+            }
+        });
     });
 
 

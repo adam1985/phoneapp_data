@@ -3,20 +3,20 @@ define(['jquery', 'component/tools', 'conf/config', './interfaceCache'],
         return function(){
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
             var confDtd = interfaceCache.confDtd();
-            var tagsDtd = interfaceCache.tagsDtd(),
+            var tokenDtd = interfaceCache.tokenDtd(),
                 weishiData = localStorage.getItem('weishi-data');
 
             if( !weishiData ) {
-                $.when(confDtd, tagsDtd).done( function(){
+                $.when(confDtd, tokenDtd).done( function(){
                     var weishiConf = JSON.parse(localStorage.getItem('weishiConf')),
                         access_token = $.cookie('access_token'),
-                        totalTags = JSON.parse(localStorage.getItem('total-tags')),
                         data = {
                             title : weishiConf.title,
                             src : 'video.html',
                             imgSrc : weishiConf.imgSrc,
                             info : weishiConf.info,
-                            position : weishiConf.position
+                            position : weishiConf.position,
+                            access_token : access_token
                         };
 
                     localStorage.setItem('weishi-data', JSON.stringify(data));

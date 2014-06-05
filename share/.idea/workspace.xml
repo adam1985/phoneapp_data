@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/invite-static/assets/app2/styles/index.css" line="201" />
+    <bookmark url="file://$PROJECT_DIR$/invite-static/assets/app2/styles/index.css" line="200" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f2e9d4b-4a98-4314-9af3-c4797de4f7d7" name="!changes.default.changelist.name!" comment="" />
@@ -25,94 +25,7 @@
     <favorites_list name="share" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="share.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/static/share/share.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="212" column="24" selection-start="9032" selection-end="9032" vertical-scroll-proportion="4.645533" vertical-offset="1652" max-vertical-offset="5313">
-              <folding>
-                <marker date="1401796122104" expanded="true" signature="8703:8833" placeholder="..." />
-                <marker date="1401796122104" expanded="true" signature="8874:8959" placeholder="..." />
-                <marker date="1401796122104" expanded="true" signature="9006:9042" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="initialize.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/share-static/assets/pc2/src/controller/initialize.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="16" selection-start="558" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="828">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index2.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/share-static/assets/pc2/css/index2.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="8" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1426">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="share-app.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/static/share/share-app.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="20" selection-start="6437" selection-end="6441" vertical-scroll-proportion="0.0" vertical-offset="4048" max-vertical-offset="5474">
-              <folding>
-                <marker date="1401794783606" expanded="true" signature="6904:7034" placeholder="..." />
-                <marker date="1401794783606" expanded="true" signature="7078:7114" placeholder="..." />
-                <marker date="1401794783606" expanded="true" signature="7147:8076" placeholder="..." />
-                <marker date="1401794783606" expanded="true" signature="7183:7240" placeholder="..." />
-                <marker date="1401794783606" expanded="true" signature="7282:8065" placeholder="..." />
-                <marker date="1401794783606" expanded="true" signature="7317:8050" placeholder="..." />
-                <marker date="1401794783606" expanded="true" signature="7357:7554" placeholder="..." />
-                <marker date="1401794783606" expanded="true" signature="7596:7793" placeholder="..." />
-                <marker date="1401794783606" expanded="true" signature="7834:8031" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/share-static/assets/app2/src/conf/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="276">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/share-static/assets/app2/build.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="1" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="460">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="initialize.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/share-static/assets/app2/src/controller/initialize.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="58" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="1081">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/share-static/assets/app2/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="322">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -122,18 +35,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/roll.js" />
-        <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/superMarquee.js" />
-        <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/slider.js" />
-        <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/focus-conf.js" />
-        <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/interface/ajax.js" />
-        <option value="$PROJECT_DIR$/invite-static/assets/app/src/controller/initialize.js" />
-        <option value="$PROJECT_DIR$/invite-static/assets/pc/js/initialize.js" />
-        <option value="$PROJECT_DIR$/invite-static/assets/app/build.json" />
-        <option value="$PROJECT_DIR$/invite-static/assets/app/src/index.js" />
-        <option value="$PROJECT_DIR$/../../../../webbf/adcms/template/popv5/index.html" />
-        <option value="$PROJECT_DIR$/../../../../webbf/adcms/template/popv5/static/share/data/focus-conf.js" />
-        <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/loading.js" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/build.json" />
         <option value="$PROJECT_DIR$/../phoneapp/assets/src/controller/chatMutual.js" />
         <option value="$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/config.js" />
@@ -151,9 +52,6 @@
         <option value="$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/app/share.html" />
         <option value="$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/pc/share.html" />
         <option value="$PROJECT_DIR$/invite-static/assets/app2/src/controller/jump.js" />
-        <option value="$PROJECT_DIR$/html/pc/pc-share-res.html" />
-        <option value="$PROJECT_DIR$/html/app/share-res.html" />
-        <option value="$PROJECT_DIR$/invite-static/assets/app2/styles/index.css" />
         <option value="$PROJECT_DIR$/invite-static/assets/pc2/css/index2.css" />
         <option value="$PROJECT_DIR$/share-static/assets/pc2/build.json" />
         <option value="$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/head/0.html" />
@@ -171,8 +69,23 @@
         <option value="$PROJECT_DIR$/../../../../webbf/windforce/trunk/static/share/share-app.html" />
         <option value="$PROJECT_DIR$/share-static/assets/pc2/src/controller/initialize.js" />
         <option value="$PROJECT_DIR$/share-static/assets/app2/src/controller/initialize.js" />
-        <option value="$PROJECT_DIR$/../../../../webbf/windforce/trunk/static/share/share.html" />
         <option value="$PROJECT_DIR$/share-static/assets/app2/styles/index.css" />
+        <option value="$PROJECT_DIR$/../../../../webbf/windforce/trunk/static/share/share.html" />
+        <option value="$PROJECT_DIR$/share-static/assets/app2/src/component/jquery.base64.js" />
+        <option value="$PROJECT_DIR$/invite-static/assets/pc2/src/controller/initialize.js" />
+        <option value="$PROJECT_DIR$/html/pc/pc-share-res.html" />
+        <option value="$PROJECT_DIR$/invite-static/assets/app2/src/index.js" />
+        <option value="$PROJECT_DIR$/invite-static/assets/app2/src/controller/initialize.js" />
+        <option value="$PROJECT_DIR$/invite-static/assets/app2/src/conf/config.js" />
+        <option value="$PROJECT_DIR$/invite-static/assets/pc2/src/conf/config.js" />
+        <option value="$PROJECT_DIR$/html/app/share-res.html" />
+        <option value="$PROJECT_DIR$/invite-static/assets/app2/styles/index.css" />
+        <option value="$PROJECT_DIR$/../hot_report2/views/upload.ejs" />
+        <option value="$PROJECT_DIR$/../hot_report2/views/img.ejs" />
+        <option value="$PROJECT_DIR$/../hot_report2/views/index.ejs" />
+        <option value="$PROJECT_DIR$/../hot_report2/views/show.ejs" />
+        <option value="$PROJECT_DIR$/../hot_report2/routes/index.js" />
+        <option value="$PROJECT_DIR$/../hot_report2/models/post.js" />
       </list>
     </option>
   </component>
@@ -214,7 +127,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,140 +156,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="share-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="component" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -457,19 +235,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="share-static" />
+              <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="pc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -483,58 +253,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="share-static" />
+              <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share-static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conf" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -551,10 +280,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\phoneapp_data\popv5\static\hot_report2\views" />
+      <recent name="D:\wamp\www\phoneapp_data\popv5\static\share\share-static\assets\app2\src\component" />
       <recent name="D:\wamp\www\phoneapp_data\popv5\static\share\share-static\assets\pc2\src\conf" />
       <recent name="D:\wamp\www\phoneapp_data\popv5\static\share" />
       <recent name="D:\wamp\www\phoneapp_data\popv5\static\share\invite-static\assets\app\src\controller" />
-      <recent name="D:\wamp\www\phoneapp_data\popv5\static\share\static\bf-static\assets\pc\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -606,15 +336,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="变化" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2888889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27291667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -646,128 +376,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../html/worldcup/data/focus-conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="53" selection-start="0" selection-end="2889" vertical-scroll-proportion="2.4898512" vertical-offset="0" max-vertical-offset="2070" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/conf/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="299" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/tools.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="6" selection-start="3634" selection-end="3634" vertical-scroll-proportion="0.0" vertical-offset="2159" max-vertical-offset="2898" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/controller/initialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="29" selection-start="5460" selection-end="5460" vertical-scroll-proportion="0.0" vertical-offset="1873" max-vertical-offset="4531" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/src/component/window.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="6" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.74695534" vertical-offset="966" max-vertical-offset="2415" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bf-static/assets/pc2/css/index2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="730" selection-end="730" vertical-scroll-proportion="0.5068871" vertical-offset="0" max-vertical-offset="3197" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/jump.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="621" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/initialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/app/src/controller/generalizeInitialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="44" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc2/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/app/share1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="77" selection-start="2742" selection-end="2762" vertical-scroll-proportion="-26.59375" vertical-offset="552" max-vertical-offset="3680" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/pc/share1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="88" selection-start="1247" selection-end="1267" vertical-scroll-proportion="-13.0625" vertical-offset="364" max-vertical-offset="2852" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/pc/share.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="0" selection-start="6963" selection-end="6963" vertical-scroll-proportion="-16.53125" vertical-offset="2484" max-vertical-offset="3588" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc2/js/initialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="3" selection-start="675" selection-end="676" vertical-scroll-proportion="0.6535859" vertical-offset="0" max-vertical-offset="739" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/app/jump.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="830" selection-end="830" vertical-scroll-proportion="0.38189533" vertical-offset="144" max-vertical-offset="851" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/src/controller/jump.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="30" selection-start="245" selection-end="245" vertical-scroll-proportion="0.18673883" vertical-offset="0" max-vertical-offset="739" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/src/controller/indexInitialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="0" selection-start="11858" selection-end="11858" vertical-scroll-proportion="0.5247934" vertical-offset="4909" max-vertical-offset="5635" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/src/controller/generalizeInitialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="48" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.65764546" vertical-offset="135" max-vertical-offset="874" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/pc/pc-share-res.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="51" selection-start="3970" selection-end="3970" vertical-scroll-proportion="0.0" vertical-offset="3331" max-vertical-offset="4715" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc2/css/index2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="1" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.6721763" vertical-offset="409" max-vertical-offset="1610" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/styles/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="33" selection-start="10568" selection-end="10568" vertical-scroll-proportion="0.017906336" vertical-offset="4403" max-vertical-offset="5129">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="45" selection-start="1895" selection-end="1895" vertical-scroll-proportion="0.42074928" vertical-offset="513" max-vertical-offset="4301" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/web/bf-static/assets/pc2/build.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="38" selection-end="38" vertical-scroll-proportion="0.06506365" vertical-offset="0" max-vertical-offset="707" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/share-static/assets/pc2/build.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="181" selection-end="181" vertical-scroll-proportion="0.2602546" vertical-offset="0" max-vertical-offset="707" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/shell/images/dealImages/template/head/0.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="707" />
@@ -860,78 +468,207 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/share-static/assets/app2/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
-          <folding />
-        </state>
+        <state line="1" column="6" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/share-static/assets/app2/build.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="1" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="460">
-          <folding />
-        </state>
+        <state line="14" column="1" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="460" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/share-static/assets/app2/src/conf/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="276">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/share-static/assets/pc2/css/index2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="8" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1426">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/static/share/share-app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="20" selection-start="6437" selection-end="6441" vertical-scroll-proportion="0.0" vertical-offset="4048" max-vertical-offset="5474">
-          <folding>
-            <marker date="1401794783606" expanded="true" signature="6904:7034" placeholder="..." />
-            <marker date="1401794783606" expanded="true" signature="7078:7114" placeholder="..." />
-            <marker date="1401794783606" expanded="true" signature="7147:8076" placeholder="..." />
-            <marker date="1401794783606" expanded="true" signature="7183:7240" placeholder="..." />
-            <marker date="1401794783606" expanded="true" signature="7282:8065" placeholder="..." />
-            <marker date="1401794783606" expanded="true" signature="7317:8050" placeholder="..." />
-            <marker date="1401794783606" expanded="true" signature="7357:7554" placeholder="..." />
-            <marker date="1401794783606" expanded="true" signature="7596:7793" placeholder="..." />
-            <marker date="1401794783606" expanded="true" signature="7834:8031" placeholder="..." />
-          </folding>
-        </state>
+        <state line="6" column="0" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="276" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/share-static/assets/app2/src/controller/initialize.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="58" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="1081">
-          <folding />
-        </state>
+        <state line="25" column="74" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1081" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/share-static/assets/pc2/src/controller/initialize.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="16" selection-start="558" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
+        <state line="27" column="30" selection-start="1279" selection-end="1283" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/static/share/share-app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="20" selection-start="6843" selection-end="6843" vertical-scroll-proportion="0.0" vertical-offset="4048" max-vertical-offset="5474" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/share-static/assets/app2/src/component/jquery.uri.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8234" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/share-static/assets/app2/src/component/jquery.base64.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="26" selection-start="77947" selection-end="77947" vertical-scroll-proportion="2.9914773" vertical-offset="309" max-vertical-offset="3864" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/share-static/assets/pc2/css/index2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="57" selection-start="2380" selection-end="2380" vertical-scroll-proportion="0.5110193" vertical-offset="319" max-vertical-offset="1426">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc2/build.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc2/src/component/tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3305786" vertical-offset="966" max-vertical-offset="2990" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/static/share/share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="212" column="8" selection-start="9016" selection-end="9032" vertical-scroll-proportion="-9.03125" vertical-offset="4587" max-vertical-offset="5313" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/static/share/static/assets/app/src/controller/listInitialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="806" selection-end="1033" vertical-scroll-proportion="0.1584022" vertical-offset="345" max-vertical-offset="2484" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc2/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/build.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="3" selection-start="145" selection-end="145" vertical-scroll-proportion="0.18673883" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/src/controller/jump.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="9" selection-start="301" selection-end="301" vertical-scroll-proportion="0.28010824" vertical-offset="0" max-vertical-offset="739" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/pc/pc-share-res.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="62" selection-start="8312" selection-end="8328" vertical-scroll-proportion="0.0" vertical-offset="4439" max-vertical-offset="4830">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc2/src/controller/initialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="440" selection-end="681" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/src/controller/initialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/src/conf/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="44" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="989">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/share-static/assets/app2/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="115" selection-start="9261" selection-end="9261" vertical-scroll-proportion="0.4119318" vertical-offset="3804" max-vertical-offset="5129">
+        <state line="186" column="39" selection-start="8581" selection-end="9979" vertical-scroll-proportion="0.0" vertical-offset="3804" max-vertical-offset="5129">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../webbf/windforce/trunk/static/share/share.html">
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/app2/styles/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="24" selection-start="9032" selection-end="9032" vertical-scroll-proportion="4.645533" vertical-offset="1652" max-vertical-offset="5313">
+        <state line="185" column="39" selection-start="9949" selection-end="9949" vertical-scroll-proportion="0.8415978" vertical-offset="3644" max-vertical-offset="5106">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/node/02/upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="550" selection-end="550" vertical-scroll-proportion="0.43572396" vertical-offset="0" max-vertical-offset="739">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/app/share-res.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="29" selection-end="29" vertical-scroll-proportion="0.06628242" vertical-offset="0" max-vertical-offset="4439">
           <folding>
-            <marker date="1401796122104" expanded="true" signature="8703:8833" placeholder="..." />
-            <marker date="1401796122104" expanded="true" signature="8874:8959" placeholder="..." />
-            <marker date="1401796122104" expanded="true" signature="9006:9042" placeholder="..." />
+            <marker date="1401884769124" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401884769124" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401884769124" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401884769124" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401884769124" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1401884769124" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite-static/assets/pc2/src/conf/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="9" selection-start="371" selection-end="371" vertical-scroll-proportion="0.37347767" vertical-offset="0" max-vertical-offset="739">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/node/02/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.37347767" vertical-offset="0" max-vertical-offset="739">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hot_report2/views/upload.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="16" selection-start="898" selection-end="898" vertical-scroll-proportion="-16.53125" vertical-offset="0" max-vertical-offset="759">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/node/02/requestHandlers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="7" selection-start="1979" selection-end="2377" vertical-scroll-proportion="0.8755074" vertical-offset="917" max-vertical-offset="1863">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hot_report2/models/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="30" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.0" vertical-offset="1311" max-vertical-offset="5911">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hot_report2/views/show.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="485" selection-end="485" vertical-scroll-proportion="0.42291373" vertical-offset="0" max-vertical-offset="759">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hot_report2/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="64" selection-start="4727" selection-end="4727" vertical-scroll-proportion="3.8161435" vertical-offset="0" max-vertical-offset="2921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hot_report2/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="198" column="11" selection-start="6017" selection-end="6017" vertical-scroll-proportion="0.660485" vertical-offset="4091" max-vertical-offset="13662">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: '../../invite-static/assets/app/src',
+    //baseUrl: 'src',
     paths: {
         'jquery': 'jquery/jquery',
         'jquery.mobile' : 'mobile/jquery.mobile'

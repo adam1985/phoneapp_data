@@ -81,6 +81,27 @@ Post.getAll = function(key, val, callback) {
                         return callback(err);//失败！返回 err
                     }
 
+                    var fullPath = /http:\/\/[\w\W]+\.\w{3,4}/img;
+                    var relativePath = /\/img\/[\w\W]+\.\w{3,4}/img;
+                    var rexImg = /(<img[\W\w]+>)/img;
+                    var imgPath = 'http://fjc1.pop.baofeng.net/popv5/static/hot_report2';
+
+                    docs.forEach(function(v){
+                        if( !fullPath.test(v.imgSrc)) {
+                            v.imgSrc = imgPath + v.imgSrc;
+                        }
+
+                        v.content = v.content.replace(rexImg, function($){
+
+                            if( !fullPath.test($)) {
+                                return $.replace(relativePath, function(s){
+                                    return imgPath + s;
+                                });
+                            }
+                        });
+
+                    });
+
                     callback(null, docs);//成功！以数组形式返回查询的结果
             });
         });

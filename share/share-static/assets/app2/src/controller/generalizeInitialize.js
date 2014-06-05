@@ -13,12 +13,12 @@ define(['jquery', 'component/tools', 'component/jquery.uri'], function($, tools)
                 myInviteCode.html( invite );
             }
 
-            downloadApk.on('tap', 'a', function(e){
+            downloadApk.on('click', 'a', function(e){
                 var href = $(this).attr('data-href');
                 if( /micromessenger/i.test( ua ) ) {
                     e.preventDefault();
                     download.show();
-                    document.documentElement.scrollTop = 0;
+                    document.body.scrollTop = 0;
                     setTimeout( function(){
                         if( download.is(':visible') ) {
                             download.hide();

@@ -8,8 +8,6 @@
     <meta name="format-detection" content="telephone=no">
     <title>百万猜球</title>
     <link rel="stylesheet" href="../../invite-static/assets/app2/styles/index.css"/>
-    <script src="../../invite-static/assets/app2/require.min.js"
-            data-main="../../invite-static/assets/app2/dist/index"></script>
 </head>
 <body>
 <div class="wrapper common-page generalize-wrapper" data-role="page" id="generalize-page">
@@ -33,24 +31,8 @@
                 </div>
             </div>
             <div class="layout-body">
-                <div class="generalize-text">预测世界杯比赛胜负，猜的最准的人赢得100万现金！完全免费，无需全部猜对，只要你比其他人猜的更准，你就能得到100万大奖，靠运气，更靠实力！快下载“百万猜球”APP参加吧！
-                </div>
+                <div id="my-share-invite">
 
-                <div class="page-width my-invite-res">
-                    我的2014巴西世界杯预测详情
-                </div>
-
-                <div class="world-cup-box">
-                    <div class="world-cup-pic">
-                        <img src="http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/worldcup.jpg"/>
-                    </div>
-                    <div class="rank-box page-width">
-                        <div class="rank-new">
-                            <div class="rank-left"><img src="../../invite-static/assets/app2/images/rank-img-01.jpg" /><span>巴西</span></div>
-                            <div class="rank-center"><img src="../../invite-static/assets/app2/images/rank-img-02.jpg" /><span>英格兰</span></div>
-                            <div class="rank-right"><img src="../../invite-static/assets/app2/images/rank-img-03.jpg" /><span>德国</span></div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="invite-box">
@@ -170,6 +152,30 @@
         </div>
     </div>
 </div>
+<script type="text/html" id="my-invite-template">
+    <div class="generalize-text">
+        {{= text }}
+        预测世界杯比赛胜负，猜的最准的人赢得100万现金！完全免费，无需全部猜对，只要你比其他人猜的更准，你就能得到100万大奖，靠运气，更靠实力！快下载“百万猜球”APP参加吧！
+    </div>
+
+    <div class="page-width my-invite-res">
+        {{= name }}的预测详情
+    </div>
+
+    <div class="world-cup-box">
+        <div class="world-cup-pic">
+            <img src="{{= imgSrc }}"/>
+        </div>
+        <div class="rank-box page-width">
+            <div class="rank-new">
+                <div class="rank-left"><img src="../../invite-static/assets/app2/images/rank-img-01.jpg" /><span>{{= top2 }}</span></div>
+                <div class="rank-center"><img src="../../invite-static/assets/app2/images/rank-img-02.jpg" /><span>{{= top1 }}</span></div>
+                <div class="rank-right"><img src="../../invite-static/assets/app2/images/rank-img-03.jpg" /><span>{{= top3 }}</span></div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/javascript" src="http://fjc1.pop.baofeng.net/popv5/static/share/invite-static/assets/app2/require.min.js" data-main="http://fjc1.pop.baofeng.net/popv5/static/share/invite-static/assets/app2/dist/index"></script>
 <div class="hide">
 <script type="text/javascript">
     var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
