@@ -6,7 +6,7 @@ define( ['jquery',  'component/iscroll',  'component/tools'],
         pullUpEl, pullUpOffset,
         generatedCount = 0;
 
-    return function( pullDownAction, pullUpAction) {
+    return function( pullDownAction, pullUpAction, onScrollMove) {
 
         //设置滚动条
         var setTouchScroll = function() {
@@ -72,6 +72,7 @@ define( ['jquery',  'component/iscroll',  'component/tools'],
                             pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
                             this.maxScrollY = pullUpOffset;
                         }
+                        onScrollMove && onScrollMove(myScroll);
                     },
                     onScrollEnd: function () {
                         isVaildDate = $(document.body).data('has-list-page');

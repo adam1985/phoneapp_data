@@ -64,8 +64,6 @@
                 t.setTime(+t + days * 864e+5);
             }
 
-            alert(options.expires);
-
             return (document.cookie = [
                 encode(key), '=', stringifyCookieValue(value),
                 options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE

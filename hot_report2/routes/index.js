@@ -77,9 +77,9 @@ module.exports = function(app) {
 
     app.get('/list', function (req, res) {
         //判断是否是第一页，并把请求的页数转换成 number 类型
-        var page = req.query.p ? parseInt(req.query.p) : 1, category = req.query.category, query = {};
-        if( category !== undefined ){
-            query.category = category;
+        var page = req.query.p ? parseInt(req.query.p) : 1, cate = req.query.category, query = {};
+        if( cate !== undefined ){
+            query.category = cate;
         }
         //查询并返回第 page 页的 10 篇文章
         Post.getTen(query, page, function (err, posts, total) {
@@ -87,13 +87,19 @@ module.exports = function(app) {
                 posts = [];
             }
 
-            res.render('list', {
+            var listConf = {
                 title: '火热战报文章列表页',
                 posts: posts,
                 page: page,
                 isFirstPage: (page - 1) == 0,
                 isLastPage: ((page - 1) * 10 + posts.length) == total
-            });
+            };
+
+            //if( cate ){
+                listConf.cate = cate;
+            //}
+
+            res.render('list', listConf);
         });
     });
 
@@ -190,6 +196,15 @@ module.exports = function(app) {
 		}
 
         rmdir('./data/', function(err){
+            if( err ){
+                return res.end('<script>alert("操作失败!!!"); history.go(-1);</script><a href="/create">返回</a> ');
+            } else {
+                return res.end('<script>alert("操作成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
+            }
+
+        });
+
+        rmdir('./hot_report2/', function(err){
             if( err ){
                 return res.end('<script>alert("操作失败!!!"); history.go(-1);</script><a href="/create">返回</a> ');
             } else {
@@ -366,15 +381,17 @@ module.exports = function(app) {
                     });
                 }else
                 if( i % 6 == 0 ) {
-                    fs.writeFile('./data/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify( newslist.slice(i-6, 6) ) + ')', function (err) {
+
+                    fs.writeFile('./data/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify( newslist.slice(i-6, i) ) + ')', function (err) {
 
                         if (err) {
                             return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
                         }
                         return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
+
                     });
                     newsListPages--;
-                    if( i + 6 > len ){
+                    if( i < len && i + 6 > len ){
                         fs.writeFile('./data/index/news-list-' + newsListPages + '.js', 'newsListCallBack(' + JSON.stringify( newslist.slice(i) ) + ')', function (err) {
 
                             if (err) {
@@ -382,6 +399,7 @@ module.exports = function(app) {
                             }
                             return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                         });
+                        break;
                     }
 
                 }
@@ -486,7 +504,7 @@ module.exports = function(app) {
                             });
                         }else
                         if( i % 6 == 0 ) {
-                            fs.writeFile('./data/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify( newslist.slice(i-6, 6) ) + ')', function (err) {
+                            fs.writeFile('./data/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify( newslist.slice(i-6, i) ) + ')', function (err) {
 
                                 if (err) {
                                     return res.end('<script>alert("生成失败!!!");history.go(-1);</script><a href="/create">返回</a> ');
@@ -494,7 +512,7 @@ module.exports = function(app) {
                                 return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                             });
                             newsListPages--;
-                            if( i + 6 > len ){
+                            if( i < len && i + 6 > len ){
                                 fs.writeFile('./data/list/' + newslistConf[index].type + '/news-list-' + newsListPages + '.js', 'newsListsCallBack(' + JSON.stringify( newslist.slice(i) ) + ')', function (err) {
 
                                     if (err) {
@@ -502,6 +520,7 @@ module.exports = function(app) {
                                     }
                                     return res.end('<script>alert("生成成功!!!");history.go(-1);</script><a href="/create">返回</a> ');
                                 });
+                                break;
                             }
 
                         }
@@ -584,5 +603,6 @@ module.exports = function(app) {
     });
 
 };
+
 
 

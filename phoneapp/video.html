@@ -44,8 +44,8 @@
     }}
     <div class="video-list-item">
         <div class="video-thumb">
-            <a class="player-video" data-vid="{{= target.vid }}" data-id="{{= target.id }}" href="javascript:void(null)">
-                <img class="video-max-pic" src="{{= target.picurl }}" />
+            <a class="player-video" href="javascript:void(null)" data-index="{{= i }}" data-vid="{{= target.vid }}" data-id="{{= target.id }}">
+                <img class="video-max-pic" data-original="{{= target.picurl }}" />
                 <span class="player-btn"><img src="assets/images/player_btn.png" /></span>
             </a>
         </div>
@@ -54,14 +54,24 @@
                 <img src="assets/images/video_icon.png" /> 精彩进球
             </div>
             <div class="fr video-control-btn">
-                <a class="fl" href="javascript:void(null)" data-vid="{{= target.vid }}" data-id="{{= target.id }}"><img src="assets/images/video_download.png" /> </a>
-                <a class="fr" id="toggle-full-screen" href="javascript:void(null)"><img src="assets/images/full_screen.png" /> </a>
+                <!--<a class="fl video-download" href="javascript:void(null)" data-vid="{{= target.vid }}" data-id="{{= target.id }}"><img src="assets/images/video_download.png" /> </a>-->
+                <a class="fr toggle-full-screen" href="javascript:void(null)" data-index="{{= i }}" data-vid="{{= target.vid }}" data-id="{{= target.id }}"><img src="assets/images/full_screen.png" /> </a>
             </div>
         </div>
     </div>
     {{ } }}
     {{ } }}
 </script>
+<script id="video-play-template" type="text/html">
+    <div class="video-play-box" style="height: {{= height }}px;">
+        <video poster="{{= picurl }}" width="{{= width }}" height="{{= height }}" autoplay="autoplay" preload="none" controls="controls" x-webkit-airplay="">
+            {{ for ( var attr in src ) { }}
+            <source src="{{= src[attr] }}" />
+            {{ } }}
+        </video>
+    </div>
+</script>
+<!-- 微视视频调起模板 -->
 <script src="assets/require.min.js" data-main="assets/src/index"></script>
 </body>
 </html>

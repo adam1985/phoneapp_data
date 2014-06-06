@@ -81,13 +81,13 @@ Post.getAll = function(key, val, callback) {
                         return callback(err);//失败！返回 err
                     }
 
-                    var fullPath = /http:\/\/[\w\W]+\.\w{3,4}/img;
+                    var fullPath = /http:\/\//;
                     var relativePath = /\/img\/[\w\W]+\.\w{3,4}/img;
-                    var rexImg = /(<img[\W\w]+>)/img;
+                    var rexImg = /(<img[\W\w]+?>)/img;
                     var imgPath = 'http://fjc1.pop.baofeng.net/popv5/static/hot_report2';
 
                     docs.forEach(function(v){
-                        if( !fullPath.test(v.imgSrc)) {
+                        if( v.imgSrc.length && !fullPath.test(v.imgSrc)) {
                             v.imgSrc = imgPath + v.imgSrc;
                         }
 
@@ -98,6 +98,7 @@ Post.getAll = function(key, val, callback) {
                                     return imgPath + s;
                                 });
                             }
+                            return $;
                         });
 
                     });

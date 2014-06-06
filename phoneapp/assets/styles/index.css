@@ -275,6 +275,9 @@ padding: 30px 20px; z-index: 9999; box-sizing: border-box;
 .video-lists-container{ border-bottom: 1px solid #ccc;}
 .video-list-item{ margin: 10px 10px 30px 10px;
     -moz-box-shadow:1px 5px 10px #8A8A8A; -webkit-box-shadow:1px 5px 10px #8A8A8A; box-shadow:1px 5px 10px #8A8A8A;}
+
+.video-thumb{ position: relative;}
+.video-play-box{ /*position: absolute; left : 0; top:0;*/ width: 100%; z-index: 9999;}
 .video-thumb a,.video-thumb img{ display: block; width: 100%;}
 .video-thumb a{ position: relative;}
 .video-thumb .player-btn{ display: block; width: 15%; position: absolute; left: 50%; top : 50%; margin: -7% 0 0 -7%;}
@@ -285,3 +288,36 @@ padding: 30px 20px; z-index: 9999; box-sizing: border-box;
 .video-control-btn img,.video-control-btn a{ display: inline-block; }
 .video-control-btn a{width: 25%; margin-right: 10%; }
 .video-control-btn img{ width: 100%;}
+:fullscreen {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:2147483647;
+    background:black;
+    width:100%;
+    height:100%;
+}
+/* If there is a fullscreen element that is not the root then
+   we should hide the viewport scrollbar. */
+:fullscreen-ancestor:root {
+    overflow:hidden;
+}
+:fullscreen-ancestor {
+    /* Ancestors of a fullscreen element should not induce stacking contexts
+       that would prevent the fullscreen element from being on top. */
+    z-index:auto;
+    /* Ancestors of a fullscreen element should not be partially transparent,
+       since that would apply to the fullscreen element and make the page visible
+       behind it. It would also create a pseudo-stacking-context that would let content
+       draw on top of the fullscreen element. */
+    opacity:1;
+    /* Ancestors of a fullscreen element should not apply SVG masking, clipping, or
+       filtering, since that would affect the fullscreen element and create a pseudo-
+       stacking context. */
+    mask:none;
+    clip:none;
+    filter:none;
+    transform:none;
+}

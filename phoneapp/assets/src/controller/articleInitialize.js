@@ -1,4 +1,5 @@
-define(['jquery', 'component/template',  'component/loading',  './initializeScroll', 'component/jquery.lazyload', 'component/jquery.uri', 'conf/config'],
+define(['jquery', 'component/template',  'component/loading',  './initializeScroll',
+    'component/jquery.lazyload', 'component/jquery.uri', 'conf/config'],
     function($, template, loading, initializeScroll, lazyload, uri, config){
         return function( complete ){
 
