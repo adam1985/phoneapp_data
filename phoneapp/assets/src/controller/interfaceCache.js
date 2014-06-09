@@ -91,6 +91,9 @@ define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
                 playerHistorySaveObj = {};
             if( playerHistory ){
                 playerHistoryObj = JSON.parse(playerHistory);
+            }
+
+            if( playerHistorySave ) {
                 playerHistorySaveObj = JSON.parse(playerHistorySave);
             }
 

@@ -108,6 +108,7 @@ define(['jquery', 'component/template',  'interface/ajax',
                                 data : {
                                     url : "weishi/playReport",
                                     protocol_type : 'wbox',
+                                    qtype : 'POST',
                                     version : '1.0',
                                     client_id : config.client_id,
                                     appid : config.client_id,
