@@ -40,6 +40,10 @@ define(['jquery', 'component/template',  'component/loading',  './initializeScro
                         onScrollStart : function(){
                             iscroll.refresh();
                             layoutContent.trigger('scroll');
+                        },
+                        onScrollMove : function(){
+                            iscroll.refresh();
+                            layoutContent.trigger('scroll');
                         }
                     });
 

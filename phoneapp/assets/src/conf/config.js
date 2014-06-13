@@ -6,7 +6,7 @@ define({
     vInterface : "http://v.baofeng.com/interface", // 微视接口调度
     client_id : "801491603",  // 第三方创建应用App Key
     client_secret : "ba2cffc1a64bfdc00c5180f5c634e4e1", // 第三方创建应用App Secret
-    timeout : 100 // 第三方调用的票过期时间
-
+    timeout : 99, // 第三方调用的票过期时间，默认99分钟过期
+    playTimeout : 864e+5 // 播放地址过期时间
 });
 

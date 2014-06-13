@@ -5,7 +5,6 @@ define(['jquery', 'component/template',  'interface/ajax',
 
         return function(){
 
-
             $(document.body).data('has-list-page', true);
             miniVideoEntrance().done( function(){
 
@@ -100,6 +99,12 @@ define(['jquery', 'component/template',  'interface/ajax',
                             layoutContent.trigger('scroll');
                         });
 
+                        layoutContent.on('mousewheel DOMMouseScroll', function(event) {
+                            event.stopPropagation();
+                            event.preventDefault();
+                            layoutContent.trigger('scroll');
+                        });
+
                         // 播放报数
                         var playReport = function( idinfos ) {
                             ajax({
@@ -120,7 +125,7 @@ define(['jquery', 'component/template',  'interface/ajax',
                                 },
                                 success : function( res ){
                                     if( res.errcode == 0 ){
-                                        alert('报数成功!!');
+                                        //console.log(res.data);
                                     }
 
                                 }

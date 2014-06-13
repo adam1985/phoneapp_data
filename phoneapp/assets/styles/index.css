@@ -321,3 +321,8 @@ padding: 30px 20px; z-index: 9999; box-sizing: border-box;
     filter:none;
     transform:none;
 }
+
+.weishi-logo{
+  position: absolute; left: 5%; top:5%; width : 30%; z-index: 100;
+}
+.weishi-logo  img{ display: block;}

@@ -1,1 +1,1 @@
-listConfCallBack({"title":"最新赛况","newsSource":"news-list-","latestPage":1})
+listConfCallBack({"title":"最新赛况","newsSource":"news-list-","latestPage":2})

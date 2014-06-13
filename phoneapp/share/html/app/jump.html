@@ -2,11 +2,20 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
-    <title>百万世界杯</title>
+    <title>百万猜球</title>
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .weixin-download, .weixin-download img {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <div style="display: none;">
@@ -15,18 +24,33 @@
         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc8ce18317936c91898a28ddf786ee363' type='text/javascript'%3E%3C/script%3E"));
     </script>
 </div>
+<div class="hide weixin-download" id="weixin-download">
+    <img src="http://fjc1.pop.baofeng.net/popv5/static/share/invite-static/assets/app/images/weixin-download.png"/>
+</div>
 <script>
     (function () {
         var jumpUrl = {
-                    andriod : 'http://wx.dl.baofeng.com/mobile/WorldCup/WorldCup.apk',
-                    ios : 'https://itunes.apple.com/us/app/bai-wan-cai-qiu/id849399346?l=zh&ls=1&mt=8'
-                },
-                isAndroid = ((/android/gi).test(navigator.appVersion)),
-                isIos = ((/iphone|ipad/gi).test(navigator.appVersion));
+                    andriod: 'http://wx.dl.baofeng.com/mobile/WorldCup/WorldCup.apk',
+                    ios: 'https://itunes.apple.com/us/app/bai-wan-cai-qiu/id849399346?l=zh&ls=1&mt=8'
+            },
+            ua = navigator.userAgent.toLowerCase(),
+            isAndroid = ((/android/gi).test(ua)),
+            isIos = ((/iphone|ipad/gi).test(ua)),
+            isWeixin = /micromessenger/i.test(ua),
+            download = document.getElementById('weixin-download');
 
-        if (isAndroid) {
+        if( isWeixin  ) {
+
+            if( isIos ) {
+                location.href = jumpUrl.ios;
+            } else if( isAndroid ) {
+                download.style.display = 'block';
+                document.body.scrollTop = 0;
+            }
+
+        } else if (isAndroid) {
             location.href = jumpUrl.andriod;
-        } else if( isIos ) {
+        } else if (isIos) {
             location.href = jumpUrl.ios;
         }
 

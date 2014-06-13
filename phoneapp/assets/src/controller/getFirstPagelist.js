@@ -24,20 +24,15 @@ define(['jquery','component/template', 'component/tools', 'conf/config', './mini
                                 if( ajaxNumber > 1 ) {
                                     newsListContainer.append( templateStr );
                                 } else {
+                                    newsListContainer.html( templateStr );
                                     if($('#index-page').length) {
                                         miniVideoEntrance().done( function(){
                                             var weishiData = JSON.parse(localStorage.getItem('weishi-data'));
-                                            var vTemplate = template.render('weishi-template', weishiData),
-                                                newList = $(templateStr);
-                                            newsListContainer.html( newList );
-                                            $('#news-list-container').find('.news-list-box').
+                                            var vTemplate = template.render('weishi-template', weishiData);
+                                            newsListContainer.find('.news-list-box').
                                                 eq(weishiData.position - 1).before(vTemplate);
-
-                                        });
-                                    } else {
-                                        newsListContainer.html( templateStr );
+                                        })
                                     }
-
                                 }
 
                             }

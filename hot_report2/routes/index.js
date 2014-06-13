@@ -10,6 +10,27 @@ var fstream = require('fstream'),
 
 module.exports = function(app) {
 
+    var getClientIP = function(req){
+        var ipAddress;
+        var headers = req.headers;
+        var forwardedIpsStr = headers['x-real-ip'] || headers['x-forwarded-for'];
+        forwardedIpsStr ? ipAddress = forwardedIpsStr : ipAddress = null;
+        if (!ipAddress) {
+            ipAddress = req.connection.remoteAddress;
+        }
+        return ipAddress;
+    };
+
+    app.all('*', function(req, res){
+        var ip = getClientIP(req);
+        if( ip != '60.247.90.102') {
+            //res.render("404");
+        }
+    });
+
+
+
+
     app.get('/', function (req, res) {
         res.render('index', { title: '火热战报文章发布系统' });
     });

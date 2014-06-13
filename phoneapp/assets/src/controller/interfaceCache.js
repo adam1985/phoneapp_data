@@ -37,7 +37,7 @@ define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
                     success: function( token ){
                         if( token.ret == 0 ) {
                             var expires = new Date();
-                            expires.setTime(+expires + ( config.timeout - 1 ) * 60 * 1000);
+                            expires.setTime(+expires + config.timeout * 60 * 1000);
 
                             $.cookie('access_token', token.data.access_token, {
                                 expires : expires,
@@ -85,16 +85,20 @@ define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
 
         var playerDtd = function(id ,vid, client_id, access_token) {
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
-            var playerHistory = localStorage.getItem('player-history'),
-                playerHistorySave = $.cookie('player-history'),
-                playerHistoryObj = {},
+            var playerHistorySave = $.cookie('player-history'),
                 playerHistorySaveObj = {};
-            if( playerHistory ){
-                playerHistoryObj = JSON.parse(playerHistory);
-            }
 
             if( playerHistorySave ) {
                 playerHistorySaveObj = JSON.parse(playerHistorySave);
+            } else {
+                localStorage.removeItem('player-history');
+            }
+
+            var playerHistory = localStorage.getItem('player-history'),
+                playerHistoryObj = {};
+
+            if( playerHistory ){
+                playerHistoryObj = JSON.parse(playerHistory);
             }
 
             if( !playerHistorySave || !playerHistorySaveObj[vid] || !playerHistory || !playerHistoryObj[vid] ) {
@@ -119,7 +123,7 @@ define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
                             playerHistorySaveObj[vid] = 1;
                             localStorage.setItem('player-history', JSON.stringify(playerHistoryObj));
                             $.cookie('player-history', JSON.stringify(playerHistorySaveObj), {
-                                expires : 1,
+                                expires : new Date( +new Date() + config.playTimeout ),
                                 domain : '.baofeng.net'
                             });
                             dtd.resolve(); // 改变Deferred对象的执行状态
