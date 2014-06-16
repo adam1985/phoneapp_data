@@ -1,1 +1,1 @@
-bannerConfCallBack([{"title":"sehryj！@#￥htk4523松岛枫v额","src":"http://worldcup.baofeng.net"},{"title":"商业品牌~商品品牌~~商业品牌~~~","src":"http://baike.baidu.com/view/13322209.htm?fr=aladdin"}])
+bannerConfCallBack([{"title":"wewrwqr","src":""}])

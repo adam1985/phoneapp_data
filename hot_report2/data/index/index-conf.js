@@ -1,1 +1,1 @@
-indexConfCallBack({"title":"火热战报","bannerSource":"banner-conf.js","focusSource":"focus-conf.js","newsSource":"news-list-","latestPage":4})
+indexConfCallBack({"title":"火热战报","bannerSource":"banner-conf.js","focusSource":"focus-conf.js","newsSource":"news-list-","latestPage":5})

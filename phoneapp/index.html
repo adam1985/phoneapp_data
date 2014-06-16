@@ -45,9 +45,9 @@
     {{ if( isShow && list.length >>> 0 ){ }}
     <div class="page-width layout-banner">
         <ul>
-        {{ for ( var i = 0, len = list.length; i < len; i++ ) { }}
+            {{ for ( var i = 0, len = list.length; i < len; i++ ) { }}
             <li><a href="{{= list[i].src }}" title="{{= list[i].title }}" target="_blank">{{= list[i].title }}</a> </li>
-        {{ } }}
+            {{ } }}
         </ul>
     </div>
     <div class="close-banner"></div>
@@ -59,36 +59,36 @@
     {{ if( list.length >>> 0 ){ }}
     <div class="cl focus-picture-box swiper-wrapper" id="focus-picture-box">
         {{ for ( var i = 0, len = list.length; i < len; i++ ) {
-            var current = list[i];
+        var current = list[i];
         }}
-            <div class="focus-picture-list swiper-slide">
-                <a href="javascript:void(null)" data-params="{{= current.assignType }}">
-                    <img src="{{= current.imgSrc }}"/>
-                </a>
-            </div>
+        <div class="focus-picture-list swiper-slide">
+            <a href="javascript:void(null)" data-params="{{= current.assignType }}">
+                <img src="{{= current.imgSrc }}"/>
+            </a>
+        </div>
         {{ } }}
     </div>
     <div class="cl focus-picture-control">
         <div class="fl focus-picture-titles" id="focus-picture-titles">
             {{ for ( var i = 0, len = list.length; i < len; i++ ) {
-                var current = list[i];
+            var current = list[i];
             }}
-                {{ if( i === 0 ) { }}
-                    <a title="{{= current.title }}" href="javascript:void(null)" class="on" data-params="{{= current.assignType }}">{{= current.title }}</a>
-                {{ } else { }}
-                    <a title="{{= current.title }}" href="javascript:void(null)" data-params="{{= current.assignType }}">{{= current.title }}</a>
-                {{ } }}
+            {{ if( i === 0 ) { }}
+            <a title="{{= current.title }}" href="javascript:void(null)" class="on" data-params="{{= current.assignType }}">{{= current.title }}</a>
+            {{ } else { }}
+            <a title="{{= current.title }}" href="javascript:void(null)" data-params="{{= current.assignType }}">{{= current.title }}</a>
+            {{ } }}
             {{ } }}
         </div>
         <div class="fr focus-picture-buttons" id="focus-picture-buttons">
             {{ for ( var i = 0, len = list.length; i < len; i++ ) {
-                var current = list[i];
+            var current = list[i];
             }}
-                {{ if( i === 0) { }}
-                    <a href="javascript:void(null)" class="on">{{= i + 1 }}</a>
-                {{ } else { }}
-                    <a href="javascript:void(null)">{{= i + 1 }}</a>
-                {{ } }}
+            {{ if( i === 0) { }}
+            <a href="javascript:void(null)" class="on">{{= i + 1 }}</a>
+            {{ } else { }}
+            <a href="javascript:void(null)">{{= i + 1 }}</a>
+            {{ } }}
             {{ } }}
         </div>
     </div>
@@ -99,8 +99,11 @@
 <script id="hot-news-template" type="text/html">
     {{ if( list.length >>> 0 ){ }}
     {{ for ( var i = 0, len = list.length; i < len; i++ ) {
-        var target = list[i];
+    var target = list[i];
     }}
+    {{ if( i == video.index - 1 && video.show ) { }}
+    {{ include('weishi-template') }}
+    {{ } }}
     <div class="news-list-box">
         <div class="sprites news-list-header">
             <a class="category" href="{{= target.src }}?category={{= target.type }}">{{= target.title }}</a>
@@ -108,61 +111,61 @@
 
         {{ if( target.list.length >>> 0 ) { }}
         {{ for ( var j = 0, length = target.list.length; j < length; j++ ) {
-            var current = target.list[j];
+        var current = target.list[j];
         }}
 
-            {{ if( current.imgSrc ) { }}
-            <div class="cl news-list-body">
-                <div class="fl thumb-box">
-                    <a href="javascript:void(null)" class="thumb" data-params="{{= current.assignType }}">
-                        <img src="{{= current.imgSrc }}"/>
-                        {{ if( current.player ) { }}
-                            <span class="sprites video-play-btn"></span>
-                        {{ } }}
-                    </a>
-                </div>
-                <div class="fr news-content">
-                    <div class="in-news-content">
-            {{ } else { }}
-            <div class="news-list-body">
-                <div class="news-content news-list-lace">
-                    <div>
-            {{ } }}
-                        <a class="atitle" href="javascript:void(null)" data-params="{{= current.assignType }}">
-                            <h2>{{= current.title }}</h2>
-                            <p>
-                                {{= current.info }}
-                            </p>
-                        </a>
-                </div>
+        {{ if( current.imgSrc ) { }}
+        <div class="cl news-list-body">
+            <div class="fl thumb-box">
+                <a href="javascript:void(null)" class="thumb" data-params="{{= current.assignType }}">
+                    <img src="{{= current.imgSrc }}"/>
+                    {{ if( current.player ) { }}
+                    <span class="sprites video-play-btn"></span>
+                    {{ } }}
+                </a>
             </div>
+            <div class="fr news-content">
+                <div class="in-news-content">
+                    {{ } else { }}
+                    <div class="news-list-body">
+                        <div class="news-content news-list-lace">
+                            <div>
+                                {{ } }}
+                                <a class="atitle" href="javascript:void(null)" data-params="{{= current.assignType }}">
+                                    <h2>{{= current.title }}</h2>
+                                    <p>
+                                        {{= current.info }}
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
 
-        </div>
+                    </div>
 
-        {{ } }}
-        {{ } }}
-    </div>
-    {{ } }}
-    {{ } }}
+                    {{ } }}
+                    {{ } }}
+                </div>
+                {{ } }}
+                {{ } }}
 </script>
 <!-- 微视视频模板 -->
 <script id="weishi-template" type="text/html">
     <div class="news-list-box">
         <div class="sprites news-list-header">
-            <a href="{{= src }}" class="category">{{= title }}</a>
+            <a href="{{= video.src }}" class="category">{{= video.title }}</a>
         </div>
         <div class="cl news-list-body">
             <div class="fl thumb-box">
-                <a class="thumb" href="{{= src }}">
-                    <img src="{{= imgSrc }}">
+                <a class="thumb" href="{{= video.src }}">
+                    <img src="{{= video.imgSrc }}">
                     <span class="sprites video-play-btn"></span>
                 </a>
             </div>
             <div class="fr news-content">
                 <div class="in-news-content">
-                    <a href="{{= src }}" class="atitle">
+                    <a href="{{= video.src }}" class="atitle">
                         <p>
-                            {{= info }}
+                            {{= video.info }}
                         </p>
                         <span class="fr join-v-video">点击查看更多内容</span>
                     </a>

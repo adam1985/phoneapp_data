@@ -1,5 +1,5 @@
-define(['jquery','component/template', 'component/tools', 'conf/config', './miniVideoEntrance'],
-    function($, template, tools, config, miniVideoEntrance ){
+define(['jquery','component/template', 'component/tools', 'conf/config', './miniVideoEntrance', 'component/localStorage'],
+    function($, template, tools, config, miniVideoEntrance, localStorage ){
         return function(pageIndexArg, path, data, jsonpCallback, boxId, templateId){
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
             var totalRow = 0, maxRow = 6, ajaxNumber = 0,
@@ -18,21 +18,42 @@ define(['jquery','component/template', 'component/tools', 'conf/config', './mini
                                 ajaxNumber++;
                                 totalRow += data.length;
                                 data = tools.joinAssignSrc( data );
-                                var templateStr = template.render(templateId, {
-                                    list : data
-                                });
+                                var templateConf = {
+                                    list : data,
+                                    video : {
+                                        show : false,
+                                        index : -1
+                                    }
+                                }, templateStr;
+
                                 if( ajaxNumber > 1 ) {
+                                    templateStr = template.render(templateId, templateConf);
                                     newsListContainer.append( templateStr );
                                 } else {
-                                    newsListContainer.html( templateStr );
-                                    if($('#index-page').length) {
+                                    if( $('#index-page').length) {
+
                                         miniVideoEntrance().done( function(){
+
                                             var weishiData = JSON.parse(localStorage.getItem('weishi-data'));
-                                            var vTemplate = template.render('weishi-template', weishiData);
-                                            newsListContainer.find('.news-list-box').
-                                                eq(weishiData.position - 1).before(vTemplate);
-                                        })
+
+                                            templateConf.video = {
+                                                show : true,
+                                                title : weishiData.title,
+                                                src : weishiData.src,
+                                                imgSrc : weishiData.imgSrc,
+                                                info : weishiData.info,
+                                                index : weishiData.position
+                                            };
+
+                                            templateStr = template.render(templateId, templateConf);
+                                            newsListContainer.html( templateStr );
+                                        });
+
+                                    } else {
+                                        templateStr = template.render(templateId, templateConf);
+                                        newsListContainer.html( templateStr );
                                     }
+
                                 }
 
                             }

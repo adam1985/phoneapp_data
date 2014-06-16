@@ -1,7 +1,7 @@
 define(['jquery', 'component/template',  'interface/ajax',
-    './pullDownUpLoad',  'component/tools', 'conf/config', './interfaceCache',
+    './pullDownUpLoad',  'component/tools', 'conf/config', './interfaceCache', 'component/localStorage',
     './miniVideoEntrance', 'component/fullScreen', 'component/jquery.lazyload'],
-    function($, template, ajax, pullDownUpLoad,  tools, config, interfaceCache, miniVideoEntrance, fullScreen, lazyload){
+    function($, template, ajax, pullDownUpLoad,  tools, config, interfaceCache,localStorage, miniVideoEntrance, fullScreen, lazyload){
 
         return function(){
 
@@ -184,7 +184,7 @@ define(['jquery', 'component/template',  'interface/ajax',
 
                         //视频全屏播放
 
-                        videoListsBox.on('tap', '.toggle-full-screen', function(){
+                        videoListsBox.on('click', '.toggle-full-screen', function(){
                             var self = $(this),
                                 videoElement = self.closest('.video-list-item').find('video');
                             if( videoElement.length ) {

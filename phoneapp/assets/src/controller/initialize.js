@@ -1,6 +1,6 @@
-define(['jquery', 'jquery.mobile',  './commonInitialize',  './indexInitialize',  './listInitialize',
+define(['jquery', 'jquery.mobile',  'component/localStorage', './commonInitialize',  './indexInitialize',  './listInitialize',
     './articleInitialize', './qaInitialize', './chatRoomInitialize', './videoInitialize', './commonIscroll'],
-    function($, mobile, commonInitialize, indexInitialize, listInitialize,
+    function($, mobile, localStorage, commonInitialize, indexInitialize, listInitialize,
              articleInitialize, qaInitialize, chatRoomInitialize, videoInitialize, commonIscroll){
 
         $(function(){

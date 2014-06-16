@@ -1,8 +1,9 @@
-define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
-    function($, tools, config){
+define(['jquery', 'component/tools', 'conf/config', 'component/localStorage',  'component/jquery.cookie'],
+    function($, tools, config, localStorage){
 
         var confDtd = function() {
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
+
             var weishiConf = localStorage.getItem('weishiConf');
 
             if( !weishiConf ) {
@@ -85,7 +86,7 @@ define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
 
         var playerDtd = function(id ,vid, client_id, access_token) {
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
-            var playerHistorySave = $.cookie('player-history'),
+            var playerHistorySave = $.cookie('player-history-cookie'),
                 playerHistorySaveObj = {};
 
             if( playerHistorySave ) {
@@ -101,7 +102,10 @@ define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
                 playerHistoryObj = JSON.parse(playerHistory);
             }
 
+
+
             if( !playerHistorySave || !playerHistorySaveObj[vid] || !playerHistory || !playerHistoryObj[vid] ) {
+
                 $.ajax({
                     url: config.vInterface,
                     dataType: 'jsonp',
@@ -122,7 +126,7 @@ define(['jquery', 'component/tools', 'conf/config', 'component/jquery.cookie'],
                             playerHistoryObj[vid] = res.data;
                             playerHistorySaveObj[vid] = 1;
                             localStorage.setItem('player-history', JSON.stringify(playerHistoryObj));
-                            $.cookie('player-history', JSON.stringify(playerHistorySaveObj), {
+                            $.cookie('player-history-cookie', JSON.stringify(playerHistorySaveObj), {
                                 expires : new Date( +new Date() + config.playTimeout ),
                                 domain : '.baofeng.net'
                             });

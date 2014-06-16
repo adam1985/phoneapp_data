@@ -21,22 +21,21 @@ module.exports = function(app) {
         return ipAddress;
     };
 
-    app.all('*', function(req, res){
-        var ip = getClientIP(req);
-        if( ip != '60.247.90.102') {
-            //res.render("404");
+    app.get('*', function(req, res, next) {
+        var ip = req.ip || getClientIP(req);
+        if( ip == '60.247.90.102') {
+            res.send(403);
+        } else {
+            next();
         }
     });
 
-
-
-
     app.get('/', function (req, res) {
         res.render('index', { title: '火热战报文章发布系统' });
+
     });
 
     app.post('/', function (req, res) {
-
         post = new Post(req.body.category, req.body.type, req.body.title, req.body.src, req.body.ovideoSrc, req.body.imgSrc, req.body.info, req.body.content);
         post.save(function (err) {
             res.set({
@@ -81,6 +80,7 @@ module.exports = function(app) {
     });
 
     app.get('/img/:name', function (req, res) {
+
         var name = req.params.name;
         fs.readFile("img/" + name, "binary", function(error, file) {
             if(error) {
@@ -97,6 +97,7 @@ module.exports = function(app) {
 
 
     app.get('/list', function (req, res) {
+
         //判断是否是第一页，并把请求的页数转换成 number 类型
         var page = req.query.p ? parseInt(req.query.p) : 1, cate = req.query.category, query = {};
         if( cate !== undefined ){
@@ -125,6 +126,7 @@ module.exports = function(app) {
     });
 
     app.get('/article', function (req, res) {
+
         Post.getArticle(req.param('time'), function (err, doc) {
             if (err) {
                 return res.redirect('back');
@@ -139,6 +141,7 @@ module.exports = function(app) {
 
 
     app.get('/edit', function (req, res) {
+
         Post.getArticle(req.param('time'), function (err, doc) {
             if (err) {
                 return res.redirect('back');
@@ -183,10 +186,12 @@ module.exports = function(app) {
     });
 
     app.get('/create', function (req, res) {
+
         res.render('create', { title: '文章生成' });
     });
 	
 	app.get('/removefile', function (req, res) {
+
 	
 		res.set({
             'Content-Type': 'text/html; charset=UTF-8'
@@ -432,6 +437,7 @@ module.exports = function(app) {
     });
 
     app.get('/createList', function (req, res) {
+
         res.set({
             'Content-Type': 'text/html; charset=UTF-8'
         });
@@ -559,6 +565,7 @@ module.exports = function(app) {
     });
 
     app.get('/createArticle', function (req, res) {
+
         res.set({
             'Content-Type': 'text/html; charset=UTF-8'
         });
@@ -586,6 +593,7 @@ module.exports = function(app) {
 
     app.get('/targz', function (req, res) {
 
+
         res.set({
             'Content-Type': 'text/html; charset=UTF-8'
         });
@@ -609,6 +617,7 @@ module.exports = function(app) {
 
     app.get('/download', function (req, res) {
 
+
         res.set({
             'Content-Type': 'text/html; charset=UTF-8'
         });
@@ -622,6 +631,7 @@ module.exports = function(app) {
         } );
 
     });
+
 
 };
 

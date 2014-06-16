@@ -58,6 +58,7 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
                             newsDtd = getFirstPageList(pageIndexArg, 'data/index/', data, 'newsListCallBack', 'news-list-container', 'hot-news-template');
 
                         $.when(bannerDtd, focusDtd, newsDtd).done(function(){
+
                             pageIndex = pageIndexArg.pageIndex;
 
                             mobileLoad.hide();
@@ -184,7 +185,11 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
                                                 if( data.length >>> 0) {
                                                     data = tools.joinAssignSrc( data );
                                                     var templateStr = template.render('hot-news-template', {
-                                                        list : data
+                                                        list : data,
+                                                        video : {
+                                                            show : false,
+                                                            index : -1
+                                                        }
                                                     });
                                                     newsListContainer.append( templateStr );
                                                 }

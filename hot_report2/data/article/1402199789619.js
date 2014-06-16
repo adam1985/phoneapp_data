@@ -1,0 +1,1 @@
+articleCallBack({"title":"测试一下","content":"<img src=\"http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/1402199729108hs.png\" style=\"\"><br><br><img src=\"http://fjc1.pop.baofeng.net/popv5/static/hot_report2/img/1402199729108hs.png\" style=\"\">"})
