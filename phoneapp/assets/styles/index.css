@@ -60,6 +60,7 @@ img{ vertical-align: middle;}
 
 /* 页面内容区 */
 .layout-content{ padding: 0; overflow: hidden; top:44px; bottom: 0; z-index:10;}
+#scroller{ position: relative; z-index: 100;}
 .layout-item-content{ display: none;}
 .layout-content .active { display: block;}
 .news-list-box{ border-bottom: 1px solid #cbcbcb; padding: 8px 8px 0 8px; position: relative;}
@@ -326,3 +327,4 @@ padding: 30px 20px; z-index: 9999; box-sizing: border-box;
   position: absolute; left: 5%; top:5%; width : 30%; z-index: 100;
 }
 .weishi-logo  img{ display: block;}
+.video-element{ position: absolute; left : 0; top  : 0; z-index: -1;}

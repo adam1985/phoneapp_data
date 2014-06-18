@@ -52,7 +52,7 @@
         </div>
         <div class="cl video-control">
             <div class="fl video-icon">
-                <img src="assets/images/video_icon.png" /> 精彩进球
+                <img src="assets/images/video_icon.png" /> 巴西最前线
             </div>
             <div class="fr video-control-btn">
                 <!--<a class="fl video-download" href="javascript:void(null)" data-vid="{{= target.vid }}" data-id="{{= target.id }}"><img src="assets/images/video_download.png" /> </a>-->
@@ -64,14 +64,13 @@
     {{ } }}
 </script>
 <script id="video-play-template" type="text/html">
-    <div class="video-play-box" style="height: {{= height }}px;">
-        <video poster="{{= picurl }}" width="{{= width }}" height="{{= height }}" autoplay="autoplay" preload="none" controls="controls" x-webkit-airplay="">
-            {{ for ( var attr in src ) { }}
-            <source src="{{= src[attr] }}" />
+    <div class="{{= className }} video-play-box" style="height: {{= height }}px;">
+        <video poster="{{= picurl }}" width="{{= width }}" height="{{= height }}" autoplay="autoplay" preload="none" controls="controls" x-webkit-airplay="allow" webkit-playsinline>
+            {{ for ( var i = 0, len = src.length; i < len; i++ ) { }}
+            <source src="{{= src[i] }}" />
             {{ } }}
         </video>
     </div>
-    <div class="weishi-logo"><img src="assets/images/weishi-logo.png" /></div>
 </script>
 <!-- 微视视频调起模板 -->
 <script src="assets/require.min.js" data-main="assets/src/index"></script>

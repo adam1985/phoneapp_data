@@ -24,38 +24,38 @@ define(['jquery','component/template', 'component/tools', 'conf/config', './mini
                                         show : false,
                                         index : -1
                                     }
-                                }, templateStr;
+                                }, templateStr, videoEntranceDtd;
 
-                                if( ajaxNumber > 1 ) {
-                                    templateStr = template.render(templateId, templateConf);
-                                    newsListContainer.append( templateStr );
-                                } else {
-                                    if( $('#index-page').length) {
+                                    if( ajaxNumber > 1 ) {
+                                        templateStr = template.render(templateId, templateConf);
+                                        newsListContainer.append( templateStr );
+                                    } else {
+                                        if( $('#index-page').length) {
 
-                                        miniVideoEntrance().done( function(){
+                                            videoEntranceDtd = miniVideoEntrance();
 
-                                            var weishiData = JSON.parse(localStorage.getItem('weishi-data'));
+                                            videoEntranceDtd.done( function(){
 
-                                            templateConf.video = {
-                                                show : true,
-                                                title : weishiData.title,
-                                                src : weishiData.src,
-                                                imgSrc : weishiData.imgSrc,
-                                                info : weishiData.info,
-                                                index : weishiData.position
-                                            };
+                                                var weishiData = JSON.parse(localStorage.getItem('weishi-data'));
 
+                                                templateConf.video = {
+                                                    show : true,
+                                                    title : weishiData.title,
+                                                    src : weishiData.src,
+                                                    imgSrc : weishiData.imgSrc,
+                                                    info : weishiData.info,
+                                                    index : weishiData.position
+                                                };
+
+                                                templateStr = template.render(templateId, templateConf);
+                                                newsListContainer.html( templateStr );
+                                            });
+
+                                        } else {
                                             templateStr = template.render(templateId, templateConf);
                                             newsListContainer.html( templateStr );
-                                        });
-
-                                    } else {
-                                        templateStr = template.render(templateId, templateConf);
-                                        newsListContainer.html( templateStr );
+                                        }
                                     }
-
-                                }
-
                             }
 
                             --pageIndex;
@@ -69,7 +69,14 @@ define(['jquery','component/template', 'component/tools', 'conf/config', './mini
                                 arg.callee();
                             } else {
                                 pageIndexArg.pageIndex = pageIndex;
-                                dtd.resolve(); // 改变Deferred对象的执行状态
+                                if( videoEntranceDtd ) {
+                                    videoEntranceDtd.done(function () {
+                                        dtd.resolve();
+                                    });
+                                } else {
+                                    dtd.resolve();
+                                }
+
                             }
 
                         }

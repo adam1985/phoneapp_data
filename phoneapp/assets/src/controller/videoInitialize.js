@@ -30,7 +30,7 @@ define(['jquery', 'component/template',  'interface/ajax',
                                 client_id : config.client_id,
                                 access_token : weishiData.access_token,
                                 type : 1,
-                                tag : '体育',
+                                tag : '巴西最前线',
                                 reqnum : pageSize,
                                 start : settings.start
                             },
@@ -54,6 +54,7 @@ define(['jquery', 'component/template',  'interface/ajax',
 
                                     $('#video-lists-container')[settings.insertType]( templateStr );
 
+                                    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
                                     settings.callback(lists, infos);
 
                                 }
@@ -75,23 +76,32 @@ define(['jquery', 'component/template',  'interface/ajax',
                 loadVideoList({
                     callback : function(lists, infos){
 
+                        var videoLists = lists;
+
+                        pageIndex += pageSize;
+
                         // 上拉加载分页，下拉刷新
                         var myScroll = pullDownUpLoad(function(myScroll){
                             loadVideoList({
-                                callback: function(){
+                                start : 0,
+                                callback: function(lists){
                                     pageIndex = pageSize;
+                                    videoLists = lists;
                                     imgLazyload(myScroll);
                                     myScroll.refresh();
+
                                 }
                             });
                         }, function(myScroll){
                             loadVideoList({
                                 start : pageIndex,
                                 insertType : 'append',
-                                callback: function(){
+                                callback: function(lists){
+                                    videoLists = lists;
                                     pageIndex += pageSize;
                                     imgLazyload(myScroll);
                                     myScroll.refresh();
+
                                 }
                             });
                         }, function(myScroll){
@@ -129,7 +139,7 @@ define(['jquery', 'component/template',  'interface/ajax',
                                     }
 
                                 }
-                            });
+                            }, true);
 
                         };
 
@@ -142,34 +152,46 @@ define(['jquery', 'component/template',  'interface/ajax',
                                     vid = self.attr('data-vid'),
                                     index = self.attr('data-index'),
                                     videoListItem = self.closest('.video-list-item'),
-                                    videoThumb = videoListItem.find('.video-thumb');
-                                interfaceCache.playerDtd(id, vid, config.client_id, weishiData.access_token).done(function(){
-                                    var playerHistoryObj = JSON.parse(localStorage.getItem('player-history'));
+                                    videoThumb = videoListItem.find('.video-thumb'),
+                                    videoElemnet = videoThumb.find('video');
 
-                                    var templateStr = template.render('video-play-template', {
-                                        src : playerHistoryObj[vid].url,
-                                        picurl : lists[index].picurl,
-                                        width : videoThumb.width(),
-                                        height : videoThumb.height()
+                                if( videoElemnet.length ){
+                                    videoElemnet[0].play();
+                                } else {
+                                    interfaceCache.playerDtd(id, vid, config.client_id, weishiData.access_token).done(function(){
+
+                                        var playerHistoryObj = eval('(' + $(document).data('player-history') + ')');
+
+                                        var templateStr = template.render('video-play-template', {
+                                            src : playerHistoryObj[vid],
+                                            picurl : videoLists[index].picurl,
+                                            width : tools.isIos ? 1 : videoThumb.width(),
+                                            height : tools.isIos ? 1 : videoThumb.height(),
+                                            className : tools.isIos ? '' : ''
+                                        });
+
+                                        if( tools.isIos ) {
+                                            self.after( templateStr );
+                                        } else {
+                                            self.replaceWith( templateStr );
+                                        }
+
+                                        videoElemnet = videoThumb.find('video');
+
+                                        var video_type = infos[index].video.video_type,
+                                            count = 1,
+                                            source = '巴西最前线', //世界杯
+                                            sContent = '5be06KW/5pyA5YmN57q/'; //5LiW55WM5p2v
+
+                                        videoElemnet.on('play', function(){
+                                            var idinfos = [id, video_type, count, source, sContent];
+                                            playReport(idinfos.join(':'));
+                                            count++;
+                                        });
+
+                                        callback && callback( videoElemnet );
                                     });
-
-                                    videoThumb.html( templateStr );
-
-                                    var videoElemnet = videoThumb.find('video')[0];
-
-                                    var video_type = infos[index].video.video_type,
-                                        count = 1,
-                                        source = 'tag', //世界杯
-                                        sContent = '5L2T6IKy'; //5LiW55WM5p2v
-
-                                    videoElemnet.addEventListener('play', function(){
-                                        var idinfos = [id, video_type, count, source, sContent];
-                                        playReport(idinfos.join(':'));
-                                        count++;
-                                    });
-
-                                    callback && callback( videoElemnet );
-                                });
+                                }
                             },
                             fullScreenPlayer = function( video ){
                                 if(window.fullScreenApi.supportsFullScreen){

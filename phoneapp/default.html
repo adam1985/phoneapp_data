@@ -22,9 +22,10 @@
                 <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
             </div>
             <div class="scroller-box" id="scroller-box">
+
                 <div class="page-width layout-banner-box" id="layout-banner-box"></div>
 
-                <div class="page-width focus-picture swiper-container" id="focus-picture"></div>
+                <div id="focus-picture"></div>
 
                 <div id="news-list-container">
 
@@ -57,6 +58,7 @@
 <!-- 焦点图模板 -->
 <script id="focus-template" type="text/html">
     {{ if( list.length >>> 0 ){ }}
+    <div class="page-width focus-picture swiper-container">
     <div class="cl focus-picture-box swiper-wrapper" id="focus-picture-box">
         {{ for ( var i = 0, len = list.length; i < len; i++ ) {
             var current = list[i];
@@ -91,6 +93,7 @@
                 {{ } }}
             {{ } }}
         </div>
+    </div>
     </div>
     {{ } }}
 </script>

@@ -17,47 +17,80 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
                         var pageIndex = data.latestPage, pageIndexArg = {
                             pageIndex : data.latestPage
                         };
-                        var bannerDtd = $.ajax({
-                                url: config.base + 'data/index/' + data.bannerSource,
-                                dataType: 'jsonp',
-                                jsonpCallback : 'bannerConfCallBack',
-                                success: function( data ){
-                                    var layoutBanner = $('#layout-banner-box');
-                                    if( data.length >>> 0) {
-                                        var templateStr = template.render('banner-template', {
-                                            list : data,
-                                            isShow : !sessionStorage.getItem('is-hide-banner')
-                                        });
-                                        layoutBanner.html( templateStr );
-                                    } else {
-                                        layoutBanner.hide();
-                                        sessionStorage.setItem('is-hide-banner', true);
+                        var bannerDtd = function(){
+                                var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
+                                $.ajax({
+                                    url: config.base + 'data/index/' + data.bannerSource,
+                                    dataType: 'jsonp',
+                                    jsonpCallback : 'bannerConfCallBack',
+                                    success: function( data ){
+                                        var layoutBanner = $('#layout-banner-box');
+                                        if( data.length >>> 0) {
+                                            var templateStr = template.render('banner-template', {
+                                                list : data,
+                                                isShow : !sessionStorage.getItem('is-hide-banner')
+                                            });
+                                            layoutBanner.html( templateStr );
+                                        } else {
+                                            layoutBanner.hide();
+                                            sessionStorage.setItem('is-hide-banner', true);
 
+                                        }
+                                        dtd.resolve(); // 改变Deferred对象的执行状态
                                     }
-                                }
-                            }),
+                                });
+                                return dtd.promise(); // 返回promise对象
+                            },
 
-                            focusDtd = $.ajax({
-                                url: config.base + 'data/index/' + data.focusSource,
-                                dataType: 'jsonp',
-                                jsonpCallback : 'focusConfCallBack',
-                                success: function( data ){
-                                    var focusPicture = $('#focus-picture');
-                                    if( data.length >>> 0) {
-                                        data = tools.joinAssignSrc( data );
-                                        var templateStr = template.render('focus-template', {
-                                            list : data
-                                        });
-                                        focusPicture.html( templateStr );
-                                    } else {
-                                        focusPicture.hide();
+                            focusDtd = function(){
+                                var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
+                                $.ajax({
+                                    url: config.base + 'data/index/' + data.focusSource,
+                                    dataType: 'jsonp',
+                                    jsonpCallback : 'focusConfCallBack',
+                                    success: function( data ){
+                                        var focusPicture = $('#focus-picture');
+                                        if( data.length >>> 0) {
+                                            data = tools.joinAssignSrc( data );
+                                            var templateStr = template.render('focus-template', {
+                                                list : data
+                                            });
+                                            focusPicture.html( templateStr );
+                                        } else {
+                                            //focusPicture.hide();
+                                        }
+                                        var focusPictureButtons = $('#focus-picture-buttons').find('a'),
+                                            foucsPicTureTitles = $('#focus-picture-titles').find('a');
+                                        if( focusPicture.length ) {
+
+                                            $('.swiper-container').swiper({
+                                                mode:'horizontal',
+                                                loop: true,
+                                                autoplay: 5000,
+                                                onSlideChangeStart : function( swiper ) {
+                                                    var length = swiper.slides.length - 2,
+                                                        activeIndex = swiper.activeIndex - 2,
+                                                        nextIndex = activeIndex + 1;
+
+                                                    if( nextIndex > length - 1 ) {
+                                                        nextIndex = 0;
+                                                    }
+
+                                                    focusPictureButtons.removeClass('on').eq( nextIndex ).addClass('on');
+                                                    foucsPicTureTitles.removeClass('on').eq( nextIndex ).addClass('on');
+                                                }
+                                            });
+                                        }
+                                        dtd.resolve(); // 改变Deferred对象的执行状态
                                     }
-                                }
-                            }),
+                                });
+                                return dtd.promise(); // 返回promise对象
+                            };
 
                             newsDtd = getFirstPageList(pageIndexArg, 'data/index/', data, 'newsListCallBack', 'news-list-container', 'hot-news-template');
 
-                        $.when(bannerDtd, focusDtd, newsDtd).done(function(){
+                        $.when(bannerDtd(), focusDtd(), newsDtd).done(function(){
+
 
                             pageIndex = pageIndexArg.pageIndex;
 
@@ -141,30 +174,6 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
                                     picHeight = ( deviceWidth / picWidth ) * 328;
                                     //focusPictrue.height( picHeight );
 
-                                var focusPictureButtons = $('#focus-picture-buttons').find('a'),
-                                    foucsPicTureTitles = $('#focus-picture-titles').find('a');
-
-                                if( foucsPictureBox.length ) {
-                                    $('.swiper-container').swiper({
-                                        mode:'horizontal',
-                                        loop: true,
-                                        autoplay: 5000,
-                                        onSlideChangeStart : function( swiper) {
-                                            var length = swiper.slides.length - 2,
-                                                activeIndex = swiper.activeIndex - 2,
-                                                nextIndex = activeIndex + 1;
-
-                                            if( nextIndex > length - 1 ) {
-                                                nextIndex = 0;
-                                            }
-
-                                            focusPictureButtons.removeClass('on').eq( nextIndex ).addClass('on');
-                                            foucsPicTureTitles.removeClass('on').eq( nextIndex ).addClass('on');
-                                        }
-                                    });
-                                }
-
-
                                 var myScroll = pullDownUpLoad(function(myScroll){
                                     pageIndexArg.pageIndex = data.latestPage;
                                     var refDtd = getFirstPageList(pageIndexArg, 'data/index/', data, 'newsListCallBack', 'news-list-container', 'hot-news-template');
@@ -208,6 +217,9 @@ define(['jquery',  'component/template', 'component/jquery.swiper', 'component/l
                                     }
 
                                 });
+
+
+
 
                                 myScroll.refresh();
 

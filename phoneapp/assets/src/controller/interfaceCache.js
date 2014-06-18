@@ -1,5 +1,5 @@
-define(['jquery', 'component/tools', 'conf/config', 'component/localStorage',  'component/jquery.cookie'],
-    function($, tools, config, localStorage){
+define(['jquery', 'component/tools', 'conf/config', 'interface/ajax',  'component/localStorage',  'component/jquery.cookie'],
+    function($, tools, config, ajax, localStorage){
 
         var confDtd = function() {
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
@@ -7,7 +7,7 @@ define(['jquery', 'component/tools', 'conf/config', 'component/localStorage',  '
             var weishiConf = localStorage.getItem('weishiConf');
 
             if( !weishiConf ) {
-                $.ajax({
+                ajax({
                     url: config.vConf + 'weishi-conf.js',
                     dataType: 'jsonp',
                     jsonpCallback : 'weishiConfCallback',
@@ -26,7 +26,7 @@ define(['jquery', 'component/tools', 'conf/config', 'component/localStorage',  '
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
             var access_token = $.cookie('access_token');
             if( !access_token ) {
-                $.ajax({
+                ajax({
                     url: config.vInterface,
                     dataType: 'jsonp',
                     data : {
@@ -60,7 +60,7 @@ define(['jquery', 'component/tools', 'conf/config', 'component/localStorage',  '
             if( !totalTags ) {
                 tokenDtd().done(function(){
                     var access_token = $.cookie('access_token');
-                    $.ajax({
+                    ajax({
                         url: config.vInterface,
                         dataType: 'jsonp',
                         data : {
@@ -71,6 +71,7 @@ define(['jquery', 'component/tools', 'conf/config', 'component/localStorage',  '
                             access_token : access_token
                         },
                         success: function( tags ){
+                            //console.log(tags);
                             if( tags.ret == 0 ) {
                                 localStorage.setItem('total-tags', JSON.stringify(tags.data.info));
                                 dtd.resolve(); // 改变Deferred对象的执行状态
@@ -86,16 +87,15 @@ define(['jquery', 'component/tools', 'conf/config', 'component/localStorage',  '
 
         var playerDtd = function(id ,vid, client_id, access_token) {
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
-            var playerHistorySave = $.cookie('player-history-cookie'),
+
+            var doc = $(document), playerHistorySave = doc.data('player-history-cookie'),
                 playerHistorySaveObj = {};
 
             if( playerHistorySave ) {
                 playerHistorySaveObj = JSON.parse(playerHistorySave);
-            } else {
-                localStorage.removeItem('player-history');
             }
 
-            var playerHistory = localStorage.getItem('player-history'),
+            var playerHistory = doc.data('player-history'),
                 playerHistoryObj = {};
 
             if( playerHistory ){
@@ -103,10 +103,9 @@ define(['jquery', 'component/tools', 'conf/config', 'component/localStorage',  '
             }
 
 
-
             if( !playerHistorySave || !playerHistorySaveObj[vid] || !playerHistory || !playerHistoryObj[vid] ) {
 
-                $.ajax({
+                ajax({
                     url: config.vInterface,
                     dataType: 'jsonp',
                     data : {
@@ -123,15 +122,20 @@ define(['jquery', 'component/tools', 'conf/config', 'component/localStorage',  '
                     },
                     success: function( res ){
                         if( res.ret == 0 ) {
-                            playerHistoryObj[vid] = res.data;
-                            playerHistorySaveObj[vid] = 1;
-                            localStorage.setItem('player-history', JSON.stringify(playerHistoryObj));
-                            $.cookie('player-history-cookie', JSON.stringify(playerHistorySaveObj), {
-                                expires : new Date( +new Date() + config.playTimeout ),
-                                domain : '.baofeng.net'
+                            var url = [];
+
+                            $.each(res.data.url, function(i, v){
+                                url.push( v );
                             });
-                            dtd.resolve(); // 改变Deferred对象的执行状态
+
+                            playerHistoryObj[vid] = url;
+                            playerHistorySaveObj[vid] = 1;
+                            doc.data('player-history', JSON.stringify(playerHistoryObj));
+
+                            doc.data('player-history-cookie', JSON.stringify(playerHistorySaveObj));
+
                         }
+                        dtd.resolve(); // 改变Deferred对象的执行状态
                     }
                 });
             } else {

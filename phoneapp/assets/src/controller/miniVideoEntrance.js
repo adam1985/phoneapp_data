@@ -3,6 +3,7 @@ define(['jquery', 'component/tools', 'conf/config', './interfaceCache', 'compone
         return function(){
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
             var confDtd = interfaceCache.confDtd();
+            //var tagsDtd = interfaceCache.tagsDtd();
             var tokenDtd = interfaceCache.tokenDtd(),
                 weishiData = localStorage.getItem('weishi-data'),
                 access_token = $.cookie('access_token');

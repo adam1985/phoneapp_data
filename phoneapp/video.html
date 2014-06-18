@@ -40,7 +40,7 @@
 <script id="video-lists-template" type="text/html">
     {{ if( list.length >>> 0 ){ }}
     {{ for ( var i = 0, len = list.length; i < len; i++ ) {
-        var target = list[i];
+    var target = list[i];
     }}
     <div class="video-list-item">
         <div class="video-thumb">
@@ -52,7 +52,7 @@
         </div>
         <div class="cl video-control">
             <div class="fl video-icon">
-                <img src="assets/images/video_icon.png" /> 精彩进球
+                <img src="assets/images/video_icon.png" /> 巴西最前线
             </div>
             <div class="fr video-control-btn">
                 <!--<a class="fl video-download" href="javascript:void(null)" data-vid="{{= target.vid }}" data-id="{{= target.id }}"><img src="assets/images/video_download.png" /> </a>-->
@@ -65,9 +65,9 @@
 </script>
 <script id="video-play-template" type="text/html">
     <div class="video-play-box" style="height: {{= height }}px;">
-        <video poster="{{= picurl }}" width="{{= width }}" height="{{= height }}" autoplay="autoplay" preload="none" controls="controls" x-webkit-airplay="">
-            {{ for ( var attr in src ) { }}
-            <source src="{{= src[attr] }}" />
+        <video poster="{{= picurl }}" width="{{= width }}" height="{{= height }}" autoplay="autoplay" preload="none" controls="controls" x-webkit-airplay="allow" webkit-playsinline>
+            {{ for ( var i = 0, len = src.length; i < len; i++ ) { }}
+            <source src="{{= src[i] }}" />
             {{ } }}
         </video>
     </div>
@@ -77,3 +77,4 @@
 <script src="assets/require.min.js" data-main="assets/dist/index"></script>
 </body>
 </html>
+

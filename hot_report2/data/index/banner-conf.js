@@ -1,1 +1,1 @@
-bannerConfCallBack([{"title":"wewrwqr","src":""}])
+bannerConfCallBack([])
