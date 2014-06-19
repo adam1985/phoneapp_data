@@ -281,7 +281,7 @@ padding: 30px 20px; z-index: 9999; box-sizing: border-box;
 .video-play-box{ /*position: absolute; left : 0; top:0;*/ width: 100%; z-index: 9999;}
 .video-thumb a,.video-thumb img{ display: block; width: 100%;}
 .video-thumb a{ position: relative;}
-.video-thumb .player-btn{ display: block; width: 15%; position: absolute; left: 50%; top : 50%; margin: -7% 0 0 -7%;}
+.video-thumb .player-btn{ display: block; width: 20%; position: absolute; left: 50%; top : 50%; margin: -10% 0 0 -10%;}
 .video-control{ padding: 15px 10px;}
 .video-icon{width:50%;}
 .video-icon img{width: 18%;}
@@ -327,4 +327,21 @@ padding: 30px 20px; z-index: 9999; box-sizing: border-box;
   position: absolute; left: 5%; top:5%; width : 30%; z-index: 100;
 }
 .weishi-logo  img{ display: block;}
-.video-element{ position: absolute; left : 0; top  : 0; z-index: -1;}
+/*.video-play-box{ position: absolute; left : 0; top  : 0; }*/
+
+.player-btn-animate {
+    -webkit-transform:scale(1,1);
+    opacity: 1;
+    -webkit-animation-name:player-btn-animate;
+    -webkit-animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes player-btn-animate {
+    0%   {-webkit-transform:scale(1,1);opacity: 1;}
+    25%  {-webkit-transform:scale(0.8,0.8);opacity: 0.25;}
+    50%  {-webkit-transform:scale(1,1);opacity: 0.5;}
+    75%  {-webkit-transform:scale(0.8,0.8);opacity: 0.75;}
+    100% {-webkit-transform:scale(1,1);opacity: 1;}
+}

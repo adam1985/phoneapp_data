@@ -49,6 +49,9 @@ define(['jquery','component/template', 'component/tools', 'conf/config', './mini
 
                                                 templateStr = template.render(templateId, templateConf);
                                                 newsListContainer.html( templateStr );
+                                            }).fail(function(){
+                                                templateStr = template.render(templateId, templateConf);
+                                                newsListContainer.html( templateStr );
                                             });
 
                                         } else {
@@ -71,6 +74,8 @@ define(['jquery','component/template', 'component/tools', 'conf/config', './mini
                                 pageIndexArg.pageIndex = pageIndex;
                                 if( videoEntranceDtd ) {
                                     videoEntranceDtd.done(function () {
+                                        dtd.resolve();
+                                    }).fail(function(){
                                         dtd.resolve();
                                     });
                                 } else {

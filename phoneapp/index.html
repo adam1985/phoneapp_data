@@ -101,12 +101,13 @@
 <!-- 热点新闻列表模板 -->
 <script id="hot-news-template" type="text/html">
     {{ if( list.length >>> 0 ){ }}
-    {{ for ( var i = 0, len = list.length; i < len; i++ ) {
+    {{ for ( var i = 0, len = list.length; i <= len; i++ ) {
     var target = list[i];
     }}
     {{ if( i == video.index - 1 && video.show ) { }}
     {{ include('weishi-template') }}
     {{ } }}
+    {{ if( i < len ) { }}
     <div class="news-list-box">
         <div class="sprites news-list-header">
             <a class="category" href="{{= target.src }}?category={{= target.type }}">{{= target.title }}</a>
@@ -150,6 +151,7 @@
                 </div>
                 {{ } }}
                 {{ } }}
+                {{ } }}
 </script>
 <!-- 微视视频模板 -->
 <script id="weishi-template" type="text/html">
@@ -177,6 +179,6 @@
         </div>
     </div>
 </script>
-<script src="assets/require.min.js" data-main="assets/dist/index"></script>
+<script src="assets/require.min.js" data-main="assets/src/index"></script>
 </body>
 </html>

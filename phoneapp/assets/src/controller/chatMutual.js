@@ -65,7 +65,7 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                             iscroll.scrollToElement(item);
                         }
                     },
-                    getMessage = function (token, name, uid, blockWord) {
+                    getMessage = function (token, uid, blockWord) {
 
                         return (function () {
                             var arg = arguments;
@@ -88,7 +88,7 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                             $.each(messageData, function () {
                                                 if( this.id != uid ) {
                                                     var messages = {
-                                                        user: name,
+                                                        user: this.name,
                                                         me : false,
                                                         time: tools.formatTime(this.time),
                                                         content: ubbReplace(this.message, blockWord)
@@ -141,7 +141,7 @@ define(['jquery', 'component/template', 'conf/config', 'component/jquery.uri',
                                 dataType: 'jsonp',
                                 jsonpCallback : 'blockWordCallBack',
                                 success: function( blockWord ){
-                                    getMessage(token, joinChat.data.name, joinChat.data.id, blockWord);
+                                    getMessage(token, joinChat.data.id, blockWord);
 
                                     // 发送消息
                                     var inputChatMsg = $('#input-chat-msg'),

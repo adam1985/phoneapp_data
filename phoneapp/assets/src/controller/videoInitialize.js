@@ -1,6 +1,6 @@
 define(['jquery', 'component/template',  'interface/ajax',
     './pullDownUpLoad',  'component/tools', 'conf/config', './interfaceCache', 'component/localStorage',
-    './miniVideoEntrance', 'component/fullScreen', 'component/jquery.lazyload'],
+    './miniVideoEntrance', 'component/fullScreen',  'component/jquery.lazyload'],
     function($, template, ajax, pullDownUpLoad,  tools, config, interfaceCache,localStorage, miniVideoEntrance, fullScreen, lazyload){
 
         return function(){
@@ -44,7 +44,8 @@ define(['jquery', 'component/template',  'interface/ajax',
                                         lists.push({
                                             id : this.id,
                                             vid : this.video.vid,
-                                            picurl : this.video.picurl
+                                            picurl : this.video.picurl,
+                                            className : tools.isIos ? 'player-btn' : 'player-btn player-btn-animate'
                                         });
                                     });
 
@@ -147,41 +148,71 @@ define(['jquery', 'component/template',  'interface/ajax',
                         //点击播放
                         var videoListsBox = $('#video-lists-container'),
                             startPlayer = function( element, callback ) {
-                                var self = $(element),
+                                var self = element,
                                     id = self.attr('data-id'),
                                     vid = self.attr('data-vid'),
                                     index = self.attr('data-index'),
                                     videoListItem = self.closest('.video-list-item'),
                                     videoThumb = videoListItem.find('.video-thumb'),
-                                    videoElemnet = videoThumb.find('video');
+                                    videoPlayBox = videoThumb.find('.video-play-box'),
+                                    playerBtn = videoThumb.find('.player-btn'),
+                                    videoElemnet = videoThumb.find('video'),
+                                    videoEle = videoElemnet[0],
+                                    videoLists = $('.video-element'),
+                                    isLoadVideo = videoElemnet.data('is-load-video'),
+                                    myPlayer = _V_(videoEle);
 
-                                if( videoElemnet.length ){
-                                    videoElemnet[0].play();
+
+                                videoLists.each(function(){
+                                    _V_(this).pause();
+                                });
+
+                                if( isLoadVideo ){
+                                    myPlayer.play();
                                 } else {
                                     interfaceCache.playerDtd(id, vid, config.client_id, weishiData.access_token).done(function(){
 
-                                        var playerHistoryObj = eval('(' + $(document).data('player-history') + ')');
+                                        var playerHistoryObj = $(document).data('player-history');
 
                                         var templateStr = template.render('video-play-template', {
-                                            src : playerHistoryObj[vid],
-                                            picurl : videoLists[index].picurl,
-                                            width : tools.isIos ? 1 : videoThumb.width(),
-                                            height : tools.isIos ? 1 : videoThumb.height(),
-                                            className : tools.isIos ? '' : ''
+                                            src : playerHistoryObj[vid]
                                         });
 
-                                        if( tools.isIos ) {
-                                            self.after( templateStr );
+                                        //videoElemnet.html(templateStr);
+
+                                        videoElemnet.attr('src', playerHistoryObj[vid][0]);
+
+                                        videoElemnet.attr('width',tools.isIos ? 1 : videoThumb.width() );
+                                        videoElemnet.attr('height',tools.isIos ? 1 : videoThumb.height() );
+                                        myPlayer.width(tools.isIos ? 1 : videoThumb.width());
+                                        myPlayer.height(tools.isIos ? 1 : videoThumb.height());
+
+                                        videoPlayBox.show();
+
+                                        if( !tools.isIos ) {
+                                            self.hide();
                                         } else {
-                                            self.replaceWith( templateStr );
+                                            //playerBtn.find('.player-icon').attr('src', 'assets/images/player_on_btn.png')
+                                            playerBtn.addClass('player-btn-animate');
+                                            videoPlayBox.css({
+                                                position : 'absolute',
+                                                left : -9999,
+                                                top : -9999
+                                            });
                                         }
 
-                                        videoElemnet = videoThumb.find('video');
+                                        myPlayer.play();
+                                        myPlayer.on("click", function(){
+                                            myPlayer.play();
+                                        });
+                                        myPlayer.on("ended", function(){
+                                            myPlayer.currentTime(0);
+                                        });
 
                                         var video_type = infos[index].video.video_type,
                                             count = 1,
-                                            source = '巴西最前线', //世界杯
-                                            sContent = '5be06KW/5pyA5YmN57q/'; //5LiW55WM5p2v
+                                            source = 'tag', //世界杯 巴西最前线
+                                            sContent = '5be06KW/5pyA5YmN57q/'; //5LiW55WM5p2v 5be06KW/5pyA5YmN57q/
 
                                         videoElemnet.on('play', function(){
                                             var idinfos = [id, video_type, count, source, sContent];
@@ -189,8 +220,11 @@ define(['jquery', 'component/template',  'interface/ajax',
                                             count++;
                                         });
 
+                                        videoElemnet.data('is-load-video', 1);
+
                                         callback && callback( videoElemnet );
                                     });
+
                                 }
                             },
                             fullScreenPlayer = function( video ){
@@ -199,8 +233,9 @@ define(['jquery', 'component/template',  'interface/ajax',
                                 }
                             };
 
-                        videoListsBox.on('tap', '.player-video', function(){
-                            startPlayer( this );
+                        videoListsBox.on('click', function(e){
+                            var target = $(e.target), element = target.closest('.video-thumb').find('.player-video');
+                            startPlayer( element );
                         });
 
 

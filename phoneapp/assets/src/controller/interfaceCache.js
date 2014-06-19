@@ -1,6 +1,8 @@
 define(['jquery', 'component/tools', 'conf/config', 'interface/ajax',  'component/localStorage',  'component/jquery.cookie'],
     function($, tools, config, ajax, localStorage){
 
+        var timeout = 5000;
+
         var confDtd = function() {
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
 
@@ -11,9 +13,13 @@ define(['jquery', 'component/tools', 'conf/config', 'interface/ajax',  'componen
                     url: config.vConf + 'weishi-conf.js',
                     dataType: 'jsonp',
                     jsonpCallback : 'weishiConfCallback',
+                    cache : true,
                     success: function( conf ){
                         localStorage.setItem('weishiConf', JSON.stringify(conf));
                         dtd.resolve(); // 改变Deferred对象的执行状态
+                    },
+                    error : function(){
+                        dtd.reject();
                     }
                 });
             } else {
@@ -46,6 +52,9 @@ define(['jquery', 'component/tools', 'conf/config', 'interface/ajax',  'componen
                             });
                             dtd.resolve(); // 改变Deferred对象的执行状态
                         }
+                    },
+                    error : function(){
+                        dtd.reject();
                     }
                 });
             } else {
@@ -76,6 +85,9 @@ define(['jquery', 'component/tools', 'conf/config', 'interface/ajax',  'componen
                                 localStorage.setItem('total-tags', JSON.stringify(tags.data.info));
                                 dtd.resolve(); // 改变Deferred对象的执行状态
                             }
+                        },
+                        error : function(){
+                            dtd.reject();
                         }
                     });
                 });
@@ -88,22 +100,11 @@ define(['jquery', 'component/tools', 'conf/config', 'interface/ajax',  'componen
         var playerDtd = function(id ,vid, client_id, access_token) {
             var dtd = $.Deferred();  //在函数内部，新建一个Deferred对象
 
-            var doc = $(document), playerHistorySave = doc.data('player-history-cookie'),
-                playerHistorySaveObj = {};
+            var doc = $(document),
+                playerHistorySave = doc.data('player-history-cookie') || {},
+                playerHistory = doc.data('player-history') || {};
 
-            if( playerHistorySave ) {
-                playerHistorySaveObj = JSON.parse(playerHistorySave);
-            }
-
-            var playerHistory = doc.data('player-history'),
-                playerHistoryObj = {};
-
-            if( playerHistory ){
-                playerHistoryObj = JSON.parse(playerHistory);
-            }
-
-
-            if( !playerHistorySave || !playerHistorySaveObj[vid] || !playerHistory || !playerHistoryObj[vid] ) {
+            if(!playerHistorySave[vid] || !playerHistory[vid] ) {
 
                 ajax({
                     url: config.vInterface,
@@ -128,16 +129,19 @@ define(['jquery', 'component/tools', 'conf/config', 'interface/ajax',  'componen
                                 url.push( v );
                             });
 
-                            playerHistoryObj[vid] = url;
-                            playerHistorySaveObj[vid] = 1;
-                            doc.data('player-history', JSON.stringify(playerHistoryObj));
+                            playerHistory[vid] = url;
+                            playerHistorySave[vid] = 1;
+                            doc.data('player-history', playerHistory);
 
-                            doc.data('player-history-cookie', JSON.stringify(playerHistorySaveObj));
+                            doc.data('player-history-cookie', playerHistorySave);
 
                         }
                         dtd.resolve(); // 改变Deferred对象的执行状态
+                    },
+                        error : function(){
+                        dtd.reject();
                     }
-                });
+                }, true);
             } else {
                 dtd.resolve(); // 改变Deferred对象的执行状态
             }

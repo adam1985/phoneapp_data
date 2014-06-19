@@ -1,10 +1,10 @@
 define(['jquery', 'component/jquery.cookie'], function ($) {
-  /*  if( window.localStorage ) {
+    if( window.localStorage ) {
 
         return window.localStorage;
 
 
-    } else {*/
+    } else {
         return localStorage = {
             getItem : function( name ){
                 return $.cookie(name);
@@ -22,6 +22,6 @@ define(['jquery', 'component/jquery.cookie'], function ($) {
             }
 
         };
-    //}
+    }
 
 });

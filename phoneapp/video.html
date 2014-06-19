@@ -6,6 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="assets/styles/index.min.css"/>
+    <link rel="stylesheet" href="assets/styles/videojs/video-js.min.css"/>
     <title>8s' 世界杯微视频</title>
 </head>
 <body>
@@ -46,8 +47,13 @@
         <div class="video-thumb">
             <a class="player-video" href="javascript:void(null)" data-index="{{= i }}" data-vid="{{= target.vid }}" data-id="{{= target.id }}">
                 <img class="video-max-pic" data-original="{{= target.picurl }}" />
-                <span class="player-btn"><img src="assets/images/player_btn.png" /></span>
+                <span class="{{= target.className }}"><img class="player-icon" src="assets/images/player_btn.png" /></span>
             </a>
+            <div class="hide video-play-box">
+                <video class="video-js vjs-default-skin video-element" poster="{{= target.picurl }}" autoplay="autoplay" preload="auto" controls="controls" x-webkit-airplay="allow" data-setup="{}" webkit-playsinline>
+
+                </video>
+            </div>
             <div class="weishi-logo"><img src="assets/images/weishi-logo.png" /></div>
         </div>
         <div class="cl video-control">
@@ -56,7 +62,7 @@
             </div>
             <div class="fr video-control-btn">
                 <!--<a class="fl video-download" href="javascript:void(null)" data-vid="{{= target.vid }}" data-id="{{= target.id }}"><img src="assets/images/video_download.png" /> </a>-->
-                <a class="fr toggle-full-screen" href="javascript:void(null)" data-index="{{= i }}" data-vid="{{= target.vid }}" data-id="{{= target.id }}"><img src="assets/images/full_screen.png" /> </a>
+                <!--<a class="fr toggle-full-screen" href="javascript:void(null)" data-index="{{= i }}" data-vid="{{= target.vid }}" data-id="{{= target.id }}"><img src="assets/images/full_screen.png" /> </a>-->
             </div>
         </div>
     </div>
@@ -64,17 +70,12 @@
     {{ } }}
 </script>
 <script id="video-play-template" type="text/html">
-    <div class="video-play-box" style="height: {{= height }}px;">
-        <video poster="{{= picurl }}" width="{{= width }}" height="{{= height }}" autoplay="autoplay" preload="none" controls="controls" x-webkit-airplay="allow" webkit-playsinline>
-            {{ for ( var i = 0, len = src.length; i < len; i++ ) { }}
-            <source src="{{= src[i] }}" />
-            {{ } }}
-        </video>
-    </div>
-    <div class="weishi-logo"><img src="assets/images/weishi-logo.png" /></div>
+    {{ for ( var i = 0, len = src.length; i < len; i++ ) { }}
+    <source src="{{= src[i] }}" />
+    {{ } }}
 </script>
 <!-- 微视视频调起模板 -->
+<script src="assets/styles/videojs/video.js"></script>
 <script src="assets/require.min.js" data-main="assets/dist/index"></script>
 </body>
 </html>
-

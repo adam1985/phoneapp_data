@@ -24,6 +24,8 @@ define(['jquery', 'component/tools', 'conf/config', './interfaceCache', 'compone
                     localStorage.setItem('weishi-data', JSON.stringify(data));
 
                     dtd.resolve(); // 改变Deferred对象的执行状态
+                }).fail(function(){
+                    dtd.reject();
                 });
             } else {
                 dtd.resolve(); // 改变Deferred对象的执行状态
