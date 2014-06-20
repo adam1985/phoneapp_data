@@ -149,48 +149,50 @@ define(['jquery', 'component/template',  'interface/ajax',
                         var videoListsBox = $('#video-lists-container'),
                             startPlayer = function( element, callback ) {
                                 var self = element,
+                                    arg = arguments,
                                     id = self.attr('data-id'),
                                     vid = self.attr('data-vid'),
                                     index = self.attr('data-index'),
                                     videoListItem = self.closest('.video-list-item'),
                                     videoThumb = videoListItem.find('.video-thumb'),
-                                    videoPlayBox = videoThumb.find('.video-play-box'),
                                     playerBtn = videoThumb.find('.player-btn'),
                                     videoElemnet = videoThumb.find('video'),
-                                    videoEle = videoElemnet[0],
-                                    videoLists = $('.video-element'),
+                                    videoEle,
+
                                     isLoadVideo = videoElemnet.data('is-load-video'),
+                                    myPlayer;
+
+
+                                if( isLoadVideo &&  videoElemnet.length ){
+                                    videoEle = videoElemnet[0];
                                     myPlayer = _V_(videoEle);
-
-
-                                videoLists.each(function(){
-                                    _V_(this).pause();
-                                });
-
-                                if( isLoadVideo ){
+                                    var isPaused = myPlayer.paused();
                                     myPlayer.play();
+                                    if( isPaused ) {
+                                       // myPlayer.play();
+                                    } else {
+                                        // myPlayer.pause();
+                                    }
+
                                 } else {
                                     interfaceCache.playerDtd(id, vid, config.client_id, weishiData.access_token).done(function(){
 
                                         var playerHistoryObj = $(document).data('player-history');
 
                                         var templateStr = template.render('video-play-template', {
-                                            src : playerHistoryObj[vid]
+                                            src : playerHistoryObj[vid],
+                                            vid : vid,
+                                            width : tools.isIos ? 1 : videoThumb.width(),
+                                            height : tools.isIos ? 1 : videoThumb.height(),
+                                            picurl : lists[index].picurl
                                         });
 
-                                        //videoElemnet.html(templateStr);
+                                        var videoPlayBox = videoThumb.find('.video-play-box');
 
-                                        videoElemnet.attr('src', playerHistoryObj[vid][0]);
-
-                                        videoElemnet.attr('width',tools.isIos ? 1 : videoThumb.width() );
-                                        videoElemnet.attr('height',tools.isIos ? 1 : videoThumb.height() );
-                                        myPlayer.width(tools.isIos ? 1 : videoThumb.width());
-                                        myPlayer.height(tools.isIos ? 1 : videoThumb.height());
-
-                                        videoPlayBox.show();
+                                        videoPlayBox.append(templateStr);
 
                                         if( !tools.isIos ) {
-                                            self.hide();
+                                            //self.hide();
                                         } else {
                                             //playerBtn.find('.player-icon').attr('src', 'assets/images/player_on_btn.png')
                                             playerBtn.addClass('player-btn-animate');
@@ -201,10 +203,35 @@ define(['jquery', 'component/template',  'interface/ajax',
                                             });
                                         }
 
+                                        videoElemnet = videoThumb.find('video');
+                                        videoEle = videoElemnet[0];
+
+                                        myPlayer = _V_(videoEle);
+
+                                        myPlayer.width(tools.isIos ? 1 : videoThumb.width());
+                                        myPlayer.height(tools.isIos ? 1 : videoThumb.height());
+                                        //videoEle.load();
                                         myPlayer.play();
-                                        myPlayer.on("click", function(){
-                                            myPlayer.play();
+                                        videoEle.play();
+
+
+                                        myPlayer.ready(function(){
+                                            //myPlayer.play();
                                         });
+
+                                        videoElemnet.on('click', function(){
+                                           /* var myPlayer = _V_(videoEle)
+                                            setTimeout(function(){
+                                                var isPaused = myPlayer.paused();
+                                                if( isPaused ) {
+                                                    myPlayer.play();
+                                                } else {
+                                                    myPlayer.pause();
+                                                }
+                                            }, 100);*/
+
+                                        });
+
                                         myPlayer.on("ended", function(){
                                             myPlayer.currentTime(0);
                                         });
@@ -214,8 +241,23 @@ define(['jquery', 'component/template',  'interface/ajax',
                                             source = 'tag', //世界杯 巴西最前线
                                             sContent = '5be06KW/5pyA5YmN57q/'; //5LiW55WM5p2v 5be06KW/5pyA5YmN57q/
 
-                                        videoElemnet.on('play', function(){
+                                        videoElemnet.on('play', function() {
+                                            var videoList = videoListsBox.find('video'), self = this,
+                                                vid = $(self).attr('data-vid');
                                             var idinfos = [id, video_type, count, source, sContent];
+
+                                            videoList.each(function(i, v){
+                                                    var vid_ = $(v).attr('data-vid');
+                                                    if( vid_ != vid ) {
+                                                        var Player = _V_(v);
+                                                        var paused = Player.paused();
+                                                        if( !paused ) {
+                                                            Player.pause();
+                                                            // v.pause();
+                                                        }
+                                                    }
+                                            });
+
                                             playReport(idinfos.join(':'));
                                             count++;
                                         });
@@ -233,9 +275,11 @@ define(['jquery', 'component/template',  'interface/ajax',
                                 }
                             };
 
-                        videoListsBox.on('click', function(e){
-                            var target = $(e.target), element = target.closest('.video-thumb').find('.player-video');
-                            startPlayer( element );
+                        videoListsBox.on('tap', function(e){
+                            var target = $(e.target), element = target.closest('.player-video');
+                            if( element.length ) {
+                                startPlayer( element );
+                            }
                         });
 
 

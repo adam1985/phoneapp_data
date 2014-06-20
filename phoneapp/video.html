@@ -48,13 +48,11 @@
             <a class="player-video" href="javascript:void(null)" data-index="{{= i }}" data-vid="{{= target.vid }}" data-id="{{= target.id }}">
                 <img class="video-max-pic" data-original="{{= target.picurl }}" />
                 <span class="{{= target.className }}"><img class="player-icon" src="assets/images/player_btn.png" /></span>
+                <div class="weishi-logo"><img src="assets/images/weishi-logo.png" /></div>
             </a>
-            <div class="hide video-play-box">
-                <video class="video-js vjs-default-skin video-element" poster="{{= target.picurl }}" autoplay="autoplay" preload="auto" controls="controls" x-webkit-airplay="allow" data-setup="{}" webkit-playsinline>
+            <div class="video-play-box">
 
-                </video>
             </div>
-            <div class="weishi-logo"><img src="assets/images/weishi-logo.png" /></div>
         </div>
         <div class="cl video-control">
             <div class="fl video-icon">
@@ -70,9 +68,10 @@
     {{ } }}
 </script>
 <script id="video-play-template" type="text/html">
-    {{ for ( var i = 0, len = src.length; i < len; i++ ) { }}
-    <source src="{{= src[i] }}" />
-    {{ } }}
+
+    <video class="video-js vjs-default-skin video-element" data-vid="{{= vid }}" src="{{= src[0] }}" width="{{= width }}" height="{{= height }}" poster="{{= picurl }}" autoplay preload controls="controls" x-webkit-airplay data-setup="{}" webkit-playsinline>
+
+    </video>
 </script>
 <!-- 微视视频调起模板 -->
 <script src="assets/styles/videojs/video.js"></script>

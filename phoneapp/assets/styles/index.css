@@ -327,7 +327,8 @@ padding: 30px 20px; z-index: 9999; box-sizing: border-box;
   position: absolute; left: 5%; top:5%; width : 30%; z-index: 100;
 }
 .weishi-logo  img{ display: block;}
-/*.video-play-box{ position: absolute; left : 0; top  : 0; }*/
+
+.video-play-box{ position: absolute; top:0; left : 0; z-index: 999;}
 
 .player-btn-animate {
     -webkit-transform:scale(1,1);
